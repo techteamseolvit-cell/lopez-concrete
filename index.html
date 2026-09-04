@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lopez Concrete LLC | Patios, Walkways & Hardscaping</title>
+<meta name="description" content="Stamped concrete and hardscaping in Fredericksburg, VA and surrounding areas.">
+<!-- ============================================================
+  Lopez Concrete LLC - Landing Page
+  Como usar en WordPress / Elementor:
+  1) Sube estas 13 imagenes a tu Biblioteca de medios de WordPress:
+     logo.png, patio-curved-porch.jpg, firepit-circular-bluesky.jpg,
+     patio-outdoor-kitchen.jpg, patio-firepit-wall.jpg,
+     house-colonial-retaining-wall.jpg, patio-pattern-closeup.jpg,
+     patio-house-evening.jpg, patio-curved-wall.jpg, deck-stairs-patio.jpg,
+     walkway-entrance.jpg, deck-retaining-wall-steps.jpg, driveway-long.jpg
+  2) Por cada img, copia la URL que WordPress te da para ese archivo y
+     reemplaza el valor de src (comentario arriba de cada una indica que
+     archivo va ahi). En la galeria, cada foto tiene un
+     <a href="#" class="lightbox-link"> - reemplaza tambien ese href.
+  3) Este cliente AUN NO tiene formulario de GoHighLevel. Hay un formulario
+     PROVISIONAL (visualmente similar, sin conexion real) en Hero y CTA
+     final. Busca <form class="lc-fake-form"> y reemplaza TODO ese bloque
+     por el iframe + script real de GoHighLevel cuando lo tengan.
+  4) Pega TODO este bloque (incluyendo el style y el script del final) en
+     un widget HTML de Elementor, en una pagina en blanco (sin header/footer
+     del tema si quieres la landing limpia).
+============================================================= -->
+<style>
+  #lc-landing {
+    --blue: #004bae;
+    --blue-dark: #003785;
+    --blue-light: #2e7bd6;
+    --navy: #0b1e33;
+    --navy-2: #142a44;
+    --navy-3: #1c3654;
+    --line-d: #2b4460;
+    --ink: #1a2430;
+    --ink-dim: #5b6572;
+    --white: #ffffff;
+    --bg: #f5f8fb;
+    --bg-2: #eaf0f7;
+    --line-l: #dbe4ee;
+    --heading: var(--ink);
+    --body: var(--ink-dim);
+    --surface: var(--white);
+    --line: var(--line-l);
+    background: var(--bg);
+    color: var(--body);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+  }
+  #lc-landing * { box-sizing: border-box; }
+  #lc-landing img { max-width: 100%; display: block; }
+  #lc-landing a { text-decoration: none; }
+  #lc-landing .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  #lc-landing section { padding: 84px 0; margin: 0; }
+  #lc-landing h1, #lc-landing h2, #lc-landing h3 {
+    font-family: 'Space Grotesk', 'Arial', sans-serif;
+    font-weight: 700;
+    color: var(--heading);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  #lc-landing h1 { font-size: clamp(32px, 4.6vw, 50px); }
+  #lc-landing h2 { font-size: clamp(26px, 3.4vw, 36px); }
+  #lc-landing h3 { font-size: 18px; }
+  #lc-landing p { color: var(--body); margin: 0 0 16px; font-size: 16px; }
+  #lc-landing .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; color: var(--blue);
+    text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: 700;
+    margin-bottom: 14px;
+  }
+  #lc-landing .eyebrow::before { content:""; width:22px; height:2px; background:var(--blue); display:inline-block; }
+  #lc-landing .btn {
+    display: inline-block; background: var(--blue); color: #fff; font-weight: 700;
+    padding: 15px 30px; border-radius: 6px; font-size: 15px; border: none; cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+  }
+  #lc-landing .btn:hover { background: var(--blue-dark); transform: translateY(-2px); }
+  #lc-landing .btn-outline {
+    display: inline-block; border: 2px solid var(--line-l); color: var(--ink);
+    font-weight: 700; padding: 13px 26px; border-radius: 6px; font-size: 14px;
+  }
+
+  #lc-landing .sec-navy { background: var(--navy); --heading:#fff; --body:#aebdcf; --surface: var(--navy-2); --line: var(--line-d); }
+  #lc-landing .sec-white { background: var(--white); --heading: var(--ink); --body: var(--ink-dim); --surface: var(--bg); --line: var(--line-l); }
+
+  /* TOPBAR */
+  #lc-landing #lc-topbar { padding: 14px 0; margin: 0; background: #fff; text-align: center; border-bottom: 1px solid var(--line-l); }
+  #lc-topbar img { height: 44px; width: auto; display: inline-block; }
+
+  /* HERO: foto de fondo con zoom lento, texto+formulario encima, barra de stats flotante abajo */
+  #lc-landing #lc-hero { position: relative; overflow: hidden; padding: 110px 0 0; margin: 0; }
+  #lc-hero .bg-img {
+    position: absolute; inset: 0; background-size: cover; background-position: center;
+    animation: lcKenBurns 16s ease-in-out infinite alternate;
+  }
+  @keyframes lcKenBurns { 0% { transform: scale(1); } 100% { transform: scale(1.09); } }
+  #lc-hero .overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(100deg, rgba(11,30,51,.90) 0%, rgba(11,30,51,.68) 46%, rgba(11,30,51,.32) 100%);
+  }
+  #lc-hero .top { position: relative; z-index: 1; display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; align-items: center; padding-bottom: 70px; }
+  #lc-hero .badge {
+    display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.14); color: #fff;
+    border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(3px);
+    border-radius: 30px; padding: 7px 16px; font-size: 13px; font-weight: 700; margin-bottom: 20px;
+    animation: lcFadeUp .8s ease both;
+  }
+  #lc-hero h1 { color: #fff; animation: lcFadeUp .8s ease .1s both; }
+  #lc-hero p.lead { font-size: 17px; max-width: 480px; color: #dbe6f5; animation: lcFadeUp .8s ease .2s both; }
+  #lc-hero .ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; animation: lcFadeUp .8s ease .3s both; }
+  @keyframes lcFadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+  #lc-hero-form {
+    background: #fff; border: 1px solid var(--line-l); border-radius: 10px; padding: 26px;
+    box-shadow: 0 24px 60px rgba(0,0,0,.35); animation: lcFadeUp .8s ease .35s both;
+  }
+  #lc-hero-form h3 { color: var(--blue-dark); margin-bottom: 4px; }
+  #lc-hero-form .sub { font-size: 13px; color: var(--ink-dim); margin-bottom: 16px; }
+  #lc-hero-form .form-slot { min-height: 340px; }
+  #lc-hero .stat-strip {
+    position: relative; z-index: 1; margin: 0 auto 60px; max-width: 900px;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 10px; display: grid; grid-template-columns: repeat(3,1fr);
+    box-shadow: 0 20px 50px rgba(0,0,0,.4);
+  }
+  #lc-hero .stat-strip .stat { text-align: center; padding: 22px 10px; border-right: 1px solid rgba(255,255,255,.22); }
+  #lc-hero .stat-strip .stat:last-child { border-right: none; }
+  #lc-hero .stat-strip b { display: block; font-family:'Space Grotesk',sans-serif; font-size: 26px; color: #fff; }
+  #lc-hero .stat-strip span { font-size: 12px; color: #d8e4f5; text-transform: uppercase; letter-spacing: .4px; }
+  #lc-hero .btn-outline { border-color: rgba(255,255,255,.6); color: #fff; }
+  #lc-hero .btn-outline:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+
+  /* Formulario provisional (imita un embed de GoHighLevel) */
+  .lc-fake-form { display: flex; flex-direction: column; gap: 13px; }
+  .lc-fake-form label { font-size: 12px; font-weight: 700; color: var(--ink-dim); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 5px; display: block; }
+  .lc-fake-form input, .lc-fake-form select, .lc-fake-form textarea {
+    width: 100%; background: var(--bg); border: 1px solid var(--line-l); border-radius: 6px;
+    padding: 12px 14px; color: var(--ink); font-family: inherit; font-size: 14px;
+  }
+  .lc-fake-form input:focus, .lc-fake-form select:focus, .lc-fake-form textarea:focus { outline: none; border-color: var(--blue); }
+  .lc-fake-form button {
+    margin-top: 4px; border: none; cursor: pointer; width: 100%; background: var(--blue); color: #fff;
+    font-weight: 700; padding: 14px; border-radius: 6px; font-size: 15px; font-family: inherit;
+  }
+  .lc-fake-form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 480px) { .lc-fake-form .row2 { grid-template-columns: 1fr; } }
+  .lc-fake-form textarea { resize: vertical; min-height: 100px; }
+  .lc-fake-form .consent { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--ink-dim); }
+  .lc-fake-form .consent input { width: auto; margin-top: 3px; accent-color: var(--blue); }
+
+  /* PROBLEM */
+  #lc-problem { text-align: center; }
+  #lc-problem .wrap { max-width: 820px; }
+  #lc-problem h2 { color: #fff; }
+
+  /* SOLUTION */
+  #lc-solution .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  #lc-solution img { border-radius: 10px; }
+  #lc-solution .stat-row { display: flex; gap: 30px; margin-top: 26px; flex-wrap: wrap; }
+  #lc-solution .stat b { display: block; font-family:'Space Grotesk',sans-serif; font-size: 26px; color: var(--blue); }
+  #lc-solution .stat span { font-size: 12px; color: var(--ink-dim); text-transform: uppercase; letter-spacing: .4px; }
+
+  /* SERVICES */
+  #lc-services .head { text-align: center; max-width: 640px; margin: 0 auto 50px; }
+  #lc-services .grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+  #lc-services .card {
+    background: #fff; border: 1px solid var(--line-l); border-top: 3px solid var(--blue); border-radius: 8px; padding: 30px 24px;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  #lc-services .card:hover { transform: translateY(-6px); border-color: var(--blue); box-shadow: 0 16px 32px rgba(11,30,51,.18); }
+  #lc-services .card.lc-card-pre { opacity: 0; transform: translateY(24px); }
+  #lc-services .card.lc-card-in { animation: lcCardIn .6s ease forwards; }
+  #lc-services .card:nth-child(1).lc-card-in { animation-delay: 0s; }
+  #lc-services .card:nth-child(2).lc-card-in { animation-delay: .1s; }
+  #lc-services .card:nth-child(3).lc-card-in { animation-delay: .2s; }
+  #lc-services .card:nth-child(4).lc-card-in { animation-delay: .3s; }
+  @keyframes lcCardIn { to { opacity: 1; transform: translateY(0); } }
+  #lc-services .num { font-family:'Space Grotesk',sans-serif; color: var(--blue); font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+  #lc-services h3 { font-size: 17px; }
+  #lc-services p { font-size: 14px; margin: 0; }
+
+  /* PROCESS */
+  #lc-process .head { text-align: center; max-width: 640px; margin: 0 auto 54px; }
+  #lc-process .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 26px; }
+  #lc-process .step-n {
+    width: 44px; height: 44px; border-radius: 50%; background: var(--blue); color: #fff;
+    display: flex; align-items: center; justify-content: center; font-family:'Space Grotesk',sans-serif;
+    font-weight: 700; font-size: 17px; margin-bottom: 14px;
+  }
+  #lc-process h3 { font-size: 16px; }
+  #lc-process p { font-size: 14px; }
+
+  /* ABOUT */
+  #lc-about .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center; }
+  #lc-about img { border-radius: 10px; }
+  #lc-about .diffs { display: grid; gap: 18px; margin-top: 24px; }
+  #lc-about .diff { display: flex; gap: 14px; align-items: flex-start; }
+  #lc-about .diff .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); margin-top: 8px; flex: none; }
+  #lc-about .diff h3 { font-size: 15px; margin-bottom: 3px; }
+  #lc-about .diff p { font-size: 14px; margin: 0; }
+
+  /* GALLERY */
+  #lc-gallery .head { text-align: center; max-width: 640px; margin: 0 auto 50px; }
+  #lc-gallery .grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; gap: 3px; }
+  #lc-gallery .grid a:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  #lc-gallery .grid a { position: relative; overflow: hidden; display: block; cursor: zoom-in; }
+  #lc-gallery .grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  #lc-gallery .grid a:hover img { transform: scale(1.08); }
+  #lc-gallery .grid a::after { content:""; position:absolute; inset:0; background: linear-gradient(to top, rgba(11,30,51,.28), transparent 40%); }
+
+  /* LIGHTBOX */
+  #lc-lightbox { position: fixed; inset: 0; background: rgba(6,14,24,.94); z-index: 99999; display:none; align-items:center; justify-content:center; padding:48px; cursor:zoom-out; }
+  #lc-lightbox.open { display: flex; }
+  #lc-lightbox img { max-width: 92vw; max-height: 88vh; border-radius: 6px; box-shadow: 0 30px 90px rgba(0,0,0,.6); cursor: default; }
+  #lc-lightbox .lc-lightbox-close { position: absolute; top: 22px; right: 30px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.25); color: #fff; font-size: 24px; line-height: 1; cursor: pointer; }
+
+  /* TESTIMONIAL SPOTLIGHT (una sola resena real, en grande) */
+  #lc-testimonial { text-align: center; }
+  #lc-testimonial .wrap { max-width: 760px; }
+  #lc-testimonial .stars { color: #ffb547; font-size: 22px; letter-spacing: 3px; margin-bottom: 22px; }
+  #lc-testimonial blockquote { margin: 0 0 24px; font-family:'Space Grotesk',sans-serif; font-size: clamp(20px,2.6vw,28px); color: var(--ink); font-weight: 500; line-height: 1.4; }
+  #lc-testimonial .who { font-size: 14px; color: var(--ink-dim); }
+  #lc-testimonial .who b { color: var(--ink); }
+
+  /* FAQ */
+  #lc-faq .wrap { max-width: 820px; }
+  #lc-faq .head { text-align: center; margin-bottom: 44px; }
+  #lc-faq details { border-bottom: 1px solid var(--line-l); padding: 22px 0; }
+  #lc-faq summary { cursor: pointer; list-style: none; font-family:'Space Grotesk',sans-serif; font-size: 18px; color: var(--ink); display: flex; justify-content: space-between; align-items: center; }
+  #lc-faq summary::-webkit-details-marker { display: none; }
+  #lc-faq summary::after { content: "+"; color: var(--blue); font-size: 22px; margin-left: 20px; }
+  #lc-faq details[open] summary::after { content: "\2013"; }
+  #lc-faq details p { margin-top: 14px; margin-bottom: 0; font-size: 15px; }
+
+  /* CTA FINAL */
+  #lc-cta .wrap { max-width: 1080px; }
+  #lc-cta .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  #lc-cta .cta-info { text-align: left; }
+  #lc-cta img.logo { width: 170px; margin: 0 0 22px; background: #fff; padding: 14px 18px; border-radius: 10px; }
+  #lc-cta h1 { color: #fff; }
+  #lc-cta-form { background: #fff; border: 1px solid var(--line-l); border-radius: 10px; padding: 26px; box-shadow: 0 20px 50px rgba(11,30,51,.28); }
+  #lc-cta-form .form-slot { min-height: 340px; }
+  #lc-cta-form h3 { color: var(--blue-dark) !important; }
+
+  /* FOOTER */
+  #lc-landing #lc-footer { padding: 36px 0; margin: 0; text-align: center; }
+  #lc-footer p { font-size: 13px; color: #7c8ba0; margin: 4px 0; }
+  #lc-footer a { color: var(--blue-light); }
+
+  @media (max-width: 900px) {
+    #lc-hero { padding-top: 90px; }
+    #lc-hero .top { grid-template-columns: 1fr; padding-bottom: 40px; }
+    #lc-hero .stat-strip {
+      grid-template-columns: 1fr; gap: 10px; margin-left: -12px; margin-right: -12px;
+      background: none; border: none; box-shadow: none;
+    }
+    #lc-hero .stat-strip .stat {
+      background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+      border: 1px solid rgba(255,255,255,.22); border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      border-right: none;
+    }
+    #lc-services .grid, #lc-process .steps { grid-template-columns: 1fr 1fr; }
+    #lc-solution .wrap, #lc-about .wrap { grid-template-columns: 1fr; }
+    #lc-solution .stat-row { flex-wrap: nowrap; gap: 12px; }
+    #lc-solution .stat { flex: 1; min-width: 0; }
+    #lc-solution .stat b { font-size: 20px; }
+    #lc-solution .stat span { font-size: 11px; }
+    #lc-process .steps .step { text-align: center; }
+    #lc-process .step-n { margin-left: auto; margin-right: auto; }
+    #lc-about img { order: -1; }
+    #lc-cta .cta-grid { grid-template-columns: 1fr; }
+    #lc-cta .cta-info { text-align: center; }
+    #lc-cta img.logo { margin: 0 auto 22px; }
+    #lc-cta-form h3 { text-align: center; }
+    #lc-gallery .grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 170px; }
+    #lc-gallery .grid a:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+  }
+  @media (max-width: 620px) {
+    #lc-landing section { padding: 56px 0; }
+    #lc-landing #lc-topbar { padding: 10px 0; }
+    #lc-topbar img { height: 32px; }
+    #lc-services .grid, #lc-process .steps, #lc-gallery .grid { grid-template-columns: 1fr; }
+    #lc-gallery .grid a:nth-child(1) { grid-column: span 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #lc-hero .bg-img { animation: none; }
+    #lc-hero .badge, #lc-hero h1, #lc-hero p.lead, #lc-hero .ctas, #lc-hero-form { animation: none; opacity: 1; transform: none; }
+    #lc-services .card.lc-card-pre { opacity: 1; transform: none; }
+    #lc-services .card.lc-card-in { animation: none; }
+  }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<div id="lc-landing">
+
+  <!-- TOPBAR: logo original de la marca -->
+  <header id="lc-topbar">
+    <!-- Imagen: logo.png -->
+    <img src="images/logo.png" alt="Lopez Concrete LLC logo">
+  </header>
+
+  <!-- 1. HERO -->
+  <section id="lc-hero">
+    <!-- Imagen de fondo del Hero: patio-firepit-wall.jpg -->
+    <div class="bg-img" style="background-image:url('images/patio-firepit-wall.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="wrap top">
+      <div>
+        <span class="badge">Serving Fredericksburg &amp; 45 Miles Around</span>
+        <h1>Stamped Concrete &amp; Hardscaping, Designed in 3D Before We Break Ground</h1>
+        <p class="lead">Patios, walkways, retaining walls, and fire pits built by Lopez Concrete LLC. See your exact project in a 3D render first, then get a clean, durable finish backed by a written warranty.</p>
+        <div class="ctas">
+          <a href="#lc-hero-form" class="btn">Get My Free 3D Design</a>
+          <a href="tel:+15403765925" class="btn-outline">Call (540) 376-5925</a>
+        </div>
+      </div>
+      <div id="lc-hero-form">
+        <h3>Request Your Free Estimate</h3>
+        <div class="sub">See your project in 3D before you commit.</div>
+        <div class="form-slot">
+          <!-- Formulario provisional: reemplazar TODO este bloque (form.lc-fake-form)
+               por el iframe + script de GoHighLevel cuando lo tengan. -->
+          <form class="lc-fake-form" onsubmit="return false;">
+            <div class="row2">
+              <div>
+                <label for="lc-h-fname">First Name</label>
+                <input id="lc-h-fname" type="text" placeholder="Enter your first name">
+              </div>
+              <div>
+                <label for="lc-h-lname">Last Name</label>
+                <input id="lc-h-lname" type="text" placeholder="Enter your last name">
+              </div>
+            </div>
+            <div class="row2">
+              <div>
+                <label for="lc-h-phone">Phone *</label>
+                <input id="lc-h-phone" type="tel" placeholder="+1 (540) 000-0000" required>
+              </div>
+              <div>
+                <label for="lc-h-email">Email *</label>
+                <input id="lc-h-email" type="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div>
+              <label for="lc-h-address">Address</label>
+              <input id="lc-h-address" type="text" placeholder="Enter your address">
+            </div>
+            <div>
+              <label for="lc-h-desc">Project Description:</label>
+              <textarea id="lc-h-desc" placeholder="Describe your project here"></textarea>
+            </div>
+            <label class="consent"><input type="checkbox"> <span>I agree to be contacted by phone or email.</span></label>
+            <button type="button">Get My Free 3D Design</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="stat-strip">
+        <div class="stat"><b>6</b><span>Years Experience</span></div>
+        <div class="stat"><b>1-Yr</b><span>Written Warranty</span></div>
+        <div class="stat"><b>3D</b><span>Design Before Install</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. PROBLEM -->
+  <section id="lc-problem" class="sec-navy" style="padding-top:110px;">
+    <div class="wrap">
+      <h2>Tired of an unused backyard, an uneven patio, or a contractor who can't show you what you're paying for?</h2>
+      <p>A worn-out or awkward outdoor space holds back your home's value and your ability to actually enjoy it. And too many homeowners have hired a contractor only to be surprised by the final result &mdash; or left waiting on permits and promises that never materialize.</p>
+    </div>
+  </section>
+
+  <!-- 3. SOLUTION -->
+  <section id="lc-solution" class="sec-white">
+    <div class="wrap">
+      <!-- Imagen: patio-pattern-closeup.jpg -->
+      <img src="images/patio-pattern-closeup.jpg" alt="Stamped concrete pattern detail by Lopez Concrete">
+      <div>
+        <span class="eyebrow">Our Solution</span>
+        <h2>See It Before We Build It &mdash; Then Get a Flawless Finish</h2>
+        <p><strong>Lopez Concrete LLC</strong> designs your patio, walkway, or hardscaping project in a detailed 3D render before construction starts, so you know exactly what you're getting. We handle the formal contract, county permits, and utility locating &mdash; then deliver a clean, durable finish backed by a written warranty.</p>
+        <a href="#lc-hero-form" class="btn">Get My Free 3D Design</a>
+        <div class="stat-row">
+          <div class="stat"><b>6</b><span>Years in Business</span></div>
+          <div class="stat"><b>1-Yr</b><span>Warranty</span></div>
+          <div class="stat"><b>8</b><span>Areas Served</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICES -->
+  <section id="lc-services" class="sec-white" style="background:var(--bg-2);">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" style="justify-content:center;">What We Do</span>
+        <h2>Concrete &amp; Hardscaping Services</h2>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="num">01</div>
+          <h3>Stamped Concrete Patios</h3>
+          <p>Elegant, durable patios in the pattern and color that fit your home.</p>
+        </div>
+        <div class="card">
+          <div class="num">02</div>
+          <h3>Hardscaping &amp; Retaining Walls</h3>
+          <p>Solve drainage and sloped-terrain issues while adding structure to your yard.</p>
+        </div>
+        <div class="card">
+          <div class="num">03</div>
+          <h3>Fire Pits &amp; Outdoor Living</h3>
+          <p>Custom gathering spaces built for how your family actually uses the yard.</p>
+        </div>
+        <div class="card">
+          <div class="num">04</div>
+          <h3>Driveways &amp; Walkways</h3>
+          <p>Clean, level concrete that holds up to daily use for years to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PROCESS -->
+  <section id="lc-process" class="sec-white">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" style="justify-content:center;">How We Work</span>
+        <h2>From 3D Design to Finished Project in 4 Steps</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">1</div>
+          <h3>Free Site Visit &amp; 3D Design</h3>
+          <p>We measure your space and show you a 3D render of the finished project.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">2</div>
+          <h3>Formal Contract &amp; Permits</h3>
+          <p>We handle the paperwork, county permits, and utility locating for you.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">3</div>
+          <h3>Expert Installation</h3>
+          <p>Our team builds your project to match the design, with a clean, precise finish.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">4</div>
+          <h3>Final Walkthrough &amp; Warranty</h3>
+          <p>We review the finished work together, backed by our 1-year written warranty.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. ABOUT -->
+  <section id="lc-about" class="sec-white" style="background:var(--bg-2);">
+    <div class="wrap">
+      <!-- Imagen: house-colonial-retaining-wall.jpg -->
+      <img src="images/house-colonial-retaining-wall.jpg" alt="Home exterior with retaining wall landscaping by Lopez Concrete">
+      <div>
+        <span class="eyebrow">About Us</span>
+        <h2>Lopez Concrete LLC: Precision Hardscaping, Backed on Paper</h2>
+        <p>Led by Edgar Ramirez Lopez, we've spent 6 years building patios, walkways, retaining walls, and outdoor living spaces across Fredericksburg, Stafford, Culpeper, Centreville, Manassas, Fairfax, King George, and Lake Anna. Every project starts with a 3D design and a formal contract, so you always know what to expect.</p>
+        <div class="diffs">
+          <div class="diff"><span class="dot"></span><div><h3>Free 3D Design</h3><p>See your exact project before construction ever starts.</p></div></div>
+          <div class="diff"><span class="dot"></span><div><h3>Licensed &amp; Insured</h3><p>General liability insurance on every job.</p></div></div>
+          <div class="diff"><span class="dot"></span><div><h3>1-Year Written Warranty</h3><p>On workmanship and structure for concrete, pavers, and hardscaping.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. GALLERY -->
+  <section id="lc-gallery" class="sec-white">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" style="justify-content:center;">Our Work</span>
+        <h2>Recent Projects Around Fredericksburg</h2>
+      </div>
+    </div>
+    <div class="grid">
+      <!-- Imagen: patio-outdoor-kitchen.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/patio-outdoor-kitchen.jpg" alt="Finished stamped concrete patio with outdoor kitchen"></a>
+      <!-- Imagen: patio-curved-porch.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/patio-curved-porch.jpg" alt="Finished curved stamped concrete patio"></a>
+      <!-- Imagen: firepit-circular-bluesky.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/firepit-circular-bluesky.jpg" alt="Finished circular fire pit patio"></a>
+      <!-- Imagen: patio-curved-wall.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/patio-curved-wall.jpg" alt="Finished stamped patio with retaining wall"></a>
+      <!-- Imagen: deck-stairs-patio.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/deck-stairs-patio.jpg" alt="Finished deck stairs and patio"></a>
+      <!-- Imagen: walkway-entrance.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/walkway-entrance.jpg" alt="Finished concrete walkway entrance"></a>
+      <!-- Imagen: deck-retaining-wall-steps.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/deck-retaining-wall-steps.jpg" alt="Finished retaining wall and steps"></a>
+      <!-- Imagen: driveway-long.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/driveway-long.jpg" alt="Finished concrete driveway"></a>
+      <!-- Imagen: patio-house-evening.jpg -->
+      <a href="#" class="lightbox-link"><img src="images/patio-house-evening.jpg" alt="Finished stamped concrete patio, evening view"></a>
+    </div>
+  </section>
+
+  <!-- 8. TESTIMONIAL SPOTLIGHT -->
+  <section id="lc-testimonial" class="sec-white" style="background:var(--bg-2);">
+    <div class="wrap">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>&ldquo;Edgar and his team are amazing! Reasonably priced, VERY thorough and patient (we changed things several times) and accommodating. My husband, who is very OCD, has no complaints!!!!&rdquo;</blockquote>
+      <div class="who"><b>Christi Towle</b> &middot; Google Review</div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section id="lc-faq" class="sec-white">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" style="justify-content:center;">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <details open>
+        <summary>How long will the project take, and when can you start?</summary>
+        <p>Timelines depend on the scope of your project and current scheduling. We'll give you a clear start date and timeline during your free 3D design consultation.</p>
+      </details>
+      <details>
+        <summary>What's the difference in cost and maintenance between concrete and pavers?</summary>
+        <p>Stamped concrete and pavers each have different upfront costs and long-term maintenance needs &mdash; we'll walk you through the tradeoffs for your specific project so you can choose what's right for your budget.</p>
+      </details>
+      <details>
+        <summary>Do you offer a warranty, and do you handle county permits?</summary>
+        <p>Yes &mdash; every project comes with a 1-year written warranty on workmanship and structure, and we handle permitting and utility locating for you from start to finish.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 10. FINAL CTA -->
+  <section id="lc-cta" class="sec-navy">
+    <div class="wrap cta-grid">
+      <div class="cta-info">
+        <!-- Imagen: logo.png -->
+        <img class="logo" src="images/logo.png" alt="Lopez Concrete LLC logo">
+        <h1>Ready to See Your Project in 3D?</h1>
+        <p>Get a free design and estimate for your patio, walkway, or outdoor living space &mdash; no pressure, just a clear plan.</p>
+      </div>
+      <div id="lc-cta-form">
+        <h3>Request Your Free Estimate</h3>
+        <div class="form-slot">
+          <!-- Formulario provisional: reemplazar TODO este bloque (form.lc-fake-form)
+               por el iframe + script de GoHighLevel cuando lo tengan. -->
+          <form class="lc-fake-form" onsubmit="return false;">
+            <div class="row2">
+              <div>
+                <label for="lc-c-fname">First Name</label>
+                <input id="lc-c-fname" type="text" placeholder="Enter your first name">
+              </div>
+              <div>
+                <label for="lc-c-lname">Last Name</label>
+                <input id="lc-c-lname" type="text" placeholder="Enter your last name">
+              </div>
+            </div>
+            <div class="row2">
+              <div>
+                <label for="lc-c-phone">Phone *</label>
+                <input id="lc-c-phone" type="tel" placeholder="+1 (540) 000-0000" required>
+              </div>
+              <div>
+                <label for="lc-c-email">Email *</label>
+                <input id="lc-c-email" type="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div>
+              <label for="lc-c-address">Address</label>
+              <input id="lc-c-address" type="text" placeholder="Enter your address">
+            </div>
+            <div>
+              <label for="lc-c-desc">Project Description:</label>
+              <textarea id="lc-c-desc" placeholder="Describe your project here"></textarea>
+            </div>
+            <label class="consent"><input type="checkbox"> <span>I agree to be contacted by phone or email.</span></label>
+            <button type="button">Get My Free 3D Design</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FOOTER -->
+  <section id="lc-footer" class="sec-navy">
+    <div class="wrap">
+      <p>&copy; 2026 Lopez Concrete LLC. All rights reserved. General liability insured.</p>
+      <p>Serving Fredericksburg, Stafford, Culpeper, Centreville, Manassas, Fairfax, King George &amp; Lake Anna, VA.</p>
+      <p><a href="tel:+15403765925">(540) 376-5925</a> &nbsp;&middot;&nbsp; <a href="mailto:lopezconcretellc1@gmail.com">lopezconcretellc1@gmail.com</a> &nbsp;&middot;&nbsp; <a href="https://lopezconcretellcva.com" target="_blank">lopezconcretellcva.com</a></p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lc-lightbox">
+    <button type="button" class="lc-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
+  </div>
+
+</div>
+<script>
+(function () {
+  var lb = document.getElementById('lc-lightbox');
+  if (!lb) return;
+  var lbImg = lb.querySelector('img');
+  var closeBtn = lb.querySelector('.lc-lightbox-close');
+
+  document.querySelectorAll('#lc-gallery a.lightbox-link').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var inner = a.querySelector('img');
+      lbImg.src = inner ? inner.src : '';
+      lbImg.alt = inner ? inner.alt : '';
+      lb.classList.add('open');
+    });
+  });
+
+  function closeLightbox() {
+    lb.classList.remove('open');
+    lbImg.src = '';
+  }
+  closeBtn.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb) closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+})();
+(function () {
+  var cards = document.querySelectorAll('#lc-services .card');
+  if (!('IntersectionObserver' in window) || !cards.length) return;
+  cards.forEach(function (c) { c.classList.add('lc-card-pre'); });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('lc-card-in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .15 });
+  cards.forEach(function (c) { io.observe(c); });
+})();
+</script>
+</body>
+</html>
