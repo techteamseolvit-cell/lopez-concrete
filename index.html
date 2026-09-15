@@ -20,10 +20,9 @@
      reemplaza el valor de src (comentario arriba de cada una indica que
      archivo va ahi). En la galeria, cada foto tiene un
      <a href="#" class="lightbox-link"> - reemplaza tambien ese href.
-  3) Este cliente AUN NO tiene formulario de GoHighLevel. Hay un formulario
-     PROVISIONAL (visualmente similar, sin conexion real) en Hero y CTA
-     final. Busca <form class="lc-fake-form"> y reemplaza TODO ese bloque
-     por el iframe + script real de GoHighLevel cuando lo tengan.
+  3) Este cliente SI tiene formulario real de GoHighLevel (ya integrado
+     en Hero y CTA final). No es necesario cambiar nada del formulario,
+     solo el diseno alrededor si hace falta.
   4) Pega TODO este bloque (incluyendo el style y el script del final) en
      un widget HTML de Elementor, en una pagina en blanco (sin header/footer
      del tema si quieres la landing limpia).
@@ -121,7 +120,7 @@
   }
   #lc-hero-form h3 { color: var(--blue-dark); margin-bottom: 4px; }
   #lc-hero-form .sub { font-size: 13px; color: var(--ink-dim); margin-bottom: 16px; }
-  #lc-hero-form .form-slot { min-height: 340px; }
+  #lc-hero-form .form-slot { min-height: 340px; overflow: hidden; }
   #lc-hero .stat-strip {
     position: relative; z-index: 1; margin: 0 auto 60px; max-width: 900px;
     background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
@@ -246,7 +245,7 @@
   #lc-cta img.logo { width: 170px; margin: 0 0 22px; background: #fff; padding: 14px 18px; border-radius: 10px; }
   #lc-cta h1 { color: #fff; }
   #lc-cta-form { background: #fff; border: 1px solid var(--line-l); border-radius: 10px; padding: 26px; box-shadow: 0 20px 50px rgba(11,30,51,.28); }
-  #lc-cta-form .form-slot { min-height: 340px; }
+  #lc-cta-form .form-slot { min-height: 340px; overflow: hidden; }
   #lc-cta-form h3 { color: var(--blue-dark) !important; }
 
   /* FOOTER */
@@ -328,40 +327,28 @@
         <h3>Request Your Free Estimate</h3>
         <div class="sub">3D design available on request for an additional fee.</div>
         <div class="form-slot">
-          <!-- Formulario provisional: reemplazar TODO este bloque (form.lc-fake-form)
-               por el iframe + script de GoHighLevel cuando lo tengan. -->
-          <form class="lc-fake-form" onsubmit="return false;">
-            <div class="row2">
-              <div>
-                <label for="lc-h-fname">First Name</label>
-                <input id="lc-h-fname" type="text" placeholder="Enter your first name">
-              </div>
-              <div>
-                <label for="lc-h-lname">Last Name</label>
-                <input id="lc-h-lname" type="text" placeholder="Enter your last name">
-              </div>
-            </div>
-            <div class="row2">
-              <div>
-                <label for="lc-h-phone">Phone *</label>
-                <input id="lc-h-phone" type="tel" placeholder="+1 (540) 000-0000" required>
-              </div>
-              <div>
-                <label for="lc-h-email">Email *</label>
-                <input id="lc-h-email" type="email" placeholder="your@email.com" required>
-              </div>
-            </div>
-            <div>
-              <label for="lc-h-address">Address</label>
-              <input id="lc-h-address" type="text" placeholder="Enter your address">
-            </div>
-            <div>
-              <label for="lc-h-desc">Project Description:</label>
-              <textarea id="lc-h-desc" placeholder="Describe your project here"></textarea>
-            </div>
-            <label class="consent"><input type="checkbox"> <span>I agree to be contacted by phone or email.</span></label>
-            <button type="button">Get My Free Estimate</button>
-          </form>
+<iframe
+    src="https://api.leadconnectorhq.com/widget/form/TBnbMawu3snKHYCKuAe8"
+    style="width:100%;height:100%;border:none;border-radius:8px;overflow:hidden;"
+    scrolling="no"
+    id="inline-TBnbMawu3snKHYCKuAe8"
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Contact form"
+    data-height="661"
+    data-layout-iframe-id="inline-TBnbMawu3snKHYCKuAe8"
+    data-form-id="TBnbMawu3snKHYCKuAe8"
+    data-cookie-consent="true"
+    data-cookie-consent-provider="auto"
+    title="Contact form"
+        >
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
         </div>
       </div>
     </div>
@@ -556,40 +543,28 @@
       <div id="lc-cta-form">
         <h3>Request Your Free Estimate</h3>
         <div class="form-slot">
-          <!-- Formulario provisional: reemplazar TODO este bloque (form.lc-fake-form)
-               por el iframe + script de GoHighLevel cuando lo tengan. -->
-          <form class="lc-fake-form" onsubmit="return false;">
-            <div class="row2">
-              <div>
-                <label for="lc-c-fname">First Name</label>
-                <input id="lc-c-fname" type="text" placeholder="Enter your first name">
-              </div>
-              <div>
-                <label for="lc-c-lname">Last Name</label>
-                <input id="lc-c-lname" type="text" placeholder="Enter your last name">
-              </div>
-            </div>
-            <div class="row2">
-              <div>
-                <label for="lc-c-phone">Phone *</label>
-                <input id="lc-c-phone" type="tel" placeholder="+1 (540) 000-0000" required>
-              </div>
-              <div>
-                <label for="lc-c-email">Email *</label>
-                <input id="lc-c-email" type="email" placeholder="your@email.com" required>
-              </div>
-            </div>
-            <div>
-              <label for="lc-c-address">Address</label>
-              <input id="lc-c-address" type="text" placeholder="Enter your address">
-            </div>
-            <div>
-              <label for="lc-c-desc">Project Description:</label>
-              <textarea id="lc-c-desc" placeholder="Describe your project here"></textarea>
-            </div>
-            <label class="consent"><input type="checkbox"> <span>I agree to be contacted by phone or email.</span></label>
-            <button type="button">Get My Free Estimate</button>
-          </form>
+<iframe
+    src="https://api.leadconnectorhq.com/widget/form/TBnbMawu3snKHYCKuAe8"
+    style="width:100%;height:100%;border:none;border-radius:8px;overflow:hidden;"
+    scrolling="no"
+    id="inline-TBnbMawu3snKHYCKuAe8-2"
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="Contact form"
+    data-height="661"
+    data-layout-iframe-id="inline-TBnbMawu3snKHYCKuAe8-2"
+    data-form-id="TBnbMawu3snKHYCKuAe8"
+    data-cookie-consent="true"
+    data-cookie-consent-provider="auto"
+    title="Contact form"
+        >
+</iframe>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
         </div>
       </div>
     </div>
