@@ -8,7 +8,7 @@
 <meta property="og:title" content="One Revolution | De contratista a dueño que escala">
 <meta property="og:description" content="24 y 25 de octubre · Los Ángeles, CA · 9:00 AM. Para dueños de constructoras que ya facturan $30K–$50K+ al mes.">
 <meta property="og:image" content="images/andy-stage.webp">
-<link rel="icon" href="images/logo.webp">
+<link rel="icon" href="images/one-empire-icon-red.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=DM+Sans:opsz,wght@9..40,400..700&family=JetBrains+Mono:wght@500;700&display=swap">
@@ -107,7 +107,9 @@
   /* ---------- nav ---------- */
   .nav { position: sticky; top: 0; z-index: 50; background: rgba(14,15,18,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line-dark); }
   .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
-  .nav-logo img { height: 46px; width: auto; }
+  .nav-logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo .ic { height: 34px; width: auto; }
+  .nav-logo .wm { height: 17px; width: auto; }
   .nav-meta { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; color: var(--dim); text-transform: uppercase; }
   .nav-meta b { color: var(--yellow); }
   .nav .btn { padding: 12px 18px; font-size: 13px; box-shadow: 4px 4px 0 #fff; }
@@ -321,7 +323,7 @@
 
   footer { border-top: 1px solid var(--line-dark); padding: 40px 0 110px; color: var(--dim); font-size: 14px; }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
-  footer img { height: 56px; width: auto; }
+  footer img { height: 64px; width: auto; }
   footer a { color: var(--dim); }
 
   /* ---------- mobile sticky cta ---------- */
@@ -365,7 +367,8 @@
     .stats b { font-size: 24px; }
     .stats span { font-size: 12px; }
     .nav .wrap { height: 62px; }
-    .nav-logo img { height: 38px; }
+    .nav-logo .ic { height: 28px; }
+    .nav-logo .wm { height: 14px; }
     .nav .btn { display: none; }
     .hero h1 .outline, .guest h2 span, .final h2 .outline { -webkit-text-stroke-width: 1.5px; }
     .cd-grid b { font-size: 28px; }
@@ -399,7 +402,7 @@
 <!-- ===== Nav ===== -->
 <header class="nav">
   <div class="wrap">
-    <a class="nav-logo" href="#top" aria-label="One Revolution — inicio"><img src="images/logo.webp" alt="One Revolution"></a>
+    <a class="nav-logo" href="#top" aria-label="One Empire — inicio"><img class="ic" src="images/one-empire-icon-red.png" alt=""><img class="wm" src="images/one-empire-wordmark-white.png" alt="One Empire"></a>
     <span class="nav-meta"><b>24–25 OCT</b> · Los Ángeles, CA · 9:00 AM</span>
     <a class="btn btn-yellow" href="#boletos">Reservar lugar <span class="arrow">→</span></a>
   </div>
@@ -411,7 +414,7 @@
 <section class="hero dark">
   <div class="wrap">
     <div>
-      <span class="tag">Para dueños de empresas de construcción</span>
+      <span class="tag">One Empire presenta · Para dueños de constructoras</span>
       <h1 class="display">Ya sabes construir obras.<br><span class="outline">Ahora construye</span><br><span class="mark">la empresa.</span></h1>
       <p class="lead">Dos días en Los Ángeles para dueños de constructoras que ya facturan <strong>$30K–$50K+ al mes</strong> y están cansados de ser el que cotiza, supervisa, cobra y apaga incendios. Aquí aprendes a construir una empresa que crece <strong>sin que tú tengas que estar en cada obra.</strong></p>
       <div class="hero-ctas">
@@ -807,8 +810,8 @@
 
 <footer>
   <div class="wrap">
-    <img src="images/logo.webp" alt="One Revolution" loading="lazy">
-    <div>© <span id="year">2026</span> One Revolution · Los Ángeles, CA · 24 y 25 de octubre</div>
+    <img src="images/one-empire-logo-white.png" alt="One Empire" loading="lazy">
+    <div>© <span id="year">2026</span> One Empire · One Revolution · Los Ángeles, CA · 24 y 25 de octubre</div>
     <div><a href="#">Términos y condiciones</a> · <a href="#">Política de privacidad</a></div>
   </div>
 </footer>
