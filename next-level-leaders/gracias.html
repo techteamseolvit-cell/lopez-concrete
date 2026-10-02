@@ -73,6 +73,8 @@
   .topbar { background: var(--red); text-align: center; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 9px 16px; }
   .topbar .sep { opacity: .55; margin: 0 10px; }
   @media (max-width: 760px) { .topbar { width: 100vw; position: relative; left: 50%; margin-left: -50vw; } }
+  /* GoHighLevel embed: remove side padding/max-width from the builder wrappers around this page so it runs edge to edge */
+  :is(div, section, main):has(.topbar):not(.topbar) { padding-left: 0 !important; padding-right: 0 !important; margin-left: 0 !important; margin-right: 0 !important; max-width: none !important; width: 100% !important; }
   .nav { position: sticky; top: 0; z-index: 40; background: rgba(8,8,10,.86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
   .nav .wrap { height: 70px; display: flex; align-items: center; justify-content: center; }
   .brand { display: inline-flex; align-items: center; text-decoration: none; }
