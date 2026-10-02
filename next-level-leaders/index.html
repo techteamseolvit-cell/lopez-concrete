@@ -13,7 +13,7 @@
 <link rel="icon" href="images/one-empire-icon-red.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500..900;1,700..900&family=Manrope:wght@400..800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500..900&family=Manrope:wght@400..800&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
   :root {
     --black: #08080a;
@@ -27,7 +27,7 @@
     --silver-dark: #5f636b;
     --line: rgba(255,255,255,.1);
     --line-dark: rgba(8,8,10,.14);
-    --chrome: linear-gradient(180deg, #ffffff 0%, #e9ebee 38%, #9ea3ab 52%, #dfe2e6 70%, #ffffff 100%);
+    --chrome: linear-gradient(180deg, #ffffff 0%, #f5f6f8 35%, #dcdfe3 65%, #b9bec6 100%);
     --steel: linear-gradient(160deg, #f1f2f4 0%, #d7dade 55%, #c4c8ce 100%);
     --display: "Archivo", "Arial Black", sans-serif;
     --body: "Manrope", system-ui, sans-serif;
@@ -42,7 +42,7 @@
   .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
 
   /* ---------- type ---------- */
-  .h-xl, .h-lg, .h-md { font-family: var(--display); font-style: italic; font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; margin: 0; }
+  .h-xl, .h-lg, .h-md { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; margin: 0; }
   .h-xl { font-size: clamp(34px, 5vw, 64px); line-height: 1; }
   .h-lg { font-size: clamp(28px, 4.2vw, 52px); line-height: 1.02; }
   .h-md { font-size: clamp(21px, 2.5vw, 30px); line-height: 1.1; }
@@ -56,7 +56,7 @@
   .on-steel .lead { color: #33363c; }
 
   /* ---------- buttons ---------- */
-  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-family: var(--display); font-style: italic; font-weight: 900; font-size: 16px; letter-spacing: .02em; text-transform: uppercase; text-decoration: none; padding: 18px 34px; color: #fff; isolation: isolate; cursor: pointer; border: 0; background: none; }
+  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-family: var(--display); font-weight: 900; font-size: 16px; letter-spacing: .02em; text-transform: uppercase; text-decoration: none; padding: 18px 34px; color: #fff; isolation: isolate; cursor: pointer; border: 0; background: none; }
   .btn::before { content: ""; position: absolute; inset: 0; z-index: -1; transform: skewX(-14deg); transition: transform .2s ease, background .2s ease, border-color .2s; }
   .btn-red::before { background: linear-gradient(180deg, var(--red-bright), var(--red)); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
   .btn-red:hover::before { background: var(--red-bright); transform: skewX(-14deg) scale(1.04); }
@@ -107,7 +107,7 @@
   .key-art img { width: 100%; height: auto; clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%); }
   .countdown { display: flex; justify-content: center; gap: clamp(8px, 1.6vw, 18px); margin-top: 14px; }
   .countdown div { text-align: center; min-width: 62px; }
-  .countdown b { display: block; font-family: var(--display); font-style: italic; font-weight: 900; font-size: clamp(30px, 3.4vw, 42px); line-height: 1; }
+  .countdown b { display: block; font-family: var(--display); font-weight: 900; font-size: clamp(30px, 3.4vw, 42px); line-height: 1; }
   .countdown span { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--silver-mid); }
   .countdown .sep { font-family: var(--display); font-weight: 900; font-size: 30px; color: var(--red-bright); min-width: auto; line-height: 1.1; }
   .cd-label { text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--silver-mid); margin-top: 22px; }
@@ -137,17 +137,17 @@
 
   /* ---------- problem ---------- */
   .problem-top { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(28px, 5vw, 72px); align-items: end; margin-bottom: clamp(40px, 5vw, 64px); }
-  .problem-top p.big { font-family: var(--display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3vw, 38px); line-height: 1.05; margin: 0; padding-left: 22px; border-left: 5px solid var(--red); }
+  .problem-top p.big { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3vw, 38px); line-height: 1.05; margin: 0; padding-left: 22px; border-left: 5px solid var(--red); }
   .depends-label { font-weight: 800; font-size: 19px; margin: 0 0 18px; }
   .depends { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
   .dep { background: var(--black); color: #fff; padding: 26px 20px 24px; position: relative; overflow: hidden; }
   .dep::after { content: ""; position: absolute; right: -34px; bottom: -34px; width: 90px; height: 90px; border: 1px solid rgba(255,255,255,.08); transform: rotate(45deg); }
   .dep svg { width: 34px; height: 34px; stroke: var(--red-bright); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 18px; }
-  .dep p { margin: 0; font-family: var(--display); font-style: italic; font-weight: 800; text-transform: uppercase; font-size: 17px; line-height: 1.15; }
+  .dep p { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 17px; line-height: 1.15; }
   .problem-end { margin-top: clamp(44px, 5vw, 68px); display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; }
   .problem-end .bar { width: 6px; align-self: stretch; background: var(--red); transform: skewX(-12deg); }
   .problem-end p { margin: 0 0 10px; font-size: clamp(18px, 1.8vw, 22px); font-weight: 600; }
-  .problem-end p.punch { font-family: var(--display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3vw, 38px); line-height: 1.05; margin-top: 18px; }
+  .problem-end p.punch { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3vw, 38px); line-height: 1.05; margin-top: 18px; }
 
   /* ---------- vsl ---------- */
   .vsl { max-width: 960px; margin: 0 auto; }
@@ -176,15 +176,15 @@
   .path figure { margin: 0; background: var(--black); padding: 10px; }
   .path img { width: 100%; height: auto; }
   .path-foot { margin-top: clamp(40px, 5vw, 56px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
-  .path-foot p { margin: 0; max-width: 620px; font-family: var(--display); font-style: italic; font-weight: 800; text-transform: uppercase; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.1; }
+  .path-foot p { margin: 0; max-width: 620px; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.1; }
 
   /* ---------- learn ---------- */
   .learn-intro { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 72px); align-items: end; margin-bottom: clamp(40px, 5vw, 60px); }
   .learn { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .learn div { padding: 30px 18px; border-left: 1px solid var(--line); }
   .learn div:first-child { border-left: 0; }
-  .learn b { display: block; font-family: var(--display); font-style: italic; font-weight: 900; font-size: 46px; line-height: 1; margin-bottom: 14px; }
-  .learn span { font-family: var(--display); font-style: italic; font-weight: 800; text-transform: uppercase; font-size: 18px; line-height: 1.15; display: block; }
+  .learn b { display: block; font-family: var(--display); font-weight: 900; font-size: 46px; line-height: 1; margin-bottom: 14px; }
+  .learn span { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 18px; line-height: 1.15; display: block; }
   .learn-out { text-align: center; margin-top: 44px; }
 
   /* ---------- fit ---------- */
@@ -204,18 +204,18 @@
   .testi { margin: 0; background: var(--carbon-2); border-top: 3px solid var(--red); display: flex; flex-direction: column; }
   .testi video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
   .testi blockquote { margin: 0; padding: 20px 20px 24px; color: #d4d6db; font-size: 15px; line-height: 1.5; }
-  .testi blockquote b { display: block; margin-top: 8px; font-family: var(--display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: 15px; line-height: 1.15; color: #fff; }
+  .testi blockquote b { display: block; margin-top: 8px; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: 15px; line-height: 1.15; color: #fff; }
   .testi .stars { color: var(--silver); letter-spacing: 3px; font-size: 13px; margin-bottom: 8px; }
 
   /* ---------- experience ---------- */
   .xp-wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
-  .badge2 { display: inline-block; font-family: var(--display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: 14px; letter-spacing: .08em; color: #fff; padding: 8px 18px; position: relative; isolation: isolate; margin-bottom: 22px; }
+  .badge2 { display: inline-block; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: 14px; letter-spacing: .08em; color: #fff; padding: 8px 18px; position: relative; isolation: isolate; margin-bottom: 22px; }
   .badge2::before { content: ""; position: absolute; inset: 0; background: var(--red); transform: skewX(-14deg); z-index: -1; }
   .xp-list { list-style: none; padding: 0; margin: 0; }
   .xp-list li { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: 18px; padding: 20px 0; border-top: 1px solid var(--line-dark); }
   .xp-list li:last-child { border-bottom: 1px solid var(--line-dark); }
-  .xp-list b { font-family: var(--display); font-style: italic; font-weight: 900; font-size: 34px; color: var(--red); line-height: 1; }
-  .xp-list span { font-family: var(--display); font-style: italic; font-weight: 800; text-transform: uppercase; font-size: clamp(19px, 2vw, 24px); line-height: 1.1; }
+  .xp-list b { font-family: var(--display); font-weight: 900; font-size: 34px; color: var(--red); line-height: 1; }
+  .xp-list span { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(19px, 2vw, 24px); line-height: 1.1; }
   .xp-more { margin-top: 40px; padding: clamp(26px, 3.4vw, 40px); background: var(--black); color: #fff; }
   .xp-more small { display: block; font-size: 17px; color: var(--silver-mid); margin-bottom: 6px; }
   .xp-more p { margin: 0; font-size: clamp(18px, 1.8vw, 21px); }
@@ -228,7 +228,7 @@
   .speaker img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 12%; transition: transform .5s ease; }
   .speaker:hover img { transform: scale(1.04); }
   .speaker figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 14px 14px; background: linear-gradient(transparent, rgba(8,8,10,.95)); }
-  .speaker figcaption b { display: block; font-family: var(--display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: clamp(15px, 1.5vw, 19px); line-height: 1.05; }
+  .speaker figcaption b { display: block; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(15px, 1.5vw, 19px); line-height: 1.05; }
   .speaker figcaption span { display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); }
   .speaker::after { content: ""; position: absolute; left: 0; top: 0; width: 4px; height: 0; background: var(--red-bright); transition: height .4s ease; }
   .speaker:hover::after { height: 100%; }
