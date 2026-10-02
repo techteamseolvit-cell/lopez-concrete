@@ -223,12 +223,12 @@
   .xp-more .close em { font-style: normal; color: var(--silver-mid); }
 
   /* ---------- speakers ---------- */
-  .speakers { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2vw, 22px); }
+  .speakers { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(12px, 1.6vw, 18px); }
   .speaker { margin: 0; position: relative; overflow: hidden; background: linear-gradient(180deg, #1c1c21, #0b0b0d); }
   .speaker img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 12%; transition: transform .5s ease; }
   .speaker:hover img { transform: scale(1.04); }
-  .speaker figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 20px 18px; background: linear-gradient(transparent, rgba(8,8,10,.95)); }
-  .speaker figcaption b { display: block; font-family: var(--display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: 22px; line-height: 1; }
+  .speaker figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 14px 14px; background: linear-gradient(transparent, rgba(8,8,10,.95)); }
+  .speaker figcaption b { display: block; font-family: var(--display); font-style: italic; font-weight: 900; text-transform: uppercase; font-size: clamp(15px, 1.5vw, 19px); line-height: 1.05; }
   .speaker figcaption span { display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); }
   .speaker::after { content: ""; position: absolute; left: 0; top: 0; width: 4px; height: 0; background: var(--red-bright); transition: height .4s ease; }
   .speaker:hover::after { height: 100%; }
@@ -626,6 +626,7 @@
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a3313a65408771d16550b21.png" alt="Hugo Pérez" loading="lazy"><figcaption><b>Hugo Pérez</b><span>Speaker</span></figcaption></figure>
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69db2e3ad7871cddf76f2e78.png" alt="Mónica Tuccella" loading="lazy"><figcaption><b>Mónica Tuccella</b><span>Speaker</span></figcaption></figure>
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69db2e3ad7871cddf76f2e7b.png" alt="Darwin Ontiveros" loading="lazy"><figcaption><b>Darwin Ontiveros</b><span>Speaker</span></figcaption></figure>
+      <figure class="speaker reveal"><img src="images/miguel-castellanos.webp" alt="Miguel Castellanos" loading="lazy"><figcaption><b>Miguel Castellanos</b><span>Speaker</span></figcaption></figure>
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69f4f5a7bbacf0a056169dc2.png" alt="Idalia Segovia" loading="lazy"><figcaption><b>Idalia Segovia</b><span>Speaker</span></figcaption></figure>
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69db2e3a982fd67a3581887f.png" alt="JT Jesús Rojo" loading="lazy"><figcaption><b>JT Jesús Rojo</b><span>Speaker</span></figcaption></figure>
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69db2e3a982fd67a35818880.png" alt="Ruben Rojas" loading="lazy"><figcaption><b>Ruben Rojas</b><span>Speaker</span></figcaption></figure>
