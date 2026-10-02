@@ -43,9 +43,9 @@
 
   /* ---------- type ---------- */
   .h-xl, .h-lg, .h-md { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; margin: 0; }
-  .h-xl { font-size: clamp(30px, 3.8vw, 50px); line-height: 1.02; }
-  .h-lg { font-size: clamp(26px, 3.2vw, 40px); line-height: 1.05; }
-  .h-md { font-size: clamp(21px, 2.5vw, 30px); line-height: 1.1; }
+  .h-xl { font-size: clamp(30px, 3.8vw, 50px); line-height: 1.15; }
+  .h-lg { font-size: clamp(26px, 3.2vw, 40px); line-height: 1.15; }
+  .h-md { font-size: clamp(21px, 2.5vw, 30px); line-height: 1.18; }
   .chrome { background: var(--chrome); background-size: 100% 1lh; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   .red { color: var(--red-bright); }
   .on-steel .red { color: var(--red); }
@@ -105,7 +105,8 @@
   .countdown b { display: block; font-family: var(--display); font-weight: 900; font-size: clamp(30px, 3.4vw, 42px); line-height: 1; }
   .countdown span { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--silver-mid); }
   .countdown .sep { font-family: var(--display); font-weight: 900; font-size: 30px; color: var(--red-bright); min-width: auto; line-height: 1.1; }
-  .cd-label { text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--silver-mid); margin-top: 22px; }
+  .cd-label { text-align: center; font-family: var(--display); font-weight: 800; font-size: clamp(15px, 1.4vw, 18px); letter-spacing: .04em; text-transform: uppercase; color: #fff; margin-top: 24px; }
+  .cd-label span { color: var(--red-bright); }
 
   /* ---------- sections ---------- */
   section { position: relative; }
@@ -124,7 +125,7 @@
 
   /* ---------- problem ---------- */
   .problem-top { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(28px, 5vw, 72px); align-items: end; margin-bottom: clamp(40px, 5vw, 64px); }
-  .problem-top p.big { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3vw, 38px); line-height: 1.05; margin: 0; padding-left: 22px; border-left: 5px solid var(--red); }
+  .problem-top p.big { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.35; margin: 0; padding-left: 22px; border-left: 5px solid var(--red); }
   .depends-label { font-weight: 800; font-size: 19px; margin: 0 0 18px; }
   .depends { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
   .dep { background: var(--black); color: #fff; padding: 26px 20px 24px; position: relative; overflow: hidden; }
@@ -133,7 +134,7 @@
   .dep p { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 17px; line-height: 1.15; }
   .problem-end { margin-top: clamp(44px, 5vw, 68px); }
   .problem-end p { margin: 0 0 10px; font-size: clamp(18px, 1.8vw, 22px); font-weight: 600; }
-  .problem-end p.punch { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3vw, 38px); line-height: 1.05; margin-top: 18px; }
+  .problem-end p.punch { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3vw, 38px); line-height: 1.15; margin-top: 18px; }
 
   /* ---------- vsl ---------- */
   .vsl { max-width: 960px; margin: 0 auto; }
@@ -245,7 +246,13 @@
   /* ---------- responsive ---------- */
   @media (max-width: 1024px) {
     .hero .wrap, .final-grid, .xp-wrap, .problem-top, .learn-intro { grid-template-columns: 1fr; }
-    .key-art-col { max-width: 560px; width: 100%; margin: 0 auto; order: -1; }
+    .hero { padding-top: 0; }
+    .key-art-col { order: -1; width: auto; max-width: none; margin: 0 calc(-1 * clamp(16px, 4vw, 40px)); }
+    .key-art { position: relative; }
+    .key-art img { width: 100%; height: auto; clip-path: none; }
+    .key-art::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 28%; background: linear-gradient(transparent, var(--black)); pointer-events: none; }
+    .key-art-col .cd-label, .key-art-col .countdown { padding: 0 16px; }
+    .key-art-col .cd-label { margin-top: 4px; }
     .depends { grid-template-columns: repeat(3, 1fr); }
     .learn { grid-template-columns: repeat(3, 1fr); }
     .learn div:nth-child(4) { border-left: 0; }
@@ -342,7 +349,7 @@
     </div>
     <div class="key-art-col">
       <div class="key-art"><img src="images/hero-next-level-leaders.webp" alt="Next Level Leaders con Hugo Pérez y speakers invitados" width="1200" height="1169" fetchpriority="high"></div>
-      <div class="cd-label">Faltan para arrancar</div>
+      <div class="cd-label">Faltan para que tu empresa <span>suba de nivel</span></div>
       <div class="countdown" data-countdown>
         <div><b data-d>--</b><span>Días</span></div><div class="sep">:</div>
         <div><b data-h>--</b><span>Horas</span></div><div class="sep">:</div>
