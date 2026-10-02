@@ -43,8 +43,8 @@
 
   /* ---------- type ---------- */
   .h-xl, .h-lg, .h-md { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; margin: 0; }
-  .h-xl { font-size: clamp(34px, 5vw, 64px); line-height: 1; }
-  .h-lg { font-size: clamp(28px, 4.2vw, 52px); line-height: 1.02; }
+  .h-xl { font-size: clamp(30px, 3.8vw, 50px); line-height: 1.02; }
+  .h-lg { font-size: clamp(26px, 3.2vw, 40px); line-height: 1.05; }
   .h-md { font-size: clamp(21px, 2.5vw, 30px); line-height: 1.1; }
   .chrome { background: var(--chrome); background-size: 100% 1lh; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   .red { color: var(--red-bright); }
@@ -56,7 +56,7 @@
   .on-steel .lead { color: #33363c; }
 
   /* ---------- buttons ---------- */
-  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-family: var(--display); font-weight: 900; font-size: 16px; letter-spacing: .02em; text-transform: uppercase; text-decoration: none; padding: 18px 34px; color: #fff; isolation: isolate; cursor: pointer; border: 0; background: none; }
+  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-family: var(--display); font-weight: 900; font-size: 12px; letter-spacing: .03em; text-transform: uppercase; text-decoration: none; padding: 13px 24px; color: #fff; isolation: isolate; cursor: pointer; border: 0; background: none; }
   .btn::before { content: ""; position: absolute; inset: 0; z-index: -1; transform: skewX(-14deg); transition: transform .2s ease, background .2s ease, border-color .2s; }
   .btn-red::before { background: linear-gradient(180deg, var(--red-bright), var(--red)); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
   .btn-red:hover::before { background: var(--red-bright); transform: skewX(-14deg) scale(1.04); }
@@ -78,24 +78,19 @@
   .nav { position: sticky; top: 0; z-index: 40; background: rgba(8,8,10,.86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
   .nav .wrap { height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
   .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
-  .brand .ic { height: 32px; width: auto; }
-  .brand .wm { height: 16px; width: auto; }
+  .brand img { height: 50px; width: auto; }
   .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 600; color: var(--silver-mid); }
   .nav-links a { text-decoration: none; transition: color .2s; }
   .nav-links a:hover { color: #fff; }
-  .nav .btn { padding: 12px 22px; font-size: 13px; }
+  .nav .btn { padding: 9px 16px; font-size: 11px; }
 
   /* ---------- hero ---------- */
   .hero { position: relative; padding: clamp(48px, 7vw, 90px) 0 clamp(64px, 8vw, 110px); background: radial-gradient(ellipse 60% 60% at 85% 40%, rgba(193,18,31,.2), transparent 70%), var(--black); overflow: hidden; }
-  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .hero-text { display: flex; flex-direction: column; justify-content: center; }
   .hero .kicker { margin-bottom: 22px; }
-  .hero h1 { margin-bottom: 22px; font-size: clamp(32px, 4.3vw, 56px); }
+  .hero h1 { margin-bottom: 20px; font-size: clamp(30px, 3.3vw, 44px); }
   .hero .lead { margin-bottom: 28px; }
-  .seats { max-width: 460px; margin-bottom: 30px; }
-  .seats-top { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--silver-mid); margin-bottom: 8px; }
-  .seats-top b { color: #fff; }
-  .seats-bar { height: 8px; background: var(--carbon-2); transform: skewX(-20deg); overflow: hidden; }
-  .seats-bar span { display: block; height: 100%; width: 96%; background: linear-gradient(90deg, var(--red-deep), var(--red-bright)); }
   .hero-ctas { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 40px; }
   .facts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
   .facts div { padding: 16px 16px 0 0; }
@@ -123,16 +118,8 @@
   .head h2 { margin-bottom: 18px; }
   .head.center .lead { margin: 0 auto; }
 
-  /* ---------- registration ---------- */
-  .register { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
-  .video-box { position: relative; background: #000; }
-  .video-box video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
-  .video-box::before { content: ""; position: absolute; left: -10px; top: -10px; width: 90px; height: 4px; background: var(--red); transform: skewX(-30deg); }
-  .reg-points { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 14px; }
-  .reg-points li { display: flex; gap: 14px; align-items: flex-start; color: #d4d6db; }
-  .reg-points li::before { content: ""; flex: 0 0 10px; height: 10px; margin-top: 9px; background: var(--red-bright); transform: skewX(-20deg); }
-  .form-card { background: #fff; color: var(--black); padding: 8px; box-shadow: 0 30px 80px -30px rgba(193,18,31,.5); }
-  .form-card iframe { width: 100%; min-height: 1040px; border: none; display: block; }
+  .form-card { border-radius: 15px; box-shadow: 0 30px 80px -30px rgba(193,18,31,.5); }
+  .form-card iframe { width: 100%; min-height: 600px; border: none; display: block; }
   .form-note { text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--silver-mid); margin-top: 14px; }
 
   /* ---------- problem ---------- */
@@ -173,8 +160,11 @@
 
   /* ---------- path ---------- */
   .path { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 26px); }
-  .path figure { margin: 0; background: var(--black); padding: 10px; }
-  .path img { width: 100%; height: auto; }
+  .step { background: var(--black); color: #fff; padding: clamp(26px, 3vw, 38px); position: relative; overflow: hidden; }
+  .step::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--red-bright), transparent); }
+  .step-n { display: block; font-family: var(--display); font-weight: 900; font-size: 56px; line-height: 1; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 18px; }
+  .step h3 { margin-bottom: 12px; }
+  .step p { margin: 0; color: #c9cbd1; font-size: 16px; }
   .path-foot { margin-top: clamp(40px, 5vw, 56px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
   .path-foot p { margin: 0; max-width: 620px; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.1; }
 
@@ -243,8 +233,8 @@
   .final-grid .countdown { justify-content: flex-start; margin-top: 34px; }
 
   footer { border-top: 1px solid var(--line); padding: 40px 0 110px; color: var(--silver-dark); font-size: 14px; }
-  footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
-  footer img { height: 58px; width: auto; }
+  footer .wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+  footer img { height: 72px; width: auto; }
 
   .sticky-cta { display: none; }
 
@@ -255,8 +245,8 @@
 
   /* ---------- responsive ---------- */
   @media (max-width: 1024px) {
-    .hero .wrap, .register, .final-grid, .xp-wrap, .problem-top, .learn-intro { grid-template-columns: 1fr; }
-    .key-art-col { max-width: 560px; }
+    .hero .wrap, .final-grid, .xp-wrap, .problem-top, .learn-intro { grid-template-columns: 1fr; }
+    .key-art-col { max-width: 560px; width: 100%; margin: 0 auto; order: -1; }
     .depends { grid-template-columns: repeat(3, 1fr); }
     .learn { grid-template-columns: repeat(3, 1fr); }
     .learn div:nth-child(4) { border-left: 0; }
@@ -269,13 +259,16 @@
     .topbar { font-size: 10px; letter-spacing: .08em; }
     .topbar .hide-sm { display: none; }
     .nav .wrap { height: 60px; }
-    .brand .ic { height: 26px; } .brand .wm { height: 13px; }
+    .brand img { height: 40px; }
     .nav .btn { display: none; }
     .facts { grid-template-columns: 1fr; }
     .facts div { padding: 12px 0; border-bottom: 1px solid var(--line); }
     .depends { grid-template-columns: 1fr 1fr; }
     .ba, .fit, .path, .testis { grid-template-columns: 1fr; }
     .learn { grid-template-columns: 1fr 1fr; }
+    .learn div { padding: 22px 14px; }
+    .learn b { font-size: 34px; margin-bottom: 10px; }
+    .learn span { font-size: 14px; }
     .learn div { border-left: 0 !important; border-top: 1px solid var(--line); }
     .learn div:nth-child(even) { border-left: 1px solid var(--line) !important; }
     .speakers { grid-template-columns: 1fr 1fr; }
@@ -286,7 +279,7 @@
     .sticky-cta { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: rgba(8,8,10,.96); border-top: 2px solid var(--red); padding: 10px 16px; align-items: center; justify-content: space-between; gap: 12px; }
     .sticky-cta small { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--silver-mid); line-height: 1.35; }
     .sticky-cta small b { color: #fff; display: block; }
-    .sticky-cta .btn { padding: 12px 20px; font-size: 13px; }
+    .sticky-cta .btn { padding: 9px 14px; font-size: 11px; }
   }
 </style>
 </head>
@@ -296,7 +289,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="One Empire — inicio"><img class="ic" src="images/one-empire-icon-red.png" alt=""><img class="wm" src="images/one-empire-wordmark-white.png" alt="One Empire"></a>
+    <a class="brand" href="#top" aria-label="One Empire — inicio"><img src="images/one-empire-logo-red.png" alt="One Empire"></a>
     <nav class="nav-links" aria-label="Secciones">
       <a href="#evento">El evento</a>
       <a href="#aprenderas">Qué aprenderás</a>
@@ -313,14 +306,10 @@
 <section class="hero">
   <div class="streaks" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap">
-    <div>
+    <div class="hero-text">
       <span class="kicker">Para dueños de constructoras en California</span>
       <h1 class="h-xl"><span class="chrome">El evento para dueños latinos de la construcción en California que quieren </span><span class="red">crecer sin cargar con todo</span></h1>
       <p class="lead">Dos días en Los Ángeles para aprender a armar el equipo, los sistemas y los procesos que tu empresa necesita para crecer en uno de los mercados más competitivos del país.</p>
-      <div class="seats" aria-label="96% de los lugares reservados">
-        <div class="seats-top"><span>Lugares reservados</span><b>96%</b></div>
-        <div class="seats-bar"><span></span></div>
-      </div>
       <div class="hero-ctas">
         <a class="btn btn-red" href="#registro">Aparta mi lugar gratis <span class="arr">→</span></a>
         <a class="btn btn-line" href="#evento">Conoce el evento</a>
@@ -340,50 +329,6 @@
         <div><b data-m>--</b><span>Min</span></div><div class="sep">:</div>
         <div><b data-s>--</b><span>Seg</span></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Registration (video + form) ===== -->
-<section class="carbon pad" id="registro">
-  <div class="wrap register">
-    <div class="reveal">
-      <span class="kicker">Registro sin costo</span>
-      <h2 class="h-lg chrome" style="margin:18px 0">Aparta tu silla en Los Ángeles</h2>
-      <p class="lead">Mira el video y regístrate: en dos días vas a salir con claridad sobre lo que tu constructora necesita para dar el siguiente paso.</p>
-      <div class="video-box" style="margin-top:30px">
-        <video controls playsinline preload="none" poster="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a32e6cf2c211b8ce6ff8aec.png">
-          <source src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a39a3b1dfe62db453f3dcd2.mov">
-        </video>
-      </div>
-      <ul class="reg-points">
-        <li>En persona en Los Ángeles · 24 y 25 de octubre · desde las 9:00 AM</li>
-        <li>La dirección y los recordatorios te llegan por WhatsApp</li>
-        <li>Cero costo · cero spam · dos días completos</li>
-      </ul>
-    </div>
-    <div class="reveal">
-      <div class="form-card">
-        <iframe
-          src="https://api.leadconnectorhq.com/widget/form/fBqIYq7y6ACmeD72Nck3"
-          style="width:100%;height:100%;border:none;overflow:hidden;"
-          scrolling="no"
-          id="inline-fBqIYq7y6ACmeD72Nck3"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Next Level Leaders - Registro"
-          data-height="1040"
-          data-layout-iframe-id="inline-fBqIYq7y6ACmeD72Nck3"
-          data-form-id="fBqIYq7y6ACmeD72Nck3"
-          title="Next Level Leaders - Registro">
-        </iframe>
-      </div>
-      <p class="form-note">Sin costo · lugares contados</p>
     </div>
   </div>
 </section>
@@ -499,9 +444,21 @@
       <h2 class="h-lg" style="margin-top:18px">Tres pasos para que tu constructora <span class="red">suba de nivel</span></h2>
     </div>
     <div class="path">
-      <figure class="reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_768/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a35fe43c50697c411929648.png" alt="El camino Next Level Leaders, etapa 1" loading="lazy"></figure>
-      <figure class="reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_768/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a35fe43c50697c411929652.png" alt="El camino Next Level Leaders, etapa 2" loading="lazy"></figure>
-      <figure class="reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_768/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a35fe43c50697c41192964d.png" alt="El camino Next Level Leaders, etapa 3" loading="lazy"></figure>
+      <div class="step reveal">
+        <span class="step-n">01</span>
+        <h3 class="h-md">Llena tu agenda de proyectos</h3>
+        <p>Deja de esperar a que suene el teléfono. Aprende a atraer clientes de forma constante y a cerrar contratos con seguridad, sin regalar tu trabajo.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-n">02</span>
+        <h3 class="h-md">Arma el equipo y los sistemas</h3>
+        <p>Pon procesos claros y forma a la gente correcta para que la obra avance aunque tú no estés ahí todo el día.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-n">03</span>
+        <h3 class="h-md">Dirige como dueño de empresa</h3>
+        <p>Sal de la operación del día a día y enfócate en lo que hace crecer tu constructora: decisiones, números y visión.</p>
+      </div>
     </div>
     <div class="path-foot reveal">
       <p>En dos días trabajarás cada uno de estos pasos para <span class="red">llevarlos a tu empresa</span> desde el lunes siguiente.</p>
@@ -637,8 +594,8 @@
   </div>
 </section>
 
-<!-- ===== Final CTA ===== -->
-<section class="carbon pad">
+<!-- ===== Final CTA + registration ===== -->
+<section class="carbon pad" id="registro">
   <div class="wrap final-grid">
     <div class="reveal">
       <span class="kicker">Tu decisión</span>
@@ -660,23 +617,25 @@
     <div class="reveal">
       <div class="form-card">
         <iframe
-          src="https://api.leadconnectorhq.com/widget/form/fBqIYq7y6ACmeD72Nck3"
-          style="width:100%;height:100%;border:none;overflow:hidden;"
-          scrolling="no"
-          id="inline-fBqIYq7y6ACmeD72Nck3-2"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Next Level Leaders - Registro"
-          data-height="1040"
-          data-layout-iframe-id="inline-fBqIYq7y6ACmeD72Nck3-2"
-          data-form-id="fBqIYq7y6ACmeD72Nck3"
-          title="Next Level Leaders - Registro">
-        </iframe>
+    src="https://api.leadconnectorhq.com/widget/form/YsfOzAt3HF6k6tmlmNL0"
+    style="width:100%;height:100%;border:none;border-radius:15px"
+    id="inline-YsfOzAt3HF6k6tmlmNL0" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="HUGO - Los Ángeles, CA - Evento presencial"
+    data-height="984"
+    data-layout-iframe-id="inline-YsfOzAt3HF6k6tmlmNL0"
+    data-form-id="YsfOzAt3HF6k6tmlmNL0"
+    data-cookie-consent="true"
+    data-cookie-consent-provider="auto"
+    title="HUGO - Los Ángeles, CA - Evento presencial"
+        >
+</iframe>
       </div>
       <p class="form-note">Sin costo · sin spam · 2 días en persona</p>
     </div>
@@ -687,7 +646,7 @@
 
 <footer>
   <div class="wrap">
-    <img src="images/one-empire-logo-white.png" alt="One Empire" loading="lazy">
+    <img src="images/one-empire-logo-red.png" alt="One Empire" loading="lazy">
     <div>© <span id="year">2026</span> One Empire · Next Level Leaders · Los Ángeles, CA</div>
   </div>
 </footer>
