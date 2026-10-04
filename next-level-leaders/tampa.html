@@ -197,6 +197,12 @@
   .testis { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 22px); }
   .testi { margin: 0; background: var(--carbon-2); border-top: 3px solid var(--red); display: flex; flex-direction: column; }
   .testi video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
+  .loom { position: relative; display: block; width: 100%; aspect-ratio: 16/9; padding: 0; border: 0; background: radial-gradient(ellipse at center, #26262c, #0b0b0d); cursor: pointer; overflow: hidden; }
+  .loom img { width: 100%; height: 100%; object-fit: cover; }
+  .loom iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .loom-play { position: absolute; left: 50%; top: 50%; width: 58px; height: 58px; transform: translate(-50%, -50%); background: linear-gradient(180deg, var(--red-bright), var(--red)); border-radius: 50%; box-shadow: 0 10px 30px -6px rgba(224,30,43,.7); transition: transform .2s ease; }
+  .loom-play::after { content: ""; position: absolute; left: 23px; top: 18px; border-style: solid; border-width: 11px 0 11px 17px; border-color: transparent transparent transparent #fff; }
+  .loom:hover .loom-play { transform: translate(-50%, -50%) scale(1.08); }
   .testi blockquote { margin: 0; padding: 20px 20px 24px; color: #d4d6db; font-size: 15px; line-height: 1.5; }
   .testi blockquote b { display: block; margin-top: 8px; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: 15px; line-height: 1.15; color: #fff; }
   .testi .stars { color: var(--silver); letter-spacing: 3px; font-size: 13px; margin-bottom: 8px; }
@@ -562,46 +568,22 @@
     <div class="testis">
 
       <figure class="testi reveal">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-          <iframe
-            src="https://www.loom.com/embed/8c361fa24e49486492264ece30db6b18?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
-          </iframe>
-        </div>
+        <button type="button" class="loom" data-loom="8c361fa24e49486492264ece30db6b18" aria-label="Reproducir testimonio"><img src="https://cdn.loom.com/sessions/thumbnails/8c361fa24e49486492264ece30db6b18-00001.jpg" alt="" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('-00001.jpg','-with-play.gif')}else{this.remove()}"><span class="loom-play" aria-hidden="true"></span></button>
         <blockquote><div class="stars">★★★★★</div>"Pensaba que el problema era mi equipo<b>pero realmente era que yo no tenía la información correcta"</b></blockquote>
       </figure>
 
       <figure class="testi reveal">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-          <iframe
-            src="https://www.loom.com/embed/e1443d2d4e1f4001b41f70f147317ccb?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
-          </iframe>
-        </div>
+        <button type="button" class="loom" data-loom="e1443d2d4e1f4001b41f70f147317ccb" aria-label="Reproducir testimonio"><img src="https://cdn.loom.com/sessions/thumbnails/e1443d2d4e1f4001b41f70f147317ccb-00001.jpg" alt="" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('-00001.jpg','-with-play.gif')}else{this.remove()}"><span class="loom-play" aria-hidden="true"></span></button>
         <blockquote><div class="stars">★★★★★</div>"Vi otras personas que quieren crecer<b>y tienen la misma mentalidad y metas que yo"</b></blockquote>
       </figure>
 
       <figure class="testi reveal">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-          <iframe
-            src="https://www.loom.com/embed/b1f5e4a72eb747e49cd0962b270cd076?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
-          </iframe>
-        </div>
+        <button type="button" class="loom" data-loom="b1f5e4a72eb747e49cd0962b270cd076" aria-label="Reproducir testimonio"><img src="https://cdn.loom.com/sessions/thumbnails/b1f5e4a72eb747e49cd0962b270cd076-00001.jpg" alt="" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('-00001.jpg','-with-play.gif')}else{this.remove()}"><span class="loom-play" aria-hidden="true"></span></button>
         <blockquote><div class="stars">★★★★★</div>"En un punto quisiera tener un equipo así<b>con ese entusiasmo, energía y valores"</b></blockquote>
       </figure>
 
       <figure class="testi reveal">
-        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-          <iframe
-            src="https://www.loom.com/embed/70ff204968e04351b896ed805740143b?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
-            frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
-          </iframe>
-        </div>
+        <button type="button" class="loom" data-loom="70ff204968e04351b896ed805740143b" aria-label="Reproducir testimonio"><img src="https://cdn.loom.com/sessions/thumbnails/70ff204968e04351b896ed805740143b-00001.jpg" alt="" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('-00001.jpg','-with-play.gif')}else{this.remove()}"><span class="loom-play" aria-hidden="true"></span></button>
         <blockquote><div class="stars">★★★★★</div>"Sé que quieres que todo sea perfecto<b>pero eso realmente es lo que te va a detener"</b></blockquote>
       </figure>
 
@@ -729,6 +711,20 @@
     }
     tick(); setInterval(tick, 1000);
   })();
+
+  // Loom testimonials: show the cover, load the player only when clicked
+  document.querySelectorAll(".loom[data-loom]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var box = document.createElement("div");
+      box.className = "loom";
+      var f = document.createElement("iframe");
+      f.src = "https://www.loom.com/embed/" + b.getAttribute("data-loom") + "?autoplay=1&hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true";
+      f.allow = "autoplay; fullscreen; picture-in-picture";
+      f.allowFullscreen = true;
+      box.appendChild(f);
+      b.replaceWith(box);
+    }, { once: true });
+  });
 
   // Reveal on scroll
   (function () {
