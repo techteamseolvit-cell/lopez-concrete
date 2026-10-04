@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Next Level Leaders | 24 y 25 de Octubre · Tampa, FL</title>
+<meta name="description" content="Dos días en Tampa para dueños latinos de empresas de construcción en Florida que quieren crecer sin cargar con todo. Evento presencial gratuito: 24 y 25 de octubre, 9:00 AM.">
+<meta name="keywords" content="Liderazgo para empresas de construcción">
+<meta name="author" content="Hugo Pérez">
+<meta property="og:title" content="Next Level Leaders | Liderazgo para empresas de construcción">
+<meta property="og:description" content="Evento presencial gratuito · 24 y 25 de octubre · Tampa, FL · 9:00 AM.">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6ac2adfe22bc27f58f583a87.png">
+<link rel="icon" href="images/one-empire-icon-red.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500..900&family=Manrope:wght@400..800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root {
+    --black: #08080a;
+    --carbon: #111114;
+    --carbon-2: #1a1a1f;
+    --red: #c1121f;
+    --red-bright: #e01e2b;
+    --red-deep: #7d0b14;
+    --silver: #c9ccd2;
+    --silver-mid: #a3a7af;
+    --silver-dark: #5f636b;
+    --line: rgba(255,255,255,.1);
+    --line-dark: rgba(8,8,10,.14);
+    --chrome: linear-gradient(180deg, #ffffff 0%, #f5f6f8 35%, #dcdfe3 65%, #b9bec6 100%);
+    --steel: linear-gradient(160deg, #f1f2f4 0%, #d7dade 55%, #c4c8ce 100%);
+    --display: "Archivo", "Arial Black", sans-serif;
+    --body: "Manrope", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+    --wrap: 1180px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--black); color: #fff; font-family: var(--body); font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img, video { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+
+  /* ---------- type ---------- */
+  .h-xl, .h-lg, .h-md { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; margin: 0; }
+  .h-xl { font-size: clamp(30px, 3.8vw, 50px); line-height: 1.15; }
+  .h-lg { font-size: clamp(26px, 3.2vw, 40px); line-height: 1.15; }
+  .h-md { font-size: clamp(21px, 2.5vw, 30px); line-height: 1.18; }
+  .chrome { background: var(--chrome); background-size: 100% 1lh; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .red { color: var(--red-bright); }
+  .on-steel .red { color: var(--red); }
+  .kicker { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--red-bright); display: inline-flex; align-items: center; gap: 12px; }
+  .kicker::before { content: ""; width: 34px; height: 2px; background: currentColor; transform: skewX(-30deg); }
+  .on-steel .kicker { color: var(--red); }
+  .lead { font-size: clamp(17px, 1.5vw, 20px); color: #c9cbd1; max-width: 660px; margin: 0; }
+  .on-steel .lead { color: #33363c; }
+
+  /* ---------- buttons ---------- */
+  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-family: var(--display); font-weight: 900; font-size: 12px; letter-spacing: .03em; text-transform: uppercase; text-decoration: none; padding: 13px 24px; color: #fff; isolation: isolate; cursor: pointer; border: 0; background: none; }
+  .btn::before { content: ""; position: absolute; inset: 0; z-index: -1; transform: skewX(-14deg); transition: transform .2s ease, background .2s ease, border-color .2s; }
+  .btn-red::before { background: linear-gradient(180deg, var(--red-bright), var(--red)); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
+  .btn-red:hover::before { background: var(--red-bright); transform: skewX(-14deg) scale(1.04); }
+  .btn-line::before { border: 1.5px solid var(--silver-mid); }
+  .btn-line:hover::before { border-color: #fff; }
+  .btn .arr { font-style: normal; transition: transform .2s; }
+  .btn:hover .arr { transform: translateX(4px); }
+
+  /* ---------- decorative streaks (from key art) ---------- */
+  .streaks { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .streaks i { position: absolute; height: 1px; width: 60%; background: linear-gradient(90deg, transparent, var(--red-bright), transparent); transform: rotate(-28deg); opacity: .5; }
+  .streaks i:nth-child(1) { top: 18%; left: -18%; }
+  .streaks i:nth-child(2) { top: 62%; right: -24%; width: 70%; opacity: .32; }
+  .streaks i:nth-child(3) { top: 88%; left: 30%; width: 40%; opacity: .22; }
+
+  /* ---------- topbar + nav ---------- */
+  .topbar { background: var(--red); text-align: center; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 9px 16px; }
+  .topbar .sep { opacity: .55; margin: 0 10px; }
+  @media (max-width: 760px) { .topbar { width: 100vw; position: relative; left: 50%; margin-left: -50vw; } }
+  /* GoHighLevel embed: remove side padding/max-width from the builder wrappers around this page so it runs edge to edge */
+  :is(div, section, main):has(.topbar):not(.topbar) { padding-left: 0 !important; padding-right: 0 !important; margin-left: 0 !important; margin-right: 0 !important; max-width: none !important; width: 100% !important; }
+  .nav { position: sticky; top: 0; z-index: 40; background: rgba(8,8,10,.86); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .nav .wrap { height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+  .brand img { height: 50px; width: auto; }
+  .nav-links { display: flex; gap: 28px; font-size: 14px; font-weight: 600; color: var(--silver-mid); }
+  .nav-links a { text-decoration: none; transition: color .2s; }
+  .nav-links a:hover { color: #fff; }
+  .nav .btn { padding: 9px 16px; font-size: 11px; }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; padding: clamp(48px, 7vw, 90px) 0 clamp(64px, 8vw, 110px); background: radial-gradient(ellipse 60% 60% at 85% 40%, rgba(193,18,31,.2), transparent 70%), var(--black); overflow: hidden; }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .hero-text { display: flex; flex-direction: column; justify-content: center; }
+  .hero .kicker { margin-bottom: 22px; }
+  .hero h1 { margin-bottom: 20px; font-size: clamp(30px, 3.3vw, 44px); }
+  .hero .lead { margin-bottom: 28px; }
+  .hero-ctas { display: flex; gap: 22px; flex-wrap: wrap; margin-bottom: 40px; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+  .facts div { padding: 16px 16px 0 0; }
+  .facts small { display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--silver-dark); margin-bottom: 4px; }
+  .facts b { display: block; font-weight: 800; font-size: 16px; line-height: 1.3; }
+  .facts span { font-size: 14px; color: var(--silver-mid); }
+
+  .key-art { position: relative; }
+  .key-art img { width: 100%; height: auto; clip-path: polygon(7% 0, 100% 0, 93% 100%, 0 100%); }
+  .countdown { display: flex; justify-content: center; gap: clamp(8px, 1.6vw, 18px); margin-top: 24px; }
+  .countdown div { text-align: center; min-width: 62px; }
+  .countdown b { display: block; font-family: var(--display); font-weight: 900; font-size: clamp(30px, 3.4vw, 42px); line-height: 1; }
+  .countdown span { font-family: var(--mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--silver-mid); }
+  .countdown .sep { font-family: var(--display); font-weight: 900; font-size: 30px; color: var(--red-bright); min-width: auto; line-height: 1.1; }
+  .cd-label { text-align: center; font-family: var(--display); font-weight: 800; font-size: clamp(15px, 1.4vw, 18px); letter-spacing: .04em; text-transform: uppercase; color: #fff; margin-top: 24px; }
+  .cd-label span { color: var(--red-bright); }
+
+  /* ---------- sections ---------- */
+  section { position: relative; }
+  .pad { padding: clamp(72px, 9vw, 120px) 0; }
+  .carbon { background: var(--carbon); }
+  .on-steel { background: var(--steel); color: var(--black); }
+  .head { max-width: 840px; margin-bottom: clamp(36px, 5vw, 60px); }
+  .head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .head .kicker { margin-bottom: 18px; }
+  .head h2 { margin-bottom: 18px; }
+  .head.center .lead { margin: 0 auto; }
+
+  .form-card { background: transparent; }
+  .form-card iframe { width: 100%; border: none; display: block; background: transparent; color-scheme: normal; }
+  .form-note { text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--silver-mid); margin-top: 14px; }
+
+  /* ---------- problem ---------- */
+  .problem-top { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(28px, 5vw, 72px); align-items: end; margin-bottom: clamp(40px, 5vw, 64px); }
+  .problem-top p.big { font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .02em; font-size: clamp(16px, 1.5vw, 20px); line-height: 1.35; margin: 0; padding-left: 22px; border-left: 5px solid var(--red); }
+  .depends-label { font-weight: 800; font-size: 19px; margin: 0 0 18px; }
+  .depends { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .dep { background: var(--black); color: #fff; padding: 26px 20px 24px; position: relative; overflow: hidden; }
+  .dep::after { content: ""; position: absolute; right: -34px; bottom: -34px; width: 90px; height: 90px; border: 1px solid rgba(255,255,255,.08); transform: rotate(45deg); }
+  .dep svg { width: 34px; height: 34px; stroke: var(--red-bright); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 18px; }
+  .dep p { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 17px; line-height: 1.15; }
+  .problem-end { margin-top: clamp(44px, 5vw, 68px); }
+  .problem-end p { margin: 0 0 10px; font-size: clamp(18px, 1.8vw, 22px); font-weight: 600; }
+  .problem-end p.punch { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(24px, 3vw, 38px); line-height: 1.15; margin-top: 18px; }
+
+  /* ---------- vsl ---------- */
+  .vsl { max-width: 960px; margin: 0 auto; }
+  .vsl-frame { position: relative; padding: 10px; background: linear-gradient(135deg, #3a3d44, #121215 40%, #3a3d44 80%, #121215); }
+  .vsl-frame video { width: 100%; aspect-ratio: 16/9; background: #000; }
+  .vsl-after { text-align: center; max-width: 760px; margin: 44px auto 0; }
+  .vsl-after p { font-size: clamp(19px, 2vw, 24px); margin: 0 0 30px; color: #d4d6db; }
+  .vsl-after p strong { color: #fff; }
+
+  /* ---------- before / after ---------- */
+  .ba { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2.4vw, 26px); }
+  .ba-card { padding: clamp(28px, 3.6vw, 44px); }
+  .ba-card.before { background: var(--carbon-2); border: 1px solid var(--line); }
+  .ba-card.after { background: linear-gradient(160deg, #1d0a0d, #0d0d10 70%); border: 1px solid rgba(224,30,43,.55); }
+  .ba-card h3 { margin: 14px 0 24px; }
+  .ba-card ul { list-style: none; margin: 0; padding: 0; }
+  .ba-card li { display: grid; grid-template-columns: 28px 1fr; gap: 12px; padding: 13px 0; border-top: 1px solid var(--line); color: #d4d6db; }
+  .ba-card li i { font-style: normal; font-weight: 800; width: 22px; height: 22px; display: grid; place-items: center; font-size: 12px; margin-top: 2px; }
+  .before li i { color: var(--silver-mid); border: 1px solid var(--silver-dark); }
+  .after li i { background: var(--red-bright); color: #fff; }
+  .ba-close { text-align: center; max-width: 820px; margin: clamp(44px, 5vw, 64px) auto 0; }
+  .ba-close p { margin: 0 0 12px; font-size: clamp(18px, 1.8vw, 22px); color: #d4d6db; }
+
+  /* ---------- path ---------- */
+  .path { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 26px); }
+  .step { background: var(--black); color: #fff; padding: clamp(26px, 3vw, 38px); position: relative; overflow: hidden; }
+  .step::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--red-bright), transparent); }
+  .step-n { display: block; font-family: var(--display); font-weight: 900; font-size: 56px; line-height: 1; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 18px; }
+  .step h3 { margin-bottom: 12px; }
+  .step p { margin: 0; color: #c9cbd1; font-size: 16px; }
+  .path-foot { margin-top: clamp(40px, 5vw, 56px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+  .path-foot p { margin: 0; max-width: 620px; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.1; }
+
+  /* ---------- learn ---------- */
+  .learn-intro { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 72px); align-items: end; margin-bottom: clamp(40px, 5vw, 60px); }
+  .learn { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .learn div { padding: 30px 18px; border-left: 1px solid var(--line); }
+  .learn div:first-child { border-left: 0; }
+  .learn b { display: block; font-family: var(--display); font-weight: 900; font-size: 46px; line-height: 1; margin-bottom: 14px; }
+  .learn span { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 18px; line-height: 1.15; display: block; }
+  .learn-out { text-align: center; margin-top: 44px; }
+
+  /* ---------- fit ---------- */
+  .fit { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2.4vw, 26px); }
+  .fit-card { background: #fff; padding: clamp(28px, 3.6vw, 44px); box-shadow: 0 20px 50px -30px rgba(0,0,0,.35); }
+  .fit-card.no { background: var(--black); color: #fff; }
+  .fit-card h3 { margin-bottom: 22px; }
+  .fit-card ul { list-style: none; margin: 0; padding: 0; }
+  .fit-card li { display: grid; grid-template-columns: 30px 1fr; gap: 12px; padding: 13px 0; border-top: 1px solid var(--line-dark); font-weight: 600; }
+  .fit-card.no li { border-top-color: var(--line); color: #d4d6db; font-weight: 500; }
+  .fit-card li::before { width: 24px; height: 24px; display: grid; place-items: center; font-size: 13px; font-weight: 800; margin-top: 2px; }
+  .fit-card.yes li::before { content: "✓"; background: var(--red); color: #fff; }
+  .fit-card.no li::before { content: "✕"; border: 1px solid var(--silver-dark); color: var(--silver-mid); }
+
+  /* ---------- testimonials ---------- */
+  .testis { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 22px); }
+  .testi { margin: 0; background: var(--carbon-2); border-top: 3px solid var(--red); display: flex; flex-direction: column; }
+  .testi video { width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000; }
+  .testi blockquote { margin: 0; padding: 20px 20px 24px; color: #d4d6db; font-size: 15px; line-height: 1.5; }
+  .testi blockquote b { display: block; margin-top: 8px; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: 15px; line-height: 1.15; color: #fff; }
+  .testi .stars { color: var(--silver); letter-spacing: 3px; font-size: 13px; margin-bottom: 8px; }
+
+  /* ---------- experience ---------- */
+  .xp-wrap { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 5vw, 72px); align-items: start; }
+  .badge2 { display: inline-block; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: 14px; letter-spacing: .08em; color: #fff; padding: 8px 18px; position: relative; isolation: isolate; margin-bottom: 22px; }
+  .badge2::before { content: ""; position: absolute; inset: 0; background: var(--red); transform: skewX(-14deg); z-index: -1; }
+  .xp-list { list-style: none; padding: 0; margin: 0; }
+  .xp-list li { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: 18px; padding: 20px 0; border-top: 1px solid var(--line-dark); }
+  .xp-list li:last-child { border-bottom: 1px solid var(--line-dark); }
+  .xp-list b { font-family: var(--display); font-weight: 900; font-size: 34px; color: var(--red); line-height: 1; }
+  .xp-list span { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(19px, 2vw, 24px); line-height: 1.1; }
+  .xp-more { margin-top: 40px; padding: clamp(26px, 3.4vw, 40px); background: var(--black); color: #fff; }
+  .xp-more small { display: block; font-size: 17px; color: var(--silver-mid); margin-bottom: 6px; }
+  .xp-more p { margin: 0; font-size: clamp(18px, 1.8vw, 21px); }
+  .xp-more .close { margin-top: 22px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; }
+  .xp-more .close em { font-style: normal; color: var(--silver-mid); }
+
+  /* ---------- speakers ---------- */
+  .speakers { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 980px; margin: 0 auto; gap: clamp(12px, 1.6vw, 18px); }
+  .speaker { margin: 0; position: relative; overflow: hidden; background: linear-gradient(180deg, #1c1c21, #0b0b0d); }
+  .speaker img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 12%; transition: transform .5s ease; }
+  .speaker:hover img { transform: scale(1.04); }
+  .speaker figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 36px 14px 14px; background: linear-gradient(transparent, rgba(8,8,10,.95)); }
+  .speaker figcaption b { display: block; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(15px, 1.5vw, 19px); line-height: 1.05; }
+  .speaker figcaption span { display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); }
+  .speaker::after { content: ""; position: absolute; left: 0; top: 0; width: 4px; height: 0; background: var(--red-bright); transition: height .4s ease; }
+  .speaker:hover::after { height: 100%; }
+
+  /* ---------- final ---------- */
+  .final-grid { display: grid; grid-template-columns: 1fr .9fr; gap: clamp(32px, 5vw, 64px); align-items: start; }
+  .final-grid h2 { margin: 18px 0 24px; }
+  .final-grid .lead { margin-bottom: 30px; }
+  .final-facts { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .final-facts li { display: flex; gap: 14px; font-weight: 600; color: #d4d6db; }
+  .final-facts li b { color: #fff; min-width: 92px; font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding-top: 3px; }
+  .final-grid .countdown { justify-content: flex-start; margin-top: 34px; }
+
+  footer { border-top: 1px solid var(--line); padding: 40px 0 110px; color: var(--silver-dark); font-size: 14px; }
+  footer .wrap { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
+  footer img { height: 72px; width: auto; }
+
+  .sticky-cta { display: none; }
+
+  /* ---------- reveal ---------- */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 1024px) {
+    .hero .wrap, .final-grid, .xp-wrap, .problem-top, .learn-intro { grid-template-columns: 1fr; }
+    .hero { padding-top: 0; }
+    .key-art-col { order: -1; width: auto; max-width: none; margin: 0 calc(-1 * clamp(16px, 4vw, 40px)); }
+    .key-art { position: relative; }
+    .key-art img { width: 100%; height: auto; clip-path: none; }
+    .key-art::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 28%; background: linear-gradient(transparent, var(--black)); pointer-events: none; }
+    .key-art-col .cd-label, .key-art-col .countdown { padding: 0 16px; }
+    .key-art-col .cd-label { margin-top: 4px; }
+    .depends { grid-template-columns: repeat(3, 1fr); }
+    .learn { grid-template-columns: repeat(3, 1fr); }
+    .learn div:nth-child(4) { border-left: 0; }
+    .learn div:nth-child(n+4) { border-top: 1px solid var(--line); }
+    .testis { grid-template-columns: repeat(2, 1fr); }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 760px) {
+    body { font-size: 16px; }
+    .topbar { font-size: 10px; letter-spacing: .08em; }
+    .topbar .hide-sm { display: none; }
+    .nav .wrap { height: 60px; }
+    .brand img { height: 40px; }
+    .nav .btn { display: none; }
+    .nav .wrap { justify-content: center; }
+    .head, .head.center, .problem-top, .learn-intro, .xp-wrap > div:first-child, .final-grid > div:first-child, .ba-close, .path-foot, .learn-out, .vsl-after, .hero-text { text-align: center; }
+    .head { margin-left: auto; margin-right: auto; }
+    .lead { margin-left: auto; margin-right: auto; }
+    .kicker { justify-content: center; text-align: center; }
+    .kicker::before { display: none; }
+    .problem-top p.big { border-left: 0; padding-left: 0; }
+    .problem-top p.big::before { content: ""; display: block; width: 60px; height: 4px; background: var(--red); margin: 0 auto 16px; }
+    .depends-label { text-align: center; }
+    .problem-end { text-align: center; }
+    .hero-ctas, .path-foot { justify-content: center; }
+    .path-foot p { max-width: none; }
+    .facts div { text-align: center; }
+    .fit-card h3, .ba-card h3 { text-align: center; }
+    .ba-card .kicker { display: flex; justify-content: center; }
+    .step { text-align: center; }
+    .final-facts li { flex-direction: column; align-items: center; gap: 2px; text-align: center; }
+    .final-facts li b { min-width: 0; color: var(--silver-mid); font-size: 11px; }
+    .final-grid .countdown { justify-content: center; }
+    .badge2 { margin-left: auto; margin-right: auto; }
+    .facts { grid-template-columns: 1fr; }
+    .facts div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .depends { grid-template-columns: 1fr 1fr; }
+    .ba, .fit, .path, .testis { grid-template-columns: 1fr; }
+    .learn { grid-template-columns: 1fr 1fr; }
+    .learn div { padding: 22px 14px; }
+    .learn b { font-size: 34px; margin-bottom: 10px; }
+    .learn span { font-size: 14px; }
+    .learn div { text-align: center; }
+    .learn div { border-left: 0 !important; border-top: 1px solid var(--line); }
+    .learn div:nth-child(even) { border-left: 1px solid var(--line) !important; }
+    .speakers { grid-template-columns: 1fr 1fr; }
+    .speaker figcaption { padding: 30px 12px 12px; }
+    .speaker figcaption b { font-size: 16px; }
+    .countdown div { min-width: 50px; }
+    .countdown .sep { font-size: 24px; }
+    .sticky-cta { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: rgba(8,8,10,.96); border-top: 2px solid var(--red); padding: 10px 16px; align-items: center; justify-content: space-between; gap: 12px; }
+    .sticky-cta small { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--silver-mid); line-height: 1.35; }
+    .sticky-cta small b { color: #fff; display: block; }
+    .sticky-cta .btn { padding: 9px 14px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">24 y 25 de octubre<span class="sep">/</span>Tampa, FL<span class="sep hide-sm">/</span><span class="hide-sm">Evento presencial gratuito</span></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="One Empire — inicio"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbaf150d6ea53db13e67.png" alt="One Empire"></a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#evento">El evento</a>
+      <a href="#aprenderas">Qué aprenderás</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#testimonios">Testimonios</a>
+    </nav>
+    <a class="btn btn-red" href="#registro">Regístrate gratis</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="streaks" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="kicker">Para dueños latinos de constructoras en Tampa</span>
+      <h1 class="h-xl"><span class="chrome">Levantaste tu empresa con tus manos. </span><span class="red">Ahora hazla crecer sin depender de ellas.</span></h1>
+      <p class="lead">Dos días en Tampa para aprender a armar el equipo, los sistemas y los procesos que tu empresa necesita para crecer en uno de los mercados más competitivos del país.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-red" href="#registro">Aparta mi lugar gratis <span class="arr">→</span></a>
+        <a class="btn btn-line" href="#evento">Conoce el evento</a>
+      </div>
+      <div class="facts">
+        <div><small>Formato</small><b>Presencial · gratuito</b><span>2 días de trabajo intensivo</span></div>
+        <div><small>Fecha</small><b>24 y 25 de octubre</b><span>9:00 AM</span></div>
+        <div><small>Lugar</small><b>Tampa, FL</b><span>La dirección te llega por WhatsApp</span></div>
+      </div>
+    </div>
+    <div class="key-art-col">
+      <div class="key-art"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6ac2adfe22bc27f58f583a87.png" alt="Next Level Leaders con Hugo Pérez y speakers invitados" fetchpriority="high"></div>
+      <div class="countdown" data-countdown>
+        <div><b data-d>--</b><span>Días</span></div><div class="sep">:</div>
+        <div><b data-h>--</b><span>Horas</span></div><div class="sep">:</div>
+        <div><b data-m>--</b><span>Min</span></div><div class="sep">:</div>
+        <div><b data-s>--</b><span>Seg</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Problem ===== -->
+<section class="on-steel pad" id="evento">
+  <div class="wrap">
+    <div class="problem-top">
+      <div class="reveal">
+        <span class="kicker">Lo que vemos en Tampa</span>
+        <h2 class="h-lg" style="margin-top:18px">En Tampa sobran contratistas que saben <span class="red">levantar una obra.</span></h2>
+      </div>
+      <p class="big reveal">Lo que escasea son dueños que sepan levantar una empresa.</p>
+    </div>
+    <p class="depends-label reveal">Y cuando el trabajo empieza a crecer, el dueño termina siendo:</p>
+    <div class="depends">
+      <div class="dep reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+        <p>El que carga con todo</p>
+      </div>
+      <div class="dep reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 11l3 3 5-6"/><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0"/></svg>
+        <p>El que sale a buscar cada cliente</p>
+      </div>
+      <div class="dep reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+        <p>El que tiene que estar en cada obra</p>
+      </div>
+      <div class="dep reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><path d="M5 8l7-5 7 5"/><path d="M3 14l2-6 2 6a2 2 0 0 1-4 0zM17 14l2-6 2 6a2 2 0 0 1-4 0z"/></svg>
+        <p>El que decide hasta lo más pequeño</p>
+      </div>
+      <div class="dep reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+        <p>El que apaga todos los incendios</p>
+      </div>
+    </div>
+    <div class="problem-end reveal">
+      <div>
+        <p>Entran más proyectos… pero también más horas, más estrés y más llamadas.</p>
+        <p>No es que no sepas construir.</p>
+        <p class="punch">Es que nadie te enseñó a <span class="red">convertir tu oficio en una empresa.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VSL ===== -->
+<section class="pad">
+  <div class="streaks" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="head center reveal">
+      <h2 class="h-lg"><span class="red">¿Llevas años en la construcción</span> <span class="chrome">y sientes que no avanzas? Dale play.</span></h2>
+      <p class="lead">En este video te explicamos por qué tantos contratistas en Tampa se quedan en el mismo lugar y qué hacen distinto los que sí están creciendo.</p>
+    </div>
+    <div class="vsl reveal">
+      <div class="vsl-frame">
+  <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+    <iframe
+      src="https://www.loom.com/embed/f9df260c4c434554ba0fefd5bf6c3c4a?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+      frameborder="0"
+      allowfullscreen
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+    </iframe>
+  </div>
+</div>
+    </div>
+    <div class="vsl-after reveal">
+      <p>Hay un camino para dejar de ser “el que hace todo” y <strong>pasar a ser el que dirige, cotiza con seguridad y cobra lo que vale su trabajo.</strong></p>
+      <a class="btn btn-red" href="#registro">Quiero ese camino <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Before / After ===== -->
+<section class="carbon pad">
+  <div class="wrap">
+    <div class="head center reveal">
+      <h2 class="h-lg chrome">Tu empresa no puede depender solo de ti.</h2>
+      <p class="lead">En <strong style="color:#fff">Next Level Leaders</strong> vas a ver cómo pasar del dueño que resuelve cada detalle… al <strong style="color:var(--red-bright)">líder que construye una empresa</strong> que crece aunque él no esté en la obra.</p>
+    </div>
+    <div class="ba">
+      <div class="ba-card before reveal">
+        <span class="kicker" style="color:var(--silver-mid)">Hoy</span>
+        <h3 class="h-md">Así trabajas hoy</h3>
+        <ul>
+          <li><i>✕</i>Todo pasa por tus manos y nada escala</li>
+          <li><i>✕</i>Trabajas de sol a sol, sin tiempo para tu familia</li>
+          <li><i>✕</i>Tu equipo se detiene cuando tú no estás</li>
+          <li><i>✕</i>Llevas años ganando lo mismo</li>
+        </ul>
+      </div>
+      <div class="ba-card after reveal">
+        <span class="kicker">Después</span>
+        <h3 class="h-md chrome">Así trabajarás después</h3>
+        <ul>
+          <li><i>✓</i>Delegas sin miedo a que algo salga mal</li>
+          <li><i>✓</i>Tienes un equipo que trabaja contigo, no solo para ti</li>
+          <li><i>✓</i>Tu operación corre con sistemas, no de memoria</li>
+          <li><i>✓</i>Formas líderes dentro de tu propia empresa</li>
+          <li><i>✓</i>Diriges con un plan claro, orden y visión a largo plazo</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ba-close reveal">
+      <p>El crecimiento de verdad llega el día que tu negocio deja de depender solo de tus horas y tu esfuerzo.</p>
+      <h3 class="h-md" style="margin-top:18px">Y empieza a operar como una <span class="red">empresa lista para crecer.</span></h3>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Path ===== -->
+<section class="on-steel pad">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="kicker">La ruta</span>
+      <h2 class="h-lg" style="margin-top:18px">Tres pasos para que tu constructora <span class="red">suba de nivel</span></h2>
+    </div>
+    <div class="path">
+      <div class="step reveal">
+        <span class="step-n">01</span>
+        <h3 class="h-md">Llena tu agenda de proyectos</h3>
+        <p>Deja de esperar a que suene el teléfono. Aprende a atraer clientes de forma constante y a cerrar contratos con seguridad, sin regalar tu trabajo.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-n">02</span>
+        <h3 class="h-md">Arma el equipo y los sistemas</h3>
+        <p>Pon procesos claros y forma a la gente correcta para que la obra avance aunque tú no estés ahí todo el día.</p>
+      </div>
+      <div class="step reveal">
+        <span class="step-n">03</span>
+        <h3 class="h-md">Dirige como dueño de empresa</h3>
+        <p>Sal de la operación del día a día y enfócate en lo que hace crecer tu constructora: decisiones, números y visión.</p>
+      </div>
+    </div>
+    <div class="path-foot reveal">
+      <p>En dos días trabajarás cada uno de estos pasos para <span class="red">llevarlos a tu empresa</span> desde el lunes siguiente.</p>
+      <a class="btn btn-red" href="#registro">Aparta mi lugar <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== What you'll learn ===== -->
+<section class="pad" id="aprenderas">
+  <div class="wrap">
+    <div class="learn-intro">
+      <h2 class="h-lg chrome reveal">Casi todos los eventos de construcción hablan de la obra.</h2>
+      <p class="lead reveal"><strong style="color:var(--red-bright)">NEXT LEVEL LEADERS</strong> habla del negocio que está detrás de la obra. En dos días vas a aprender a:</p>
+    </div>
+    <div class="learn reveal">
+      <div><b class="chrome">01</b><span>Atraer más oportunidades</span></div>
+      <div><b class="chrome">02</b><span>Cerrar más contratos</span></div>
+      <div><b class="chrome">03</b><span>Armar un equipo sólido</span></div>
+      <div><b class="chrome">04</b><span>Poner sistemas que funcionen</span></div>
+      <div><b class="chrome">05</b><span>Hacer crecer tu empresa</span></div>
+    </div>
+    <div class="learn-out reveal"><h3 class="h-md">Todo en un mismo lugar, <span class="red">en dos días.</span></h3></div>
+  </div>
+</section>
+
+<!-- ===== Is it for you ===== -->
+<section class="on-steel pad">
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="kicker">Antes de apartar tu lugar</span>
+      <h2 class="h-lg" style="margin-top:18px">¿Este evento es para ti?</h2>
+    </div>
+    <div class="fit">
+      <div class="fit-card yes reveal">
+        <h3 class="h-md"><span class="red">Sí</span> es para ti si:</h3>
+        <ul>
+          <li>Tienes una empresa de construcción en Tampa: remodelación, concreto, roofing, framing, ADUs o cualquier otra rama</li>
+          <li>Quieres que te lleguen más clientes y mejores proyectos</li>
+          <li>Te cuesta soltar tareas y confiar en tu equipo</li>
+          <li>Quieres crecer con orden, no a la carrera</li>
+          <li>Sientes que si tú paras, la empresa se para</li>
+          <li>Estás decidido a dar el siguiente paso</li>
+        </ul>
+      </div>
+      <div class="fit-card no reveal">
+        <h3 class="h-md"><span class="red">No</span> es para ti si:</h3>
+        <ul>
+          <li>Estás contento con donde está tu empresa hoy</li>
+          <li>No te interesa delegar ni formar un equipo</li>
+          <li>Prefieres seguir haciéndolo todo tú</li>
+          <li>Crecer no está en tus planes</li>
+          <li>No estás dispuesto a probar nada nuevo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section class="pad" id="testimonios">
+  <div class="wrap">
+    <div class="head center reveal">
+      <h2 class="h-lg chrome">Ellos ya dieron el paso</h2>
+      <p class="lead">Dueños de empresas de construcción que hoy tienen mejores procesos, equipos más fuertes y negocios más rentables. Escúchalos en sus propias palabras.</p>
+    </div>
+    <div class="testis">
+
+      <figure class="testi reveal">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe
+            src="https://www.loom.com/embed/8c361fa24e49486492264ece30db6b18?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+            frameborder="0" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+          </iframe>
+        </div>
+        <blockquote><div class="stars">★★★★★</div>"Pensaba que el problema era mi equipo<b>pero realmente era que yo no tenía la información correcta"</b></blockquote>
+      </figure>
+
+      <figure class="testi reveal">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe
+            src="https://www.loom.com/embed/e1443d2d4e1f4001b41f70f147317ccb?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+            frameborder="0" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+          </iframe>
+        </div>
+        <blockquote><div class="stars">★★★★★</div>"Vi otras personas que quieren crecer<b>y tienen la misma mentalidad y metas que yo"</b></blockquote>
+      </figure>
+
+      <figure class="testi reveal">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe
+            src="https://www.loom.com/embed/b1f5e4a72eb747e49cd0962b270cd076?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+            frameborder="0" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+          </iframe>
+        </div>
+        <blockquote><div class="stars">★★★★★</div>"En un punto quisiera tener un equipo así<b>con ese entusiasmo, energía y valores"</b></blockquote>
+      </figure>
+
+      <figure class="testi reveal">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+          <iframe
+            src="https://www.loom.com/embed/70ff204968e04351b896ed805740143b?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true"
+            frameborder="0" allowfullscreen
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;">
+          </iframe>
+        </div>
+        <blockquote><div class="stars">★★★★★</div>"Sé que quieres que todo sea perfecto<b>pero eso realmente es lo que te va a detener"</b></blockquote>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Experience ===== -->
+<section class="on-steel pad">
+  <div class="wrap xp-wrap">
+    <div class="reveal">
+      <span class="badge2">2 días</span>
+      <h2 class="h-lg">Dos días para dejar de pensar como contratista y <span class="red">empezar a pensar como empresario</span></h2>
+    </div>
+    <div class="reveal">
+      <ul class="xp-list">
+        <li><b>01</b><span>Conferencias enfocadas en construcción</span></li>
+        <li><b>02</b><span>Estrategias que aplicas de inmediato</span></li>
+        <li><b>03</b><span>Casos reales de empresas como la tuya</span></li>
+        <li><b>04</b><span>Conexiones con dueños que juegan en grande</span></li>
+        <li><b>05</b><span>Herramientas listas para usar</span></li>
+      </ul>
+      <div class="xp-more">
+        <small>Y lo que más vale…</small>
+        <p>Vas a salir pensando, liderando y operando tu empresa de construcción de una forma distinta.</p>
+        <div class="close"><em>El salón tiene cupo limitado.</em><span class="h-md"><span class="chrome">Cuando se llena,</span> <span class="red">se cierra</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Speakers ===== -->
+<section class="pad" id="speakers">
+  <div class="streaks" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="head center reveal">
+      <span class="kicker">Quiénes te acompañan</span>
+      <h2 class="h-lg" style="margin-top:18px"><span class="chrome">Gente que ya logró </span><span class="red">lo que tú quieres lograr</span></h2>
+      <p class="lead">Empresarios y expertos de la industria que vienen a compartir lo que les ha funcionado en ventas, liderazgo y crecimiento de empresas de construcción.</p>
+    </div>
+    <div class="speakers">
+      <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a3313a65408771d16550b21.png" alt="Hugo Pérez" loading="lazy"><figcaption><b>Hugo Pérez</b><span>Speaker</span></figcaption></figure>
+      <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69db2e3ad7871cddf76f2e78.png" alt="Mónica Tuccella" loading="lazy"><figcaption><b>Mónica Tuccella</b><span>Speaker</span></figcaption></figure>
+      <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69db2e3ad7871cddf76f2e7b.png" alt="Darwin Ontiveros" loading="lazy"><figcaption><b>Darwin Ontiveros</b><span>Speaker</span></figcaption></figure>
+      <figure class="speaker reveal"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbb77bca8cd20c3417f7.png" alt="Miguel Castellanos" loading="lazy"><figcaption><b>Miguel Castellanos</b><span>Speaker</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Final CTA + registration ===== -->
+<section class="carbon pad" id="registro">
+  <div class="wrap final-grid">
+    <div class="reveal">
+      <span class="kicker">Tu decisión</span>
+      <h2 class="h-xl"><span class="chrome">Trabajar más horas </span><span class="red">no va a llevar tu empresa más lejos.</span></h2>
+      <p class="lead">Lo que la lleva más lejos es saber cómo atraer más clientes, cerrar más contratos y armar una empresa que crezca aunque tú no estés en cada obra.</p>
+      <ul class="final-facts">
+        <li><b>Fecha</b>24 y 25 de octubre</li>
+        <li><b>Hora</b>9:00 AM</li>
+        <li><b>Lugar</b>Tampa, Florida</li>
+        <li><b>Costo</b>Gratuito · lugares contados</li>
+      </ul>
+      <div class="countdown" data-countdown>
+        <div><b data-d>--</b><span>Días</span></div><div class="sep">:</div>
+        <div><b data-h>--</b><span>Horas</span></div><div class="sep">:</div>
+        <div><b data-m>--</b><span>Min</span></div><div class="sep">:</div>
+        <div><b data-s>--</b><span>Seg</span></div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="form-card">
+       <iframe
+    src="https://api.leadconnectorhq.com/widget/form/FLihryBSWnTs9emHag67"
+    style="width:100%;height:100%;border:none;border-radius:15px"
+    id="inline-FLihryBSWnTs9emHag67" 
+    data-layout="{'id':'INLINE'}"
+    data-trigger-type="alwaysShow"
+    data-trigger-value=""
+    data-activation-type="alwaysActivated"
+    data-activation-value=""
+    data-deactivation-type="neverDeactivate"
+    data-deactivation-value=""
+    data-form-name="HUGO - Tampa, FL - Evento presencial"
+    data-height="984"
+    data-layout-iframe-id="inline-FLihryBSWnTs9emHag67"
+    data-form-id="FLihryBSWnTs9emHag67"
+    data-cookie-consent="true"
+    data-cookie-consent-provider="auto"
+    title="HUGO - Tampa, FL - Evento presencial"
+    
+        >
+</iframe>
+
+      </div>
+      <p class="form-note">Gratuito · sin spam · 2 días en persona</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbaf150d6ea53db13e67.png" alt="One Empire" loading="lazy">
+    <div>© <span id="year">2026</span> One Empire · Next Level Leaders · Tampa, FL</div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <small><b>24 y 25 Oct · 9:00 AM</b>Tampa · gratuito</small>
+  <a class="btn btn-red" href="#registro">Regístrate</a>
+</div>
+
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+<script>
+  // Countdown to Oct 24, 2026, 9:00 AM Eastern (EDT, UTC-4)
+  (function () {
+    var target = new Date("2026-10-24T09:00:00-04:00").getTime();
+    var boxes = document.querySelectorAll("[data-countdown]");
+    function pad(n) { return n < 10 ? "0" + n : "" + n; }
+    function tick() {
+      var diff = Math.max(0, target - Date.now());
+      var v = { d: Math.floor(diff / 864e5), h: Math.floor(diff / 36e5) % 24, m: Math.floor(diff / 6e4) % 60, s: Math.floor(diff / 1e3) % 60 };
+      boxes.forEach(function (b) { for (var k in v) b.querySelector("[data-" + k + "]").textContent = pad(v[k]); });
+    }
+    tick(); setInterval(tick, 1000);
+  })();
+
+  // Reveal on scroll
+  (function () {
+    var els = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
