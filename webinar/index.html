@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Masterclass De Cero al Millón · Hugo Pérez</title>
-<meta name="description" content="Masterclass gratuita en vivo por Zoom con Hugo Pérez: números, ventas, marketing y equipos de alto rendimiento para llevar tu empresa de construcción de cero al millón.">
+<meta name="description" content="Masterclass gratuita en vivo por Zoom con Hugo Pérez para dueños latinos de construcción: conoce tus números y tu overhead, aprende a estimar y cotizar con ganancia, y domina marketing y ventas.">
 <meta name="author" content="Hugo Pérez">
 <meta property="og:title" content="Masterclass De Cero al Millón - Hugo Pérez">
 <meta property="og:description" content="Deja de construir los sueños de otros… y empieza a levantar el tuyo. Clase gratuita 100% online.">
@@ -14,7 +14,7 @@
 <link rel="icon" href="../next-level-leaders/images/one-empire-icon-red.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap">
 
 <!-- Meta Pixel Code -->
 <script>
@@ -40,16 +40,15 @@ fbq('track', 'PageView');
     --text: #f4f1ec;
     --muted: #a19d97;
     --dim: #6e6b67;
-    --red: #b8892f;
-    --red-hi: #e9c46a;
-    --red-glow: rgba(212,175,55,.32);
-    --gold-grad: linear-gradient(180deg, #fbe7a1 0%, #e9c46a 38%, #c9a14a 70%, #9c7426 100%);
-    --on-gold: #17120a;
-    --gold: #d4af37;
-    --green: #e9c46a;
+    --red: #c1121f;
+    --red-hi: #e01e2b;
+    --red-glow: rgba(193,18,31,.4);
+    --chrome: linear-gradient(180deg, #ffffff 0%, #eef0f3 35%, #c9ccd2 68%, #8d929a 100%);
+    --red-grad: linear-gradient(180deg, #e01e2b 0%, #c1121f 55%, #9a0d18 100%);
+    --silver: #c9ccd2;
+    --green: #d7dade;
     --sans: "Inter", system-ui, -apple-system, sans-serif;
-    --display: "Inter Tight", "Inter", system-ui, sans-serif;
-    --serif: "Instrument Serif", Georgia, serif;
+    --display: "Montserrat", "Inter", system-ui, sans-serif;
     --wrap: 1180px;
     --r: 22px;
   }
@@ -62,15 +61,15 @@ fbq('track', 'PageView');
   section { position: relative; padding: clamp(72px, 10vw, 128px) 0; }
 
   /* ---------- type ---------- */
-  h1, h2, h3 { font-family: var(--display); font-weight: 700; letter-spacing: -.025em; margin: 0; line-height: 1.04; }
-  h1 { font-size: clamp(38px, 5.6vw, 72px); }
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; letter-spacing: -.02em; margin: 0; line-height: 1.04; }
+  h1 { font-size: clamp(40px, 6vw, 80px); font-weight: 900; text-transform: uppercase; letter-spacing: -.03em; line-height: .98; }
   h2 { font-size: clamp(30px, 4vw, 52px); }
   h3 { font-size: clamp(19px, 1.7vw, 22px); line-height: 1.2; letter-spacing: -.015em; }
-  .serif { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -.01em; }
-  .accent { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; padding-right: .06em; }
+  .chrome { background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .accent { color: var(--red-hi); }
   .lead { font-size: clamp(17px, 1.45vw, 20px); color: var(--muted); max-width: 620px; margin: 22px 0 0; }
   .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-  .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red-hi); box-shadow: 0 0 0 4px rgba(233,196,106,.18); }
+  .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--red-hi); box-shadow: 0 0 0 4px rgba(224,30,43,.18); }
   .sec-head { max-width: 760px; margin-bottom: clamp(40px, 5vw, 64px); }
   .sec-head h2 { margin-top: 16px; }
   .center { text-align: center; margin-left: auto; margin-right: auto; }
@@ -78,8 +77,8 @@ fbq('track', 'PageView');
 
   /* ---------- buttons ---------- */
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--display); font-weight: 600; font-size: 16px; text-decoration: none; padding: 16px 28px; border-radius: 999px; border: 0; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; white-space: nowrap; }
-  .btn-red { background: var(--gold-grad); color: var(--on-gold); box-shadow: 0 12px 34px -10px var(--red-glow), inset 0 1px 0 rgba(255,255,255,.22); }
-  .btn-red:hover { transform: translateY(-2px); box-shadow: 0 18px 44px -10px rgba(233,196,106,.55), inset 0 1px 0 rgba(255,255,255,.22); }
+  .btn-red { background: var(--red-grad); color: #fff; box-shadow: 0 12px 34px -10px var(--red-glow), inset 0 1px 0 rgba(255,255,255,.22); }
+  .btn-red:hover { transform: translateY(-2px); box-shadow: 0 18px 44px -10px rgba(224,30,43,.55), inset 0 1px 0 rgba(255,255,255,.22); }
   .btn-ghost { color: var(--text); border: 1px solid var(--line-2); background: rgba(255,255,255,.03); }
   .btn-ghost:hover { background: rgba(255,255,255,.07); }
   .btn .arr { transition: transform .2s; }
@@ -89,22 +88,21 @@ fbq('track', 'PageView');
   .nav { position: sticky; top: 0; z-index: 50; background: rgba(9,9,11,.72); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
   .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
   .brand { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-weight: 700; letter-spacing: -.01em; text-decoration: none; }
-  .logo-gold { display: block; width: 92px; height: 34px; background: var(--gold-grad); -webkit-mask: url("../next-level-leaders/images/one-empire-logo-red.png") left center / contain no-repeat; mask: url("../next-level-leaders/images/one-empire-logo-red.png") left center / contain no-repeat; }
+  .brand img { height: 30px; width: auto; }
   .nav-meta { display: flex; align-items: center; gap: 22px; font-size: 14px; color: var(--muted); }
   .live { display: inline-flex; align-items: center; gap: 8px; }
   .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red-hi); animation: pulse 1.8s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(233,196,106,.6); } 50% { box-shadow: 0 0 0 7px rgba(233,196,106,0); } }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(224,30,43,.6); } 50% { box-shadow: 0 0 0 7px rgba(224,30,43,0); } }
   .nav .btn { padding: 11px 20px; font-size: 14px; }
 
   /* ---------- hero ---------- */
   .hero { padding: clamp(48px, 7vw, 96px) 0 clamp(64px, 8vw, 112px); overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: -20% -10% auto auto; width: 900px; height: 900px; background: radial-gradient(circle, rgba(212,175,55,.28), transparent 62%); pointer-events: none; }
+  .hero::before { content: ""; position: absolute; inset: -20% -10% auto auto; width: 900px; height: 900px; background: radial-gradient(circle, rgba(193,18,31,.28), transparent 62%); pointer-events: none; }
   .hero::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(ellipse at 30% 20%, #000 10%, transparent 70%); -webkit-mask-image: radial-gradient(ellipse at 30% 20%, #000 10%, transparent 70%); opacity: .55; pointer-events: none; }
   .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(36px, 5vw, 72px); align-items: start; }
   .pill { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 8px; border-radius: 999px; border: 1px solid var(--line-2); background: rgba(255,255,255,.04); font-size: 14px; color: var(--muted); }
-  .pill b { background: var(--gold-grad); color: var(--on-gold); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+  .pill b { background: var(--red); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
   .hero h1 { margin-top: 26px; }
-  .hero h1 .serif { font-size: 1.08em; }
   .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
   .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 44px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--line); }
   .facts div { background: var(--bg-2); padding: 16px 18px; }
@@ -118,7 +116,7 @@ fbq('track', 'PageView');
 
   /* form card */
   .form-card { position: relative; border-radius: 28px; padding: 10px; background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.02)); box-shadow: 0 40px 100px -30px rgba(0,0,0,.8), 0 0 0 1px var(--line); scroll-margin-top: 96px; }
-  .form-card::before { content: ""; position: absolute; inset: -1px; border-radius: 29px; padding: 1px; background: linear-gradient(160deg, var(--red-hi), transparent 40%, transparent 70%, rgba(233,196,106,.5)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+  .form-card::before { content: ""; position: absolute; inset: -1px; border-radius: 29px; padding: 1px; background: linear-gradient(160deg, var(--red-hi), transparent 40%, transparent 70%, rgba(224,30,43,.5)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
   .form-inner { border-radius: 20px; background: #fdfaf4; overflow: hidden; }
   .form-top { display: flex; align-items: center; gap: 14px; padding: 18px 22px; background: var(--surface); border-bottom: 1px solid var(--line); }
   .form-top img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: 50% 15%; border: 2px solid var(--red); }
@@ -144,9 +142,9 @@ fbq('track', 'PageView');
   .fit ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
   .fit li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; color: #d8d4ce; }
   .ico { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 700; margin-top: 1px; }
-  .ico.yes { background: rgba(233,196,106,.14); color: var(--green); }
+  .ico.yes { background: rgba(224,30,43,.14); color: var(--green); }
   .ico.no { background: rgba(255,255,255,.06); color: var(--dim); }
-  .fit .yes-card { background: linear-gradient(160deg, rgba(233,196,106,.06), transparent 50%), var(--surface); }
+  .fit .yes-card { background: linear-gradient(160deg, rgba(224,30,43,.06), transparent 50%), var(--surface); }
   .fit .no-card { color: var(--muted); }
 
   /* video */
@@ -161,7 +159,7 @@ fbq('track', 'PageView');
   /* pains */
   .pains { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .pain { margin: 0; border-radius: var(--r); overflow: hidden; background: var(--surface); border: 1px solid var(--line); transition: transform .3s ease, border-color .3s ease; }
-  .pain:hover { transform: translateY(-4px); border-color: rgba(233,196,106,.35); }
+  .pain:hover { transform: translateY(-4px); border-color: rgba(224,30,43,.35); }
   .pain img { width: 100%; aspect-ratio: 4/3; object-fit: cover; filter: grayscale(.25) contrast(1.05); }
   .pain figcaption { padding: 20px 20px 24px; font-size: 16px; color: var(--muted); line-height: 1.45; }
   .pain figcaption b { color: var(--text); font-weight: 600; }
@@ -176,25 +174,46 @@ fbq('track', 'PageView');
   .compare ul { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 14px; }
   .compare li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; }
   .compare .before { color: var(--muted); }
-  .compare .after { background: radial-gradient(ellipse at top right, rgba(212,175,55,.22), transparent 60%), var(--surface); border-color: rgba(233,196,106,.35); }
+  .compare .after { background: radial-gradient(ellipse at top right, rgba(193,18,31,.22), transparent 60%), var(--surface); border-color: rgba(224,30,43,.35); }
   .compare .after .tag { color: var(--red-hi); }
   .compare-arrow { display: grid; place-items: center; }
-  .compare-arrow span { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--gold-grad); color: var(--on-gold); font-size: 22px; box-shadow: 0 10px 30px -8px var(--red-glow); }
+  .compare-arrow span { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; background: var(--red); color: #fff; font-size: 22px; box-shadow: 0 10px 30px -8px var(--red-glow); }
 
   /* learn */
   .learn-wrap { border-radius: 32px; padding: clamp(32px, 5vw, 64px); background: linear-gradient(180deg, rgba(9,9,11,.55), rgba(9,9,11,.92)), url("https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c31bcdeaed0604aaaaca63.webp") center/cover; border: 1px solid var(--line-2); }
-  .learn { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .learn { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
   .learn .card { background: rgba(20,20,24,.7); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); display: flex; flex-direction: column; gap: 18px; }
-  .learn .num { font-family: var(--serif); font-style: italic; font-size: 54px; line-height: 1; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; align-self: flex-start; padding-right: .08em; }
+  .learn .num { font-family: var(--display); font-weight: 900; font-size: 46px; line-height: 1; letter-spacing: -.04em; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; align-self: flex-start; padding-right: .08em; }
   .learn .verbs { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--red-hi); margin-top: -8px; }
   .learn small { color: var(--muted); font-size: 15px; line-height: 1.5; }
   .hero-sub { margin: 14px 0 0; font-family: var(--display); font-size: clamp(20px, 2.2vw, 28px); font-weight: 500; color: var(--muted); letter-spacing: -.01em; }
-  .hero-sub .serif { color: var(--text); font-size: 1.15em; }
+  .hero-sub b { color: var(--text); font-weight: 700; }
   .learn p { margin: 0; font-family: var(--display); font-weight: 700; font-size: 22px; line-height: 1.3; letter-spacing: -.01em; }
+
+  /* estimate */
+  .estimate { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .est .tag { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
+  .est.after { background: radial-gradient(ellipse at top right, rgba(193,18,31,.2), transparent 60%), var(--surface); border-color: rgba(224,30,43,.35); }
+  .est.after .tag { color: var(--red-hi); }
+  .est-lines { list-style: none; margin: 20px 0 0; padding: 0; font-variant-numeric: tabular-nums; }
+  .est-lines li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--line-2); color: var(--muted); font-size: 16px; }
+  .est-lines li b { color: var(--text); font-family: var(--display); font-weight: 700; white-space: nowrap; }
+  .est-lines li.muted b { color: var(--red-hi); font-weight: 600; font-size: 14px; }
+  .est-lines li.total { border-bottom: 0; border-top: 1px solid var(--line-2); margin-top: 6px; padding-top: 16px; color: var(--text); font-weight: 600; }
+  .est-lines li.total b { font-size: 22px; }
+  .est-result { margin-top: 18px; padding: 18px 20px; border-radius: 16px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2px 16px; }
+  .est-result small { grid-column: 1; font-size: 13px; color: var(--dim); }
+  .est-result span { grid-column: 1; font-size: 15px; color: var(--text); }
+  .est-result b { grid-column: 2; grid-row: 1 / span 2; font-family: var(--display); font-weight: 900; font-size: clamp(26px, 3vw, 36px); letter-spacing: -.03em; }
+  .est-result.bad { background: rgba(255,255,255,.03); border: 1px solid var(--line); }
+  .est-result.bad b { color: var(--muted); }
+  .est-result.good { background: rgba(193,18,31,.12); border: 1px solid rgba(224,30,43,.35); }
+  .est-result.good b { background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .est-note { text-align: center; color: var(--dim); font-size: 13px; margin: 20px 0 0; }
 
   /* method */
   .method { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
-  .method-visual { position: relative; border-radius: 28px; overflow: hidden; background: radial-gradient(ellipse at 50% 80%, rgba(212,175,55,.4), transparent 60%), var(--surface); border: 1px solid var(--line); }
+  .method-visual { position: relative; border-radius: 28px; overflow: hidden; background: radial-gradient(ellipse at 50% 80%, rgba(193,18,31,.4), transparent 60%), var(--surface); border: 1px solid var(--line); }
   .method-visual img { width: 100%; }
   .stat { position: absolute; left: 20px; bottom: 20px; right: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-radius: 18px; background: rgba(9,9,11,.75); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line-2); }
   .stat small { display: block; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
@@ -210,7 +229,7 @@ fbq('track', 'PageView');
 
   /* forget */
   .forget { text-align: center; }
-  .forget h2 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(64px, 11vw, 150px); line-height: 1; letter-spacing: -.03em; background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 .08em; }
+  .forget h2 { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(60px, 11vw, 150px); line-height: 1; letter-spacing: -.04em; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; padding: 0 .08em; }
   .forget-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 48px; border-radius: var(--r); overflow: hidden; background: var(--line); border: 1px solid var(--line); text-align: left; }
   .forget-grid div { background: var(--bg-2); padding: 28px 24px; }
   .forget-grid b { display: block; font-family: var(--display); font-weight: 700; font-size: 18px; text-decoration: line-through; text-decoration-color: var(--red-hi); text-decoration-thickness: 2px; margin-bottom: 8px; }
@@ -244,10 +263,10 @@ fbq('track', 'PageView');
   .vid figcaption span { font-size: 13px; color: var(--dim); }
   .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
   .quote { display: flex; flex-direction: column; justify-content: space-between; gap: 22px; }
-  .stars { color: var(--gold); letter-spacing: 3px; font-size: 14px; }
+  .stars { color: var(--silver); letter-spacing: 3px; font-size: 14px; }
   .quote p { margin: 10px 0 0; font-size: 16px; color: #d8d4ce; line-height: 1.55; }
   .who { display: flex; align-items: center; gap: 12px; }
-  .avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: rgba(212,175,55,.18); color: var(--red-hi); font-family: var(--display); font-weight: 700; font-size: 14px; flex-shrink: 0; }
+  .avatar { width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; background: rgba(193,18,31,.18); color: var(--red-hi); font-family: var(--display); font-weight: 700; font-size: 14px; flex-shrink: 0; }
   .who b { display: block; font-size: 15px; }
   .who span { font-size: 13px; color: var(--dim); }
 
@@ -256,7 +275,7 @@ fbq('track', 'PageView');
   .option { display: flex; flex-direction: column; gap: 14px; }
   .option .tag { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); }
   .option p { margin: 0; color: var(--muted); }
-  .option.best { background: linear-gradient(180deg, rgba(212,175,55,.18), transparent 70%), var(--surface); border-color: rgba(233,196,106,.45); box-shadow: 0 30px 80px -40px var(--red-glow); }
+  .option.best { background: linear-gradient(180deg, rgba(193,18,31,.18), transparent 70%), var(--surface); border-color: rgba(224,30,43,.45); box-shadow: 0 30px 80px -40px var(--red-glow); }
   .option.best .tag { color: var(--red-hi); }
   .option.best p { color: #e6e2dc; }
   .option.best .btn { margin-top: auto; align-self: flex-start; }
@@ -264,9 +283,9 @@ fbq('track', 'PageView');
 
   /* final */
   .final { overflow: hidden; }
-  .final::before { content: ""; position: absolute; left: 50%; top: 0; width: 1200px; height: 800px; transform: translateX(-50%); background: radial-gradient(ellipse at top, rgba(212,175,55,.25), transparent 60%); pointer-events: none; }
+  .final::before { content: ""; position: absolute; left: 50%; top: 0; width: 1200px; height: 800px; transform: translateX(-50%); background: radial-gradient(ellipse at top, rgba(193,18,31,.25), transparent 60%); pointer-events: none; }
   .final .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 5vw, 72px); align-items: start; }
-  .scarcity { margin-top: 30px; padding: 22px 24px; border-radius: 18px; border: 1px solid rgba(233,196,106,.35); background: rgba(212,175,55,.08); }
+  .scarcity { margin-top: 30px; padding: 22px 24px; border-radius: 18px; border: 1px solid rgba(224,30,43,.35); background: rgba(193,18,31,.08); }
   .scarcity b { display: block; font-family: var(--display); font-weight: 700; color: var(--red-hi); letter-spacing: .06em; text-transform: uppercase; font-size: 14px; margin-bottom: 6px; }
   .scarcity p { margin: 0; color: #d8d4ce; font-size: 16px; }
   .schedule { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 10px; }
@@ -293,13 +312,14 @@ fbq('track', 'PageView');
     .hero .wrap, .method, .host, .final .wrap { grid-template-columns: 1fr; }
     .pains, .learn, .forget-grid { grid-template-columns: repeat(2, 1fr); }
     .vids, .quotes, .options { grid-template-columns: 1fr 1fr; }
+    .learn { grid-template-columns: repeat(2, 1fr); }
     .options .option.best { grid-column: 1 / -1; }
     .host-photo { max-width: 480px; }
   }
   @media (max-width: 760px) {
     body { font-size: 16px; }
     .nav-meta .when { display: none; }
-    .fit, .compare, .vids, .quotes, .options { grid-template-columns: 1fr; }
+    .fit, .compare, .vids, .quotes, .options, .estimate { grid-template-columns: 1fr; }
     .compare-arrow span { transform: rotate(90deg); }
     .facts { grid-template-columns: 1fr; }
     .pains, .learn, .forget-grid, .creds { grid-template-columns: 1fr; }
@@ -318,7 +338,7 @@ fbq('track', 'PageView');
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="One Empire">
-      <span class="logo-gold" role="img" aria-label="One Empire"></span>
+      <img src="../next-level-leaders/images/one-empire-logo-red.png" alt="One Empire">
     </a>
     <div class="nav-meta">
       <span class="live when">Masterclass en vivo · <span data-event-date>Viernes 25 de septiembre</span></span>
@@ -334,9 +354,9 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="reveal">
       <span class="pill"><b>Masterclass</b> Gratuita · en vivo por Zoom</span>
-      <h1>De cero <span class="serif accent">al millón.</span></h1>
-      <p class="hero-sub">Masterclass junto a <span class="serif">Hugo Pérez</span></p>
-      <p class="lead">Trabajas duro en construcción y el dinero nunca alcanza. En esta masterclass te muestro los cuatro pilares para convertir tu trabajo en una empresa: números, ventas, marketing y un equipo que trabaje contigo.</p>
+      <h1><span class="chrome">De cero</span> <span class="accent">al millón.</span></h1>
+      <p class="hero-sub">Masterclass junto a <b>Hugo Pérez</b></p>
+      <p class="lead">Trabajas duro, entran proyectos… y al final del mes no sabes cuánto te quedó. En esta masterclass aprendes a <b style="color:var(--text)">conocer tus números, calcular tu overhead, estimar con ganancia</b> y llenar tu agenda con marketing y ventas que sí funcionan.</p>
       <div class="hero-actions">
         <a class="btn btn-red" href="#registro">Quiero mi acceso gratis <span class="arr">→</span></a>
         <a class="btn btn-ghost" href="#video">Ver el video primero</a>
@@ -386,8 +406,8 @@ fbq('track', 'PageView');
 
 <div class="strip" aria-hidden="true">
   <div class="strip-track">
-    <span>Clientes propios cada semana</span><span>Cotiza sin regateo</span><span>Cobra lo que vales</span><span>Opera como un negocio real</span><span>De contratista a dueño</span><span>Método ONE</span>
-    <span>Clientes propios cada semana</span><span>Cotiza sin regateo</span><span>Cobra lo que vales</span><span>Opera como un negocio real</span><span>De contratista a dueño</span><span>Método ONE</span>
+    <span>Conoce tus números</span><span>Calcula tu overhead</span><span>Estima con ganancia</span><span>Marketing que trae clientes</span><span>Ventas sin regateo</span><span>De obrero a empresario</span>
+    <span>Conoce tus números</span><span>Calcula tu overhead</span><span>Estima con ganancia</span><span>Marketing que trae clientes</span><span>Ventas sin regateo</span><span>De obrero a empresario</span>
   </div>
 </div>
 
@@ -396,14 +416,15 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Antes de registrarte</span>
-      <h2>Esta masterclass no es para todos. <span class="serif accent">Léelo bien.</span></h2>
+      <h2>Esta masterclass no es para todos. <span class="accent">Léelo bien.</span></h2>
     </div>
     <div class="fit">
       <div class="card yes-card reveal">
         <h3><span class="ico yes">✓</span>Es para ti si…</h3>
         <ul>
-          <li><span class="ico yes">✓</span>Trabajas en construcción (independiente, contratista o subcontratista).</li>
-          <li><span class="ico yes">✓</span>Ya haces trabajos por tu cuenta y quieres escalar tu negocio.</li>
+          <li><span class="ico yes">✓</span>Tienes o estás arrancando tu empresa de construcción (remodelación, concreto, roofing, framing o cualquier otra rama).</li>
+          <li><span class="ico yes">✓</span>Cotizas “a ojo” o copiando precios de otros, y no sabes si de verdad ganas.</li>
+          <li><span class="ico yes">✓</span>No tienes claro cuánto es tu overhead ni cuánto te cuesta operar cada mes.</li>
           <li><span class="ico yes">✓</span>Quieres conseguir clientes constantes y mejores contratos.</li>
           <li><span class="ico yes">✓</span>Estás cansado de depender de otros para generar ingresos.</li>
         </ul>
@@ -425,7 +446,7 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Mira esto primero</span>
-      <h2>Si ya trabajas en construcción… <span class="serif accent">pero no logras crecer</span></h2>
+      <h2>Si ya trabajas en construcción… <span class="accent">pero no logras crecer</span></h2>
       <p class="lead">Por qué la mayoría se queda estancada y qué están haciendo diferente los que ya están creciendo.</p>
     </div>
     <div class="vsl reveal">
@@ -445,7 +466,7 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">La realidad de la obra</span>
-      <h2>Si estás en construcción, <span class="serif accent">sabes que esto pasa…</span></h2>
+      <h2>Si estás en construcción, <span class="accent">sabes que esto pasa…</span></h2>
     </div>
     <div class="pains">
       <figure class="pain reveal">
@@ -454,20 +475,20 @@ fbq('track', 'PageView');
       </figure>
       <figure class="pain reveal">
         <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c2d297c0392221f6722d59.png" alt="" loading="lazy">
-        <figcaption>Te regatean precios y <b>terminas cobrando menos.</b></figcaption>
+        <figcaption>Cotizas a ojo y <b>terminas regalando tu trabajo.</b></figcaption>
       </figure>
       <figure class="pain reveal">
         <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/901ad093-7c52-419e-a092-6ab6f01c0616.png" alt="" loading="lazy">
-        <figcaption>Cada cheque <b>se va antes de que llegue.</b></figcaption>
+        <figcaption>Llega el cheque y <b>no sabes cuánto te quedó de verdad.</b></figcaption>
       </figure>
       <figure class="pain reveal">
         <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/d81f0f75-4f79-4906-a10b-bc0512930f57.png" alt="" loading="lazy">
-        <figcaption>Sigues construyendo para otros, <b>sin tiempo ni libertad para ti.</b></figcaption>
+        <figcaption>Dependes de recomendaciones y <b>tu agenda sube y baja.</b></figcaption>
       </figure>
     </div>
     <div class="verdict reveal">
-      <h2>El problema no es tu trabajo. Es que <span class="serif accent">no tienes un sistema.</span></h2>
-      <p>Hoy tienes la oportunidad de construir algo que sí sea tuyo.</p>
+      <h2>El problema no es tu trabajo. Es que <span class="accent">no conoces tus números.</span></h2>
+      <p>Y sin números, cualquier cliente nuevo puede ser una pérdida disfrazada de proyecto.</p>
     </div>
   </div>
 </section>
@@ -477,16 +498,17 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">El cambio</span>
-      <h2>Existe una forma <span class="serif accent">de cambiar esto</span></h2>
+      <h2>Existe una forma <span class="accent">de cambiar esto</span></h2>
     </div>
     <div class="compare">
       <div class="card before reveal">
         <span class="tag">Hoy</span>
         <h3>Sin sistema</h3>
         <ul>
-          <li><span class="ico no">✕</span>Haces todo tú solo, sin poder escalar.</li>
-          <li><span class="ico no">✕</span>Dependes del siguiente trabajo para pagar gastos.</li>
-          <li><span class="ico no">✕</span>No sabes cuánto vas a ganar el próximo mes.</li>
+          <li><span class="ico no">✕</span>Cotizas a ojo y te enteras de la pérdida cuando ya terminaste.</li>
+          <li><span class="ico no">✕</span>No sabes cuánto te cuesta tener la empresa abierta.</li>
+          <li><span class="ico no">✕</span>Dependes de recomendaciones para conseguir trabajo.</li>
+          <li><span class="ico no">✕</span>Bajas tu precio en cuanto el cliente regatea.</li>
         </ul>
       </div>
       <div class="compare-arrow" aria-hidden="true"><span>→</span></div>
@@ -494,9 +516,10 @@ fbq('track', 'PageView');
         <span class="tag">Con el Método ONE</span>
         <h3>Operas como dueño</h3>
         <ul>
-          <li><span class="ico yes">✓</span>Clientes llegando cada semana.</li>
-          <li><span class="ico yes">✓</span>Cotizas con seguridad y cobras lo que realmente vale.</li>
-          <li><span class="ico yes">✓</span>Diriges tu negocio en lugar de solo trabajar en él.</li>
+          <li><span class="ico yes">✓</span>Sabes tu costo real y tu margen antes de firmar.</li>
+          <li><span class="ico yes">✓</span>Tu overhead está calculado y metido en cada estimado.</li>
+          <li><span class="ico yes">✓</span>Tu marketing trae clientes cada semana.</li>
+          <li><span class="ico yes">✓</span>Vendes con seguridad y defiendes tu precio.</li>
         </ul>
       </div>
     </div>
@@ -509,15 +532,53 @@ fbq('track', 'PageView');
     <div class="learn-wrap reveal">
       <div class="sec-head">
         <span class="eyebrow">El contenido</span>
-        <h2>Los 4 pilares para ir <span class="serif accent">de cero al millón</span></h2>
+        <h2>Lo que vas a dominar <span class="accent">en esta masterclass</span></h2>
       </div>
       <div class="learn">
-        <div class="card"><span class="num">01</span><p>Números</p><span class="verbs">Analiza · Mide · Crece</span><small>Cuánto ganas de verdad en cada obra y cómo cotizar para que el dinero alcance.</small></div>
-        <div class="card"><span class="num">02</span><p>Ventas</p><span class="verbs">Convierte · Escala</span><small>Cómo cerrar contratos de mayor valor con confianza y sin regateo.</small></div>
-        <div class="card"><span class="num">03</span><p>Marketing</p><span class="verbs">Comunica · Posiciona</span><small>Cómo conseguir clientes propios cada semana sin depender de recomendaciones.</small></div>
-        <div class="card"><span class="num">04</span><p>Equipos de alto rendimiento</p><span class="verbs">Lidera · Multiplica</span><small>Cómo construir un equipo para dirigir tu negocio en lugar de cargar con todo.</small></div>
+        <div class="card"><span class="num">01</span><p>Conoce tus números</p><span class="verbs">Analiza · Mide · Decide</span><small>Ingresos, costos, margen y flujo de efectivo: los 4 números que todo dueño debe saber de memoria.</small></div>
+        <div class="card"><span class="num">02</span><p>Calcula tu overhead</p><span class="verbs">Identifica · Prorratea</span><small>Renta, seguros, licencias, camionetas, gasolina, teléfono, oficina… cuánto te cuesta abrir la puerta cada mes.</small></div>
+        <div class="card"><span class="num">03</span><p>Estima y cotiza con ganancia</p><span class="verbs">Calcula · Cotiza · Gana</span><small>Materiales, mano de obra, overhead y margen en un estimado claro que el cliente entiende y respeta.</small></div>
+        <div class="card"><span class="num">04</span><p>Marketing</p><span class="verbs">Comunica · Posiciona</span><small>Cómo atraer clientes de forma constante sin depender solo de recomendaciones.</small></div>
+        <div class="card"><span class="num">05</span><p>Ventas</p><span class="verbs">Convierte · Cierra</span><small>Cómo presentar tu precio con seguridad, manejar el regateo y cerrar contratos de mayor valor.</small></div>
+        <div class="card"><span class="num">06</span><p>Equipo y sistemas</p><span class="verbs">Lidera · Multiplica</span><small>Cómo armar procesos y un equipo para que la empresa crezca sin depender solo de tus manos.</small></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== ESTIMATE ========== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Overhead y estimación</span>
+      <h2>El mismo proyecto. <span class="accent">Dos formas de cotizarlo.</span></h2>
+      <p class="lead">La mayoría de los contratistas pierde dinero sin darse cuenta porque nunca mete el overhead en su precio. Mira la diferencia en un patio de concreto.</p>
+    </div>
+    <div class="estimate">
+      <div class="card est before reveal">
+        <span class="tag">Cotizar a ojo</span>
+        <ul class="est-lines">
+          <li><span>Materiales</span><b>$6,200</b></li>
+          <li><span>Mano de obra</span><b>$4,800</b></li>
+          <li><span>“Algo extra por si acaso”</span><b>$1,500</b></li>
+          <li class="muted"><span>Overhead</span><b>No lo calculó</b></li>
+          <li class="total"><span>Precio al cliente</span><b>$12,500</b></li>
+        </ul>
+        <div class="est-result bad"><small>Costo real con overhead: $13,100</small><b>−$600</b><span>Perdió dinero… y ni se enteró.</span></div>
+      </div>
+      <div class="card est after reveal">
+        <span class="tag">Estimar como dueño</span>
+        <ul class="est-lines">
+          <li><span>Materiales</span><b>$6,200</b></li>
+          <li><span>Mano de obra</span><b>$4,800</b></li>
+          <li><span>Overhead asignado al proyecto</span><b>$2,100</b></li>
+          <li><span>Margen de ganancia (20%)</span><b>$3,275</b></li>
+          <li class="total"><span>Precio al cliente</span><b>$16,375</b></li>
+        </ul>
+        <div class="est-result good"><small>Costo real con overhead: $13,100</small><b>+$3,275</b><span>Ganancia limpia, calculada antes de firmar.</span></div>
+      </div>
+    </div>
+    <p class="est-note reveal">Cifras de ejemplo. En la masterclass aprendes a calcular las tuyas.</p>
   </div>
 </section>
 
@@ -534,13 +595,13 @@ fbq('track', 'PageView');
     </div>
     <div class="reveal">
       <span class="eyebrow">Método ONE</span>
-      <h2 style="margin-top:16px">De contratista a <span class="serif accent">empresario</span> en 90 días.</h2>
-      <p class="lead">El camino claro y probado que te lleva de trabajar para otros a construir tu propio negocio, o escalarlo al siguiente nivel.</p>
+      <h2 style="margin-top:16px">De obrero a <span class="accent">empresario.</span></h2>
+      <p class="lead">El mismo sistema que llevó a Hugo de $175K a más de $1.5M en 9 meses: números claros, precios con ganancia y una máquina de clientes.</p>
       <ul class="pillars">
-        <li><i>01</i><div><b>Paso a paso probado</b><span>La ruta exacta para pasar de empleado a empresario constructor.</span></div></li>
-        <li><i>02</i><div><b>Estrategia práctica</b><span>Cómo conseguir clientes cada semana sin depender de la suerte.</span></div></li>
-        <li><i>03</i><div><b>Control financiero</b><span>Cotiza con confianza y maneja tu dinero como dueño.</span></div></li>
-        <li><i>04</i><div><b>Crecimiento real</b><span>Cierra contratos sin regateo, cobra lo que vales y construye un negocio rentable.</span></div></li>
+        <li><i>01</i><div><b>Números y overhead</b><span>Sabes cuánto entra, cuánto sale y cuánto te cuesta operar cada mes.</span></div></li>
+        <li><i>02</i><div><b>Estimación con ganancia</b><span>Cada cotización cubre costos, overhead y tu margen. Sin adivinar.</span></div></li>
+        <li><i>03</i><div><b>Marketing constante</b><span>Clientes llegando cada semana sin depender de la suerte.</span></div></li>
+        <li><i>04</i><div><b>Ventas con seguridad</b><span>Presentas tu precio, manejas el regateo y cierras contratos más grandes.</span></div></li>
       </ul>
       <a class="btn btn-red" href="#registro">Quiero empezar ya <span class="arr">→</span></a>
     </div>
@@ -553,7 +614,7 @@ fbq('track', 'PageView');
     <h2 class="reveal">Olvida</h2>
     <div class="forget-grid reveal">
       <div><b>El miedo</b><span>A quedarte sin trabajo cada semana.</span></div>
-      <div><b>La incertidumbre</b><span>De no saber si vas a cobrar lo justo.</span></div>
+      <div><b>Cotizar a ojo</b><span>Y descubrir la pérdida cuando ya terminaste la obra.</span></div>
       <div><b>El regateo</b><span>Clientes que siempre quieren pagar menos.</span></div>
       <div><b>El estancamiento</b><span>Años trabajando sin ver crecimiento ni libertad.</span></div>
     </div>
@@ -569,7 +630,7 @@ fbq('track', 'PageView');
     </figure>
     <div class="reveal">
       <span class="eyebrow">Tu mentor</span>
-      <h2 style="margin-top:16px">¿Quién te acompaña <span class="serif accent">en este proceso?</span></h2>
+      <h2 style="margin-top:16px">¿Quién te acompaña <span class="accent">en este proceso?</span></h2>
       <p class="lead">Hugo Pérez es experto en construcción y negocios, y fundador del <b>Método ONE</b>: el sistema que ya ayudó a muchos trabajadores de la construcción a dejar de ser empleados y convertirse en dueños de su propio negocio.</p>
       <p>Su misión: enseñarte cómo conseguir clientes, <b>cobrar lo justo</b> y crecer como empresario.</p>
       <div class="creds">
@@ -587,7 +648,7 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Resultados</span>
-      <h2>Ellos ya están construyendo su negocio… <span class="serif accent">ahora es tu turno</span></h2>
+      <h2>Ellos ya están construyendo su negocio… <span class="accent">ahora es tu turno</span></h2>
     </div>
     <div class="vids">
       <figure class="vid reveal">
@@ -631,7 +692,7 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Tu decisión</span>
-      <h2>En este momento <span class="serif accent">tienes 3 opciones</span></h2>
+      <h2>En este momento <span class="accent">tienes 3 opciones</span></h2>
     </div>
     <div class="options">
       <div class="card option dim reveal">
@@ -647,7 +708,7 @@ fbq('track', 'PageView');
       <div class="card option best reveal">
         <span class="tag">Opción 3 · Recomendada</span>
         <h3>Entrar a la masterclass</h3>
-        <p>Reservar tu lugar y descubrir todo lo que puedes lograr con el Método ONE.</p>
+        <p>Reservar tu lugar y aprender a conocer tus números, estimar con ganancia y vender como dueño.</p>
         <a class="btn btn-red" href="#registro-final">Quiero construir mi negocio <span class="arr">→</span></a>
       </div>
     </div>
@@ -659,8 +720,8 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Último paso</span>
-      <h2 style="margin-top:16px">Aprende a generar ingresos <span class="serif accent">como dueño.</span></h2>
-      <p class="lead">Tu libertad empieza cuando dejas de trabajar para otros. Asegura tu acceso antes de que se llene.</p>
+      <h2 style="margin-top:16px">Conoce tus números. <span class="accent">Cobra como dueño.</span></h2>
+      <p class="lead">Una sola masterclass para dejar de adivinar: overhead, estimación, marketing y ventas. Asegura tu acceso antes de que se llene.</p>
       <div class="scarcity">
         <b>Los cupos se agotan</b>
         <p>La masterclass es gratuita, pero se abre solo para un grupo reducido para garantizar la calidad de cada sesión. Cada día que lo postergas, sigues construyendo el sueño de otros.</p>
