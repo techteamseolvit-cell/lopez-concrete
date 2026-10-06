@@ -3,14 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Masterclass De Cero al Millón · Hugo Pérez</title>
-<meta name="description" content="Masterclass gratuita en vivo por Zoom con Hugo Pérez para dueños latinos de construcción: conoce tus números y tu overhead, aprende a estimar y cotizar con ganancia, y domina marketing y ventas.">
+<title>De Obrero a Empresario · Masterclass gratuita con Hugo Pérez</title>
+<meta name="description" content="Masterclass gratuita en vivo por Zoom, miércoles 14 de octubre a las 8 PM: conoce tus números, calcula tu overhead, estima con ganancia y domina marketing y ventas para tu empresa de construcción.">
 <meta name="author" content="Hugo Pérez">
-<meta property="og:title" content="Masterclass De Cero al Millón - Hugo Pérez">
-<meta property="og:description" content="Deja de construir los sueños de otros… y empieza a levantar el tuyo. Clase gratuita 100% online.">
-<meta property="og:image" content="https://assets.cdn.filesafe.space/O3uJRVJWaihItC8dERui/media/68bf67f9db3e0057d92d8564.png">
+<meta property="og:title" content="De Obrero a Empresario · Masterclass gratuita con Hugo Pérez">
+<meta property="og:description" content="Conoce tus números, tu overhead y aprende a estimar con ganancia. Miércoles 14 de octubre · 8:00 PM · Zoom.">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="../next-level-leaders/images/one-empire-icon-red.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +61,7 @@ fbq('track', 'PageView');
 
   /* ---------- type ---------- */
   h1, h2, h3 { font-family: var(--display); font-weight: 800; letter-spacing: -.02em; margin: 0; line-height: 1.04; }
-  h1 { font-size: clamp(40px, 6vw, 80px); font-weight: 900; text-transform: uppercase; letter-spacing: -.03em; line-height: .98; }
+  h1 { font-size: clamp(36px, 4.4vw, 60px); font-weight: 900; text-transform: uppercase; letter-spacing: -.03em; line-height: .98; }
   h2 { font-size: clamp(30px, 4vw, 52px); }
   h3 { font-size: clamp(19px, 1.7vw, 22px); line-height: 1.2; letter-spacing: -.015em; }
   .chrome { background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
@@ -248,6 +247,18 @@ fbq('track', 'PageView');
   .creds div { padding: 18px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); font-size: 15px; color: var(--muted); }
   .creds b { display: block; color: var(--text); font-family: var(--display); font-weight: 600; font-size: 16px; margin-bottom: 4px; }
 
+  /* symptoms */
+  .symptoms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .sym { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start; padding: 24px; }
+  .sym span { font-family: var(--display); font-weight: 900; font-size: 15px; color: var(--red-hi); padding-top: 2px; }
+  .sym p { margin: 0; font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 1.35; letter-spacing: -.01em; }
+  .vsl-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .vids4 { grid-template-columns: repeat(4, 1fr); }
+  .vid-btn iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .vid blockquote { margin: 0; padding: 18px 20px 22px; color: var(--muted); font-size: 15px; line-height: 1.5; }
+  .vid blockquote b { color: var(--text); font-weight: 600; }
+  .vid .stars { margin-bottom: 8px; }
+
   /* testimonials */
   .vids { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .vid { margin: 0; border-radius: var(--r); overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
@@ -312,21 +323,21 @@ fbq('track', 'PageView');
     .hero .wrap, .method, .host, .final .wrap { grid-template-columns: 1fr; }
     .pains, .learn, .forget-grid { grid-template-columns: repeat(2, 1fr); }
     .vids, .quotes, .options { grid-template-columns: 1fr 1fr; }
-    .learn { grid-template-columns: repeat(2, 1fr); }
+    .learn, .symptoms, .vids4 { grid-template-columns: repeat(2, 1fr); }
     .options .option.best { grid-column: 1 / -1; }
     .host-photo { max-width: 480px; }
   }
   @media (max-width: 760px) {
     body { font-size: 16px; }
     .nav-meta .when { display: none; }
-    .fit, .compare, .vids, .quotes, .options, .estimate { grid-template-columns: 1fr; }
+    .fit, .compare, .vids, .quotes, .options, .estimate, .symptoms, .vids4 { grid-template-columns: 1fr; }
     .compare-arrow span { transform: rotate(90deg); }
     .facts { grid-template-columns: 1fr; }
     .pains, .learn, .forget-grid, .creds { grid-template-columns: 1fr; }
     .hero-actions .btn { width: 100%; }
     .stat { left: 12px; right: 12px; bottom: 12px; padding: 12px 14px; }
-    .sticky-cta { display: flex; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 18px; border-radius: 999px; background: rgba(20,20,24,.9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line-2); box-shadow: 0 20px 40px -10px rgba(0,0,0,.6); transition: transform .3s ease; }
-    .sticky-cta.hide, .sticky-cta.top { transform: translateY(140%); }
+    .sticky-cta { display: flex; position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 60; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 18px; border-radius: 999px; background: rgba(20,20,24,.9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--line-2); box-shadow: 0 20px 40px -10px rgba(0,0,0,.6); transition: transform .3s ease, opacity .3s ease; }
+    .sticky-cta.hide, .sticky-cta.top { transform: translateY(140%); opacity: 0; pointer-events: none; }
     .sticky-cta small { font-size: 13px; color: var(--muted); line-height: 1.3; }
     .sticky-cta small b { display: block; color: var(--text); }
     .sticky-cta .btn { padding: 12px 20px; font-size: 14px; }
@@ -341,7 +352,7 @@ fbq('track', 'PageView');
       <img src="../next-level-leaders/images/one-empire-logo-red.png" alt="One Empire">
     </a>
     <div class="nav-meta">
-      <span class="live when">Masterclass en vivo · <span data-event-date>Viernes 25 de septiembre</span></span>
+      <span class="live when">Masterclass en vivo · Mié 14 de octubre · 8:00 PM</span>
       <a class="btn btn-red" href="#registro">Reservar mi lugar</a>
     </div>
   </div>
@@ -353,21 +364,21 @@ fbq('track', 'PageView');
 <section class="hero">
   <div class="wrap">
     <div class="reveal">
-      <span class="pill"><b>Masterclass</b> Gratuita · en vivo por Zoom</span>
-      <h1><span class="chrome">De cero</span> <span class="accent">al millón.</span></h1>
-      <p class="hero-sub">Masterclass junto a <b>Hugo Pérez</b></p>
-      <p class="lead">Trabajas duro, entran proyectos… y al final del mes no sabes cuánto te quedó. En esta masterclass aprendes a <b style="color:var(--text)">conocer tus números, calcular tu overhead, estimar con ganancia</b> y llenar tu agenda con marketing y ventas que sí funcionan.</p>
+      <span class="pill"><b>Gratis</b> Masterclass en vivo por Zoom</span>
+      <h1><span class="chrome">Conoce tus números.</span> <span class="accent">Cobra como dueño.</span></h1>
+      <p class="hero-sub">De obrero a empresario, con <b>Hugo Pérez</b></p>
+      <p class="lead">Para dueños latinos de empresas de construcción que trabajan duro, tienen proyectos… y aun así no saben cuánto les queda. Aprende a calcular tu overhead, estimar con ganancia y llenar tu agenda con marketing y ventas que sí funcionan.</p>
       <div class="hero-actions">
-        <a class="btn btn-red" href="#registro">Quiero mi acceso gratis <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#video">Ver el video primero</a>
+        <a class="btn btn-red" href="#registro">Quiero mi lugar gratis <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#contenido">Ver lo que vas a aprender</a>
       </div>
 
       <div class="facts">
-        <div><small>Fecha</small><b data-event-date>Viernes 25 de septiembre</b></div>
-        <div><small>Hora</small><b>6:00 PM CDMX · Dallas</b></div>
+        <div><small>Fecha</small><b>Miércoles 14 de octubre</b></div>
+        <div><small>Hora</small><b>8:00 PM · hora del Centro</b></div>
         <div><small>Formato</small><b>En vivo por Zoom</b></div>
       </div>
-      <div class="countdown" data-countdown aria-label="Tiempo restante para la clase">
+      <div class="countdown" data-countdown aria-label="Tiempo restante para la masterclass">
         <div><b data-d>--</b><span>Días</span></div>
         <div><b data-h>--</b><span>Horas</span></div>
         <div><b data-m>--</b><span>Min</span></div>
@@ -379,8 +390,8 @@ fbq('track', 'PageView');
       <div class="form-card">
         <div class="form-inner">
           <div class="form-top">
-            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_320/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c2d7f6fe4d0d28afcdbd6a.png" alt="Hugo Pérez">
-            <div><b>Reserva tu lugar gratis</b><span>Con Hugo Pérez · cupos limitados</span></div>
+            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_320/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a3313a65408771d16550b21.png" alt="Hugo Pérez">
+            <div><b>Reserva tu lugar gratis</b><span>Con Hugo Pérez · cupo limitado</span></div>
           </div>
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/XsE9QlNY3r6MO2YBao21"
@@ -399,7 +410,7 @@ fbq('track', 'PageView');
             title="Registro a la masterclass gratuita"></iframe>
         </div>
       </div>
-      <div class="form-note"><span>100% gratuito</span><span>Sin spam</span><span>Acceso por Zoom</span></div>
+      <div class="form-note"><span>100% gratuito</span><span>Sin spam</span><span>Link de Zoom por WhatsApp</span></div>
     </div>
   </div>
 </section>
@@ -411,32 +422,25 @@ fbq('track', 'PageView');
   </div>
 </div>
 
-<!-- ========== FIT ========== -->
+<!-- ========== PROBLEM ========== -->
 <section>
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">Antes de registrarte</span>
-      <h2>Esta masterclass no es para todos. <span class="accent">Léelo bien.</span></h2>
+      <span class="eyebrow">Lo que vemos en la construcción</span>
+      <h2>Sobran contratistas que saben levantar una obra. <span class="accent">Escasean los que saben cuánto les deja.</span></h2>
+      <p class="lead">Entran proyectos, se trabaja de sol a sol… y aun así el dueño termina:</p>
     </div>
-    <div class="fit">
-      <div class="card yes-card reveal">
-        <h3><span class="ico yes">✓</span>Es para ti si…</h3>
-        <ul>
-          <li><span class="ico yes">✓</span>Tienes o estás arrancando tu empresa de construcción (remodelación, concreto, roofing, framing o cualquier otra rama).</li>
-          <li><span class="ico yes">✓</span>Cotizas “a ojo” o copiando precios de otros, y no sabes si de verdad ganas.</li>
-          <li><span class="ico yes">✓</span>No tienes claro cuánto es tu overhead ni cuánto te cuesta operar cada mes.</li>
-          <li><span class="ico yes">✓</span>Quieres conseguir clientes constantes y mejores contratos.</li>
-          <li><span class="ico yes">✓</span>Estás cansado de depender de otros para generar ingresos.</li>
-        </ul>
-      </div>
-      <div class="card no-card reveal">
-        <h3><span class="ico no">✕</span>No es para ti si…</h3>
-        <ul>
-          <li><span class="ico no">✕</span>No tienes experiencia en construcción.</li>
-          <li><span class="ico no">✕</span>Buscas empezar desde cero en otro rubro.</li>
-          <li><span class="ico no">✕</span>No estás dispuesto a trabajar en el sector.</li>
-        </ul>
-      </div>
+    <div class="symptoms">
+      <div class="card sym reveal"><span>01</span><p>Cotizando “a ojo” o copiando el precio de otro</p></div>
+      <div class="card sym reveal"><span>02</span><p>Sin saber cuánto le cuesta tener la empresa abierta cada mes</p></div>
+      <div class="card sym reveal"><span>03</span><p>Cobrando el cheque sin saber cuánto le quedó de verdad</p></div>
+      <div class="card sym reveal"><span>04</span><p>Esperando que suene el teléfono por una recomendación</p></div>
+      <div class="card sym reveal"><span>05</span><p>Bajando su precio en cuanto el cliente regatea</p></div>
+      <div class="card sym reveal"><span>06</span><p>Trabajando más horas cada año… y ganando lo mismo</p></div>
+    </div>
+    <div class="verdict reveal">
+      <h2>No es que no sepas construir. <span class="accent">Es que nadie te enseñó a leer los números de tu empresa.</span></h2>
+      <p>Y sin números, cualquier proyecto nuevo puede ser una pérdida disfrazada de trabajo.</p>
     </div>
   </div>
 </section>
@@ -445,81 +449,49 @@ fbq('track', 'PageView');
 <section id="video" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">Mira esto primero</span>
-      <h2>Si ya trabajas en construcción… <span class="accent">pero no logras crecer</span></h2>
-      <p class="lead">Por qué la mayoría se queda estancada y qué están haciendo diferente los que ya están creciendo.</p>
+      <span class="eyebrow">Dale play</span>
+      <h2>¿Llevas años en la construcción <span class="accent">y sientes que no avanzas?</span></h2>
+      <p class="lead">Por qué tantos contratistas se quedan en el mismo lugar y qué hacen distinto los que sí están creciendo.</p>
     </div>
     <div class="vsl reveal">
       <div class="vsl-frame">
-        <video controls playsinline preload="metadata" src="https://storage.googleapis.com/msgsndr/O3uJRVJWaihItC8dERui/media/68bf57d73ea937409522fd7e.mp4"></video>
+        <iframe src="https://www.loom.com/embed/f9df260c4c434554ba0fefd5bf6c3c4a?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen title="Video: por qué los contratistas se estancan"></iframe>
       </div>
     </div>
     <div class="vsl-cta reveal">
-      <p>Existe una ruta para dejar de ser “el que hace el trabajo” y <b>convertirte en el que dirige, cotiza y cobra como profesional.</b></p>
-      <a class="btn btn-red" href="#registro">Quiero aplicar este sistema <span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ========== PAINS ========== -->
-<section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">La realidad de la obra</span>
-      <h2>Si estás en construcción, <span class="accent">sabes que esto pasa…</span></h2>
-    </div>
-    <div class="pains">
-      <figure class="pain reveal">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/52e687e2-986b-49f6-ac9f-987d911a360f.png" alt="" loading="lazy">
-        <figcaption>Trabajas más que nunca… <b>pero el dinero no crece.</b></figcaption>
-      </figure>
-      <figure class="pain reveal">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c2d297c0392221f6722d59.png" alt="" loading="lazy">
-        <figcaption>Cotizas a ojo y <b>terminas regalando tu trabajo.</b></figcaption>
-      </figure>
-      <figure class="pain reveal">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/901ad093-7c52-419e-a092-6ab6f01c0616.png" alt="" loading="lazy">
-        <figcaption>Llega el cheque y <b>no sabes cuánto te quedó de verdad.</b></figcaption>
-      </figure>
-      <figure class="pain reveal">
-        <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/d81f0f75-4f79-4906-a10b-bc0512930f57.png" alt="" loading="lazy">
-        <figcaption>Dependes de recomendaciones y <b>tu agenda sube y baja.</b></figcaption>
-      </figure>
-    </div>
-    <div class="verdict reveal">
-      <h2>El problema no es tu trabajo. Es que <span class="accent">no conoces tus números.</span></h2>
-      <p>Y sin números, cualquier cliente nuevo puede ser una pérdida disfrazada de proyecto.</p>
+      <p>Hay un camino para dejar de ser “el que hace todo” y pasar a ser <b>el que conoce sus números, cotiza con seguridad y cobra lo que vale su trabajo.</b></p>
+      <a class="btn btn-red" href="#registro">Quiero ese camino <span class="arr">→</span></a>
     </div>
   </div>
 </section>
 
 <!-- ========== COMPARE ========== -->
-<section>
+<section style="padding-top:0">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">El cambio</span>
-      <h2>Existe una forma <span class="accent">de cambiar esto</span></h2>
+      <h2>Del obrero que adivina <span class="accent">al dueño que decide con números</span></h2>
     </div>
     <div class="compare">
       <div class="card before reveal">
         <span class="tag">Hoy</span>
-        <h3>Sin sistema</h3>
+        <h3>Así trabajas hoy</h3>
         <ul>
           <li><span class="ico no">✕</span>Cotizas a ojo y te enteras de la pérdida cuando ya terminaste.</li>
-          <li><span class="ico no">✕</span>No sabes cuánto te cuesta tener la empresa abierta.</li>
+          <li><span class="ico no">✕</span>No sabes cuánto es tu overhead ni dónde se va el dinero.</li>
           <li><span class="ico no">✕</span>Dependes de recomendaciones para conseguir trabajo.</li>
           <li><span class="ico no">✕</span>Bajas tu precio en cuanto el cliente regatea.</li>
         </ul>
       </div>
       <div class="compare-arrow" aria-hidden="true"><span>→</span></div>
       <div class="card after reveal">
-        <span class="tag">Con el Método ONE</span>
-        <h3>Operas como dueño</h3>
+        <span class="tag">Después de la masterclass</span>
+        <h3>Así trabajarás después</h3>
         <ul>
           <li><span class="ico yes">✓</span>Sabes tu costo real y tu margen antes de firmar.</li>
           <li><span class="ico yes">✓</span>Tu overhead está calculado y metido en cada estimado.</li>
-          <li><span class="ico yes">✓</span>Tu marketing trae clientes cada semana.</li>
-          <li><span class="ico yes">✓</span>Vendes con seguridad y defiendes tu precio.</li>
+          <li><span class="ico yes">✓</span>Tu marketing trae clientes de forma constante.</li>
+          <li><span class="ico yes">✓</span>Presentas tu precio con seguridad y lo defiendes.</li>
         </ul>
       </div>
     </div>
@@ -527,20 +499,20 @@ fbq('track', 'PageView');
 </section>
 
 <!-- ========== LEARN ========== -->
-<section style="padding-top:0">
+<section id="contenido" style="padding-top:0">
   <div class="wrap">
     <div class="learn-wrap reveal">
       <div class="sec-head">
         <span class="eyebrow">El contenido</span>
-        <h2>Lo que vas a dominar <span class="accent">en esta masterclass</span></h2>
+        <h2>Lo que vas a dominar <span class="accent">en una sola noche</span></h2>
       </div>
       <div class="learn">
-        <div class="card"><span class="num">01</span><p>Conoce tus números</p><span class="verbs">Analiza · Mide · Decide</span><small>Ingresos, costos, margen y flujo de efectivo: los 4 números que todo dueño debe saber de memoria.</small></div>
-        <div class="card"><span class="num">02</span><p>Calcula tu overhead</p><span class="verbs">Identifica · Prorratea</span><small>Renta, seguros, licencias, camionetas, gasolina, teléfono, oficina… cuánto te cuesta abrir la puerta cada mes.</small></div>
-        <div class="card"><span class="num">03</span><p>Estima y cotiza con ganancia</p><span class="verbs">Calcula · Cotiza · Gana</span><small>Materiales, mano de obra, overhead y margen en un estimado claro que el cliente entiende y respeta.</small></div>
-        <div class="card"><span class="num">04</span><p>Marketing</p><span class="verbs">Comunica · Posiciona</span><small>Cómo atraer clientes de forma constante sin depender solo de recomendaciones.</small></div>
-        <div class="card"><span class="num">05</span><p>Ventas</p><span class="verbs">Convierte · Cierra</span><small>Cómo presentar tu precio con seguridad, manejar el regateo y cerrar contratos de mayor valor.</small></div>
-        <div class="card"><span class="num">06</span><p>Equipo y sistemas</p><span class="verbs">Lidera · Multiplica</span><small>Cómo armar procesos y un equipo para que la empresa crezca sin depender solo de tus manos.</small></div>
+        <div class="card"><span class="num">01</span><p>Conoce tus números</p><span class="verbs">Analiza · Mide · Decide</span><small>Ingresos, costos, margen y flujo de efectivo: los números que todo dueño debe saber de memoria.</small></div>
+        <div class="card"><span class="num">02</span><p>Calcula tu overhead</p><span class="verbs">Identifica · Reparte</span><small>Renta, seguros, licencias, camionetas, gasolina, teléfono, oficina… cuánto te cuesta abrir la puerta cada mes.</small></div>
+        <div class="card"><span class="num">03</span><p>Estima con ganancia</p><span class="verbs">Calcula · Cotiza · Gana</span><small>Materiales, mano de obra, overhead y margen en un estimado claro que el cliente entiende y respeta.</small></div>
+        <div class="card"><span class="num">04</span><p>Marketing</p><span class="verbs">Atrae · Posiciona</span><small>Cómo llenar tu agenda de proyectos sin depender solo de recomendaciones.</small></div>
+        <div class="card"><span class="num">05</span><p>Ventas</p><span class="verbs">Presenta · Cierra</span><small>Cómo presentar tu precio con seguridad, manejar el regateo y cerrar contratos más grandes.</small></div>
+        <div class="card"><span class="num">06</span><p>Dirige como dueño</p><span class="verbs">Ordena · Crece</span><small>Cómo usar tus números para decidir qué proyectos tomar y cómo hacer crecer tu empresa.</small></div>
       </div>
     </div>
   </div>
@@ -582,41 +554,33 @@ fbq('track', 'PageView');
   </div>
 </section>
 
-<!-- ========== METHOD ========== -->
-<section style="padding-top:0">
-  <div class="wrap method">
-    <div class="method-visual reveal">
-      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/c76d57b6-bb86-4b08-9c44-a92a5bec0769.png" alt="Hugo Pérez, creador del Método ONE" loading="lazy">
-      <div class="stat">
-        <div><small>Antes</small><b>$175K</b></div>
-        <span class="arrow">→</span>
-        <div class="to"><small>9 meses después</small><b>+$1.5M</b></div>
-      </div>
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">Método ONE</span>
-      <h2 style="margin-top:16px">De obrero a <span class="accent">empresario.</span></h2>
-      <p class="lead">El mismo sistema que llevó a Hugo de $175K a más de $1.5M en 9 meses: números claros, precios con ganancia y una máquina de clientes.</p>
-      <ul class="pillars">
-        <li><i>01</i><div><b>Números y overhead</b><span>Sabes cuánto entra, cuánto sale y cuánto te cuesta operar cada mes.</span></div></li>
-        <li><i>02</i><div><b>Estimación con ganancia</b><span>Cada cotización cubre costos, overhead y tu margen. Sin adivinar.</span></div></li>
-        <li><i>03</i><div><b>Marketing constante</b><span>Clientes llegando cada semana sin depender de la suerte.</span></div></li>
-        <li><i>04</i><div><b>Ventas con seguridad</b><span>Presentas tu precio, manejas el regateo y cierras contratos más grandes.</span></div></li>
-      </ul>
-      <a class="btn btn-red" href="#registro">Quiero empezar ya <span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FORGET ========== -->
-<section class="forget" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<!-- ========== FIT ========== -->
+<section style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
-    <h2 class="reveal">Olvida</h2>
-    <div class="forget-grid reveal">
-      <div><b>El miedo</b><span>A quedarte sin trabajo cada semana.</span></div>
-      <div><b>Cotizar a ojo</b><span>Y descubrir la pérdida cuando ya terminaste la obra.</span></div>
-      <div><b>El regateo</b><span>Clientes que siempre quieren pagar menos.</span></div>
-      <div><b>El estancamiento</b><span>Años trabajando sin ver crecimiento ni libertad.</span></div>
+    <div class="sec-head reveal">
+      <span class="eyebrow">Antes de apartar tu lugar</span>
+      <h2>¿Esta masterclass <span class="accent">es para ti?</span></h2>
+    </div>
+    <div class="fit">
+      <div class="card yes-card reveal">
+        <h3><span class="ico yes">✓</span>Sí es para ti si…</h3>
+        <ul>
+          <li><span class="ico yes">✓</span>Tienes una empresa de construcción o ya trabajas por tu cuenta: remodelación, concreto, roofing, framing, pintura o cualquier otra rama.</li>
+          <li><span class="ico yes">✓</span>Cotizas a ojo y no estás seguro de cuánto ganas en cada proyecto.</li>
+          <li><span class="ico yes">✓</span>No tienes claro cuál es tu overhead.</li>
+          <li><span class="ico yes">✓</span>Quieres más clientes y mejores proyectos.</li>
+          <li><span class="ico yes">✓</span>Estás decidido a manejar tu empresa como dueño.</li>
+        </ul>
+      </div>
+      <div class="card no-card reveal">
+        <h3><span class="ico no">✕</span>No es para ti si…</h3>
+        <ul>
+          <li><span class="ico no">✕</span>No trabajas en construcción.</li>
+          <li><span class="ico no">✕</span>Prefieres seguir adivinando tus precios.</li>
+          <li><span class="ico no">✕</span>Crecer no está en tus planes.</li>
+          <li><span class="ico no">✕</span>No estás dispuesto a probar nada nuevo.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -625,19 +589,18 @@ fbq('track', 'PageView');
 <section>
   <div class="wrap host">
     <figure class="host-photo reveal" style="margin:0">
-      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/bbf10431-6233-4915-b06a-082709f53a4e.png" alt="Hugo Pérez" loading="lazy">
-      <figcaption><b>Hugo Pérez</b><span>Fundador del Método ONE</span></figcaption>
+      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a3313a65408771d16550b21.png" alt="Hugo Pérez" loading="lazy">
+      <figcaption><b>Hugo Pérez</b><span>Fundador de One Empire</span></figcaption>
     </figure>
     <div class="reveal">
-      <span class="eyebrow">Tu mentor</span>
-      <h2 style="margin-top:16px">¿Quién te acompaña <span class="accent">en este proceso?</span></h2>
-      <p class="lead">Hugo Pérez es experto en construcción y negocios, y fundador del <b>Método ONE</b>: el sistema que ya ayudó a muchos trabajadores de la construcción a dejar de ser empleados y convertirse en dueños de su propio negocio.</p>
-      <p>Su misión: enseñarte cómo conseguir clientes, <b>cobrar lo justo</b> y crecer como empresario.</p>
+      <span class="eyebrow">Quién te enseña</span>
+      <h2 style="margin-top:16px">Alguien que ya hizo <span class="accent">el camino de obrero a empresario</span></h2>
+      <p class="lead">Hugo Pérez empezó en la obra, como tú. Hoy es dueño de su empresa de construcción y fundador de <b>One Empire</b> y de <b>Next Level Leaders</b>, donde enseña a contratistas latinos a dirigir su negocio con números, sistemas y visión.</p>
       <div class="creds">
-        <div><b>Método probado</b>El mismo camino que lo llevó de subcontratista a dueño.</div>
-        <div><b>Resultados reales</b>Alumnos con clientes y contratos cada semana.</div>
-        <div><b>Acompañamiento cercano</b>Guía paso a paso para que nunca te sientas solo.</div>
-        <div><b>Visión práctica</b>Finanzas claras, liderazgo y estrategia para crecer con estabilidad.</div>
+        <div><b>Viene de la obra</b>Conoce el trabajo desde adentro, no desde un escritorio.</div>
+        <div><b>Dueño de empresa</b>Enseña lo que aplica todos los días en su propia constructora.</div>
+        <div><b>Números claros</b>Overhead, estimados y márgenes explicados sin complicaciones.</div>
+        <div><b>100% práctico</b>Herramientas para aplicar en tu empresa desde el día siguiente.</div>
       </div>
     </div>
   </div>
@@ -647,70 +610,27 @@ fbq('track', 'PageView');
 <section style="padding-top:0">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">Resultados</span>
-      <h2>Ellos ya están construyendo su negocio… <span class="accent">ahora es tu turno</span></h2>
+      <span class="eyebrow">Ellos ya dieron el paso</span>
+      <h2>Dueños que hoy trabajan <span class="accent">con información correcta</span></h2>
+      <p class="lead">Contratistas que pasaron por Next Level Leaders. Escúchalos en sus propias palabras.</p>
     </div>
-    <div class="vids">
+    <div class="vids vids4">
       <figure class="vid reveal">
-        <button type="button" class="vid-btn" data-src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c8aefd5eea83397c66bb05.mov" aria-label="Reproducir testimonio de Criscian">
-          <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_768/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c8b1a29fc63a4b6a4cd348.jpeg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
-        </button>
-        <figcaption><b>Criscian</b><span>Alumno ONE</span></figcaption>
+        <button type="button" class="vid-btn" data-loom="8c361fa24e49486492264ece30db6b18" aria-label="Reproducir testimonio"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a398b9f7b00529580a61030.png" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></button>
+        <blockquote><div class="stars">★★★★★</div>“Pensaba que el problema era mi equipo, <b>pero realmente era que yo no tenía la información correcta.”</b></blockquote>
       </figure>
       <figure class="vid reveal">
-        <button type="button" class="vid-btn" data-src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c8aec79fc63af0244c9670.mov" aria-label="Reproducir testimonio de Samu">
-          <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_768/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c8b1b73204cc41a060f5e6.jpeg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
-        </button>
-        <figcaption><b>Samu</b><span>Alumno ONE</span></figcaption>
+        <button type="button" class="vid-btn" data-loom="e1443d2d4e1f4001b41f70f147317ccb" aria-label="Reproducir testimonio"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a398bee9104de6d76110837.png" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></button>
+        <blockquote><div class="stars">★★★★★</div>“Vi otras personas que quieren crecer <b>y tienen la misma mentalidad y metas que yo.”</b></blockquote>
       </figure>
       <figure class="vid reveal">
-        <button type="button" class="vid-btn" data-src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c8b0685eea838cf466db18.mov" aria-label="Reproducir testimonio de Mario">
-          <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_768/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c8b1619fc63a105a4ccf01.jpeg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span>
-        </button>
-        <figcaption><b>Mario</b><span>Alumno ONE</span></figcaption>
+        <button type="button" class="vid-btn" data-loom="b1f5e4a72eb747e49cd0962b270cd076" aria-label="Reproducir testimonio"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a398b3628e2dab9ea46da3a.png" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></button>
+        <blockquote><div class="stars">★★★★★</div>“En un punto quisiera tener un equipo así, <b>con ese entusiasmo, energía y valores.”</b></blockquote>
       </figure>
-    </div>
-    <div class="quotes">
-      <div class="card quote reveal">
-        <div><div class="stars">★★★★★</div><p>“Antes dependía de que me recomendaran. Ahora tengo clientes que me buscan cada semana. El método ONE cambió por completo cómo veo mi negocio.”</p></div>
-        <div class="who"><span class="avatar">MR</span><div><b>Miguel R.</b><span>Contratista independiente · Texas</span></div></div>
-      </div>
-      <div class="card quote reveal">
-        <div><div class="stars">★★★★★</div><p>“Dejé de regatear precios. Aprendí a cotizar con seguridad y en dos meses ya estaba cerrando contratos que antes ni me atrevía a ofrecer.”</p></div>
-        <div class="who"><span class="avatar">JL</span><div><b>José L.</b><span>Subcontratista de drywall · Florida</span></div></div>
-      </div>
-      <div class="card quote reveal">
-        <div><div class="stars">★★★★★</div><p>“Nunca pensé que iba a poder tener un negocio real. Hoy tengo equipo, clientes constantes y sé exactamente cuánto voy a ganar cada mes.”</p></div>
-        <div class="who"><span class="avatar">CR</span><div><b>Carlos R.</b><span>Remodelación · California</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== OPTIONS ========== -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Tu decisión</span>
-      <h2>En este momento <span class="accent">tienes 3 opciones</span></h2>
-    </div>
-    <div class="options">
-      <div class="card option dim reveal">
-        <span class="tag">Opción 1</span>
-        <h3>Seguir igual</h3>
-        <p>Ignorar todo lo que acabas de leer y seguir con tu vida como si nada hubiera pasado.</p>
-      </div>
-      <div class="card option dim reveal">
-        <span class="tag">Opción 2</span>
-        <h3>Hacerlo solo</h3>
-        <p>Intentar aplicar estos pasos por tu cuenta. Te llevará mucho tiempo, dinero y, sobre todo, energía.</p>
-      </div>
-      <div class="card option best reveal">
-        <span class="tag">Opción 3 · Recomendada</span>
-        <h3>Entrar a la masterclass</h3>
-        <p>Reservar tu lugar y aprender a conocer tus números, estimar con ganancia y vender como dueño.</p>
-        <a class="btn btn-red" href="#registro-final">Quiero construir mi negocio <span class="arr">→</span></a>
-      </div>
+      <figure class="vid reveal">
+        <button type="button" class="vid-btn" data-loom="70ff204968e04351b896ed805740143b" aria-label="Reproducir testimonio"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a398c3f9104de6d76111139.png" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></button>
+        <blockquote><div class="stars">★★★★★</div>“Sé que quieres que todo sea perfecto, <b>pero eso realmente es lo que te va a detener.”</b></blockquote>
+      </figure>
     </div>
   </div>
 </section>
@@ -720,17 +640,18 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Último paso</span>
-      <h2 style="margin-top:16px">Conoce tus números. <span class="accent">Cobra como dueño.</span></h2>
-      <p class="lead">Una sola masterclass para dejar de adivinar: overhead, estimación, marketing y ventas. Asegura tu acceso antes de que se llene.</p>
+      <h2 style="margin-top:16px">Deja de adivinar. <span class="accent">Empieza a cobrar como dueño.</span></h2>
+      <p class="lead">Una noche para entender tus números, tu overhead y tu estimado, y salir con un plan de marketing y ventas para tu empresa.</p>
       <div class="scarcity">
-        <b>Los cupos se agotan</b>
-        <p>La masterclass es gratuita, pero se abre solo para un grupo reducido para garantizar la calidad de cada sesión. Cada día que lo postergas, sigues construyendo el sueño de otros.</p>
+        <b>Cupo limitado</b>
+        <p>La masterclass es gratuita, pero la sala de Zoom tiene cupo limitado. Cuando se llena, se cierra el registro.</p>
       </div>
       <ul class="schedule">
-        <li><span>Fecha</span><b data-event-date>Viernes 25 de septiembre</b></li>
-        <li><span>🇺🇸 🇲🇽 LA / Tijuana</span><b>4:00 PM</b></li>
-        <li><span>🇲🇽 CDMX · 🇺🇸 Dallas</span><b>6:00 PM</b></li>
-        <li><span>🇺🇸 Miami</span><b>7:00 PM</b></li>
+        <li><span>Fecha</span><b>Miércoles 14 de octubre</b></li>
+        <li><span>🇺🇸 Los Ángeles · Phoenix</span><b>6:00 PM</b></li>
+        <li><span>🇲🇽 CDMX</span><b>7:00 PM</b></li>
+        <li><span>🇺🇸 Dallas · Houston · Chicago</span><b>8:00 PM</b></li>
+        <li><span>🇺🇸 Miami · Nueva York</span><b>9:00 PM</b></li>
         <li><span>Plataforma</span><b>Zoom · en vivo</b></li>
       </ul>
     </div>
@@ -738,8 +659,8 @@ fbq('track', 'PageView');
       <div class="form-card">
         <div class="form-inner">
           <div class="form-top">
-            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_320/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69c2d7f6fe4d0d28afcdbd6a.png" alt="Hugo Pérez">
-            <div><b>Reserva tu lugar gratis</b><span>Te llegará el acceso por WhatsApp</span></div>
+            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_320/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a3313a65408771d16550b21.png" alt="Hugo Pérez">
+            <div><b>Reserva tu lugar gratis</b><span>Te llega el link de Zoom por WhatsApp</span></div>
           </div>
           <iframe
             src="https://api.leadconnectorhq.com/widget/form/XsE9QlNY3r6MO2YBao21"
@@ -768,22 +689,22 @@ fbq('track', 'PageView');
 <footer>
   <div class="wrap">
     <div class="row">
-      <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/61983c18-78fc-44ef-89e0-b5c4c75cb4c4.png" alt="One Empire" loading="lazy">
-      <span>© <span id="year">2026</span> One Empire · Hugo Pérez</span>
+      <img src="../next-level-leaders/images/one-empire-logo-red.png" alt="One Empire" loading="lazy">
+      <span>© <span id="year">2026</span> One Empire · Hugo Pérez · De obrero a empresario</span>
     </div>
-    <p>Los resultados mencionados en esta página no son típicos ni están garantizados; dependen del esfuerzo, la experiencia y las condiciones de cada persona. Las fotografías son ilustrativas.</p>
+    <p>Los resultados dependen del esfuerzo, la experiencia y las condiciones de cada persona y no están garantizados. Las cifras del ejemplo de estimación son ilustrativas.</p>
   </div>
 </footer>
 
 <div class="sticky-cta top" id="sticky">
-  <small><b>Masterclass gratuita · Zoom</b><span data-event-date>Viernes 25 de septiembre</span></small>
+  <small><b>Masterclass gratuita · Zoom</b>Mié 14 de oct · 8:00 PM (Centro)</small>
   <a class="btn btn-red" href="#registro">Reservar</a>
 </div>
 
 <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 <script>
-  // ⚠️ Actualiza esta fecha/hora del webinar (hora de CDMX, UTC-6)
-  var EVENT_DATE = "2026-09-25T18:00:00-06:00";
+  // Miércoles 14 de octubre de 2026, 8:00 PM hora del Centro (CDT, UTC-5)
+  var EVENT_DATE = "2026-10-14T20:00:00-05:00";
 
   // Countdown
   (function () {
@@ -808,22 +729,24 @@ fbq('track', 'PageView');
     els.forEach(function (e) { io.observe(e); });
   })();
 
-  // Testimonials: show cover, load the video only on click
-  document.querySelectorAll(".vid-btn[data-src]").forEach(function (b) {
+  // Loom testimonials: show the cover, load the player only when clicked
+  document.querySelectorAll(".vid-btn[data-loom]").forEach(function (b) {
     b.addEventListener("click", function () {
-      var v = document.createElement("video");
-      v.src = b.getAttribute("data-src");
-      v.controls = true; v.autoplay = true; v.playsInline = true;
+      var f = document.createElement("iframe");
+      f.src = "https://www.loom.com/embed/" + b.getAttribute("data-loom") + "?autoplay=1&hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true";
+      f.allow = "autoplay; fullscreen; picture-in-picture";
+      f.allowFullscreen = true;
       b.querySelector(".play").remove();
-      b.appendChild(v);
-      b.removeAttribute("data-src");
-      v.play().catch(function () {});
+      b.appendChild(f);
+      b.removeAttribute("data-loom");
     }, { once: true });
   });
 
-  // Hide mobile sticky CTA while a form is on screen
+  // Mobile sticky CTA: hidden at the top and while a form is on screen
   (function () {
     var s = document.getElementById("sticky");
+    function onScroll() { s.classList.toggle("top", window.scrollY < 600); }
+    onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
     if (!("IntersectionObserver" in window)) return;
     var visible = new Set();
     var io = new IntersectionObserver(function (entries) {
@@ -831,8 +754,6 @@ fbq('track', 'PageView');
       s.classList.toggle("hide", visible.size > 0);
     });
     ["registro", "registro-final"].forEach(function (id) { io.observe(document.getElementById(id)); });
-    function onScroll() { s.classList.toggle("top", window.scrollY < 600); }
-    onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
   })();
 
   document.getElementById("year").textContent = new Date().getFullYear();
