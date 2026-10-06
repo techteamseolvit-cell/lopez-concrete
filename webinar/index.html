@@ -97,16 +97,17 @@ fbq('track', 'PageView');
   /* ---------- hero ---------- */
   .hero { padding: clamp(40px, 5vw, 72px) 0 clamp(48px, 6vw, 88px); overflow: hidden; }
   .hero { background: linear-gradient(180deg, rgba(9,9,11,.35) 0%, rgba(9,9,11,.55) 60%, var(--bg) 100%), url("images/bg-red-stage.webp") center top / cover no-repeat; }
-  .key-art { margin: 20px 0 0; max-width: 380px; border-radius: 24px; overflow: hidden; border: 1px solid rgba(224,30,43,.35); box-shadow: 0 40px 90px -30px rgba(193,18,31,.55); }
+  .key-art { margin: 20px 0 0; max-width: 480px; border-radius: 24px; overflow: hidden; border: 1px solid rgba(224,30,43,.35); box-shadow: 0 40px 90px -30px rgba(193,18,31,.55); }
   .key-art img { width: 100%; height: auto; }
   .hero .key-art + h1 { margin-top: 24px; font-size: clamp(30px, 3.2vw, 44px); }
   .hero .lead { margin-top: 14px; }
   .hero .facts { margin-top: 24px; }
   .hero .countdown { margin-top: 14px; }
   .hero .hero-actions { display: none; }
-  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(32px, 4vw, 56px); align-items: start; }
-  .hero-copy { display: flex; flex-direction: column; justify-content: flex-start; }
-  #registro { align-self: start; position: sticky; top: 92px; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: clamp(32px, 4vw, 56px); align-items: stretch; }
+  .hero-copy { display: flex; flex-direction: column; justify-content: space-between; }
+  #registro { align-self: start; }
+  #registro .countdown { margin-top: 18px; }
   .pill { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 8px; border-radius: 999px; border: 1px solid var(--line-2); background: rgba(255,255,255,.04); font-size: 14px; color: var(--muted); }
   .pill b { background: var(--red); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
   .hero h1 { margin-top: 26px; }
@@ -130,8 +131,8 @@ fbq('track', 'PageView');
   .form-top b { display: block; font-family: var(--display); font-size: 16px; }
   .form-top span { font-size: 13px; color: var(--muted); }
   .form-inner iframe { width: 100%; border: 0; display: block; background: transparent; }
-  .form-note { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--dim); margin-top: 16px; }
-  .form-note span::before { content: "✓ "; color: var(--green); }
+  .form-note { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; font-weight: 500; color: #fff; margin-top: 16px; }
+  .form-note span::before { content: "✓ "; color: #fff; font-weight: 700; }
 
   /* ---------- marquee ---------- */
   .strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-2); overflow: hidden; padding: 18px 0; }
@@ -358,7 +359,6 @@ fbq('track', 'PageView');
     .options .option.best { grid-column: 1 / -1; }
     .host-photo { max-width: 480px; width: 100%; margin: 0 auto !important; }
     .host-photo img { height: auto; min-height: 0; aspect-ratio: 4/5; }
-    #registro { position: static; }
     .hero .hero-actions { display: flex; justify-content: center; margin-top: 24px; }
     .hero-copy, .sec-head, .host > div, .final .wrap > div:first-child, .ticket, .verdict, .vsl-cta { text-align: center; margin-left: auto; margin-right: auto; }
     .sec-head .lead, .hero .lead, .host .lead, .final .lead { margin-left: auto; margin-right: auto; }
@@ -429,12 +429,6 @@ fbq('track', 'PageView');
         <div><small>Hora</small><b>8:00 PM · hora del Este</b></div>
         <div><small>Formato</small><b>En vivo por Zoom</b></div>
       </div>
-      <div class="countdown" data-countdown aria-label="Tiempo restante para la masterclass">
-        <div><b data-d>--</b><span>Días</span></div>
-        <div><b data-h>--</b><span>Horas</span></div>
-        <div><b data-m>--</b><span>Min</span></div>
-        <div><b data-s>--</b><span>Seg</span></div>
-      </div>
       </div>
     </div>
 
@@ -466,6 +460,12 @@ fbq('track', 'PageView');
         </div>
       </div>
       <div class="form-note"><span>100% gratuito</span><span>Sin spam</span><span>Link de Zoom por WhatsApp</span></div>
+      <div class="countdown" data-countdown aria-label="Tiempo restante para la masterclass">
+        <div><b data-d>--</b><span>Días</span></div>
+        <div><b data-h>--</b><span>Horas</span></div>
+        <div><b data-m>--</b><span>Min</span></div>
+        <div><b data-s>--</b><span>Seg</span></div>
+      </div>
     </div>
   </div>
 </section>
