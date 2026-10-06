@@ -116,12 +116,12 @@ fbq('track', 'PageView');
   /* form card */
   .form-card { position: relative; border-radius: 28px; padding: 10px; background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.02)); box-shadow: 0 40px 100px -30px rgba(0,0,0,.8), 0 0 0 1px var(--line); scroll-margin-top: 96px; }
   .form-card::before { content: ""; position: absolute; inset: -1px; border-radius: 29px; padding: 1px; background: linear-gradient(160deg, var(--red-hi), transparent 40%, transparent 70%, rgba(224,30,43,.5)); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
-  .form-inner { border-radius: 20px; background: #fdfaf4; overflow: hidden; }
+  .form-inner { border-radius: 20px; background: #fff; overflow: hidden; }
   .form-top { display: flex; align-items: center; gap: 14px; padding: 18px 22px; background: var(--surface); border-bottom: 1px solid var(--line); }
   .form-top img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: 50% 15%; border: 2px solid var(--red); }
   .form-top b { display: block; font-family: var(--display); font-size: 16px; }
   .form-top span { font-size: 13px; color: var(--muted); }
-  .form-inner iframe { width: 100%; border: 0; display: block; min-height: 640px; }
+  .form-inner iframe { width: 100%; border: 0; display: block; min-height: 1044px; }
   .form-note { display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; color: var(--dim); margin-top: 16px; }
   .form-note span::before { content: "✓ "; color: var(--green); }
 
@@ -253,7 +253,7 @@ fbq('track', 'PageView');
   .sym span { font-family: var(--display); font-weight: 900; font-size: 15px; color: var(--red-hi); padding-top: 2px; }
   .sym p { margin: 0; font-family: var(--display); font-weight: 600; font-size: 18px; line-height: 1.35; letter-spacing: -.01em; }
   .vsl-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .vids4 { grid-template-columns: repeat(4, 1fr); }
+  .vids.vids4 { grid-template-columns: repeat(4, 1fr); }
   .vid-btn iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .vid blockquote { margin: 0; padding: 18px 20px 22px; color: var(--muted); font-size: 15px; line-height: 1.5; }
   .vid blockquote b { color: var(--text); font-weight: 600; }
@@ -293,6 +293,27 @@ fbq('track', 'PageView');
   .option.dim { opacity: .7; }
 
   /* final */
+  /* light sections */
+  .light { --text: #111114; --muted: #4f4f57; --dim: #85858c; --surface: #ffffff; --bg-2: #ffffff; --line: rgba(17,17,20,.09); --line-2: rgba(17,17,20,.16); background: #f3f3f0; color: var(--text); }
+  .light .card { box-shadow: 0 1px 2px rgba(17,17,20,.04), 0 12px 32px -18px rgba(17,17,20,.18); }
+  .light .eyebrow { color: #55555c; }
+  .light .est-result.good b { background: none; color: var(--red); }
+  .light .est-result.good span { color: #111114; }
+  .light .est-result.bad { background: #f6f6f4; }
+  .light .ico.no { background: rgba(17,17,20,.06); }
+  .light .host-photo figcaption b { color: #fff; }
+  .light .host-photo figcaption span { color: #c9ccd2; }
+  .light .host-photo { background: #e7e7e3; }
+  .light .sym span { color: var(--red); }
+
+  /* final ticket */
+  .ticket { border-radius: 24px; padding: clamp(24px, 3vw, 36px); background: var(--surface); border: 1px solid rgba(224,30,43,.35); box-shadow: 0 30px 80px -40px var(--red-glow); display: grid; gap: 6px; }
+  .ticket .tag { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red-hi); }
+  .ticket-date { font-family: var(--display); font-weight: 800; font-size: clamp(24px, 2.6vw, 32px); letter-spacing: -.02em; }
+  .ticket .schedule { margin: 12px 0 22px; }
+  .ticket .btn { width: 100%; }
+
+  /* final */
   .final { overflow: hidden; }
   .final::before { content: ""; position: absolute; left: 50%; top: 0; width: 1200px; height: 800px; transform: translateX(-50%); background: radial-gradient(ellipse at top, rgba(193,18,31,.25), transparent 60%); pointer-events: none; }
   .final .wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 5vw, 72px); align-items: start; }
@@ -323,14 +344,14 @@ fbq('track', 'PageView');
     .hero .wrap, .method, .host, .final .wrap { grid-template-columns: 1fr; }
     .pains, .learn, .forget-grid { grid-template-columns: repeat(2, 1fr); }
     .vids, .quotes, .options { grid-template-columns: 1fr 1fr; }
-    .learn, .symptoms, .vids4 { grid-template-columns: repeat(2, 1fr); }
+    .learn, .symptoms, .vids.vids4 { grid-template-columns: repeat(2, 1fr); }
     .options .option.best { grid-column: 1 / -1; }
     .host-photo { max-width: 480px; }
   }
   @media (max-width: 760px) {
     body { font-size: 16px; }
     .nav-meta .when { display: none; }
-    .fit, .compare, .vids, .quotes, .options, .estimate, .symptoms, .vids4 { grid-template-columns: 1fr; }
+    .fit, .compare, .vids, .quotes, .options, .estimate, .symptoms, .vids.vids4 { grid-template-columns: 1fr; }
     .compare-arrow span { transform: rotate(90deg); }
     .facts { grid-template-columns: 1fr; }
     .pains, .learn, .forget-grid, .creds { grid-template-columns: 1fr; }
@@ -370,7 +391,6 @@ fbq('track', 'PageView');
       <p class="lead">Para dueños latinos de empresas de construcción que trabajan duro, tienen proyectos… y aun así no saben cuánto les queda. Aprende a calcular tu overhead, estimar con ganancia y llenar tu agenda con marketing y ventas que sí funcionan.</p>
       <div class="hero-actions">
         <a class="btn btn-red" href="#registro">Quiero mi lugar gratis <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#contenido">Ver lo que vas a aprender</a>
       </div>
 
       <div class="facts">
@@ -394,8 +414,9 @@ fbq('track', 'PageView');
             <div><b>Reserva tu lugar gratis</b><span>Con Hugo Pérez · cupo limitado</span></div>
           </div>
           <iframe
-            src="https://api.leadconnectorhq.com/widget/form/XsE9QlNY3r6MO2YBao21"
-            id="inline-XsE9QlNY3r6MO2YBao21"
+            src="https://api.leadconnectorhq.com/widget/form/BxsMwQMMlqTwWBeQJz69"
+            style="width:100%;height:100%;border:none;border-radius:20px"
+            id="inline-BxsMwQMMlqTwWBeQJz69"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
             data-trigger-value=""
@@ -403,11 +424,13 @@ fbq('track', 'PageView');
             data-activation-value=""
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
-            data-form-name="HUGO - EXPERT - Landing nueva"
-            data-height="640"
-            data-layout-iframe-id="inline-XsE9QlNY3r6MO2YBao21"
-            data-form-id="XsE9QlNY3r6MO2YBao21"
-            title="Registro a la masterclass gratuita"></iframe>
+            data-form-name="HUGO - webinar 0 al millón"
+            data-height="1044"
+            data-layout-iframe-id="inline-BxsMwQMMlqTwWBeQJz69"
+            data-form-id="BxsMwQMMlqTwWBeQJz69"
+            data-cookie-consent="true"
+            data-cookie-consent-provider="auto"
+            title="HUGO - webinar 0 al millón"></iframe>
         </div>
       </div>
       <div class="form-note"><span>100% gratuito</span><span>Sin spam</span><span>Link de Zoom por WhatsApp</span></div>
@@ -423,7 +446,7 @@ fbq('track', 'PageView');
 </div>
 
 <!-- ========== PROBLEM ========== -->
-<section>
+<section class="light">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Lo que vemos en la construcción</span>
@@ -446,7 +469,7 @@ fbq('track', 'PageView');
 </section>
 
 <!-- ========== VIDEO ========== -->
-<section id="video" style="padding-top:0">
+<section id="video">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Dale play</span>
@@ -519,7 +542,7 @@ fbq('track', 'PageView');
 </section>
 
 <!-- ========== ESTIMATE ========== -->
-<section style="padding-top:0">
+<section class="light">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Overhead y estimación</span>
@@ -586,7 +609,7 @@ fbq('track', 'PageView');
 </section>
 
 <!-- ========== HOST ========== -->
-<section>
+<section class="light">
   <div class="wrap host">
     <figure class="host-photo reveal" style="margin:0">
       <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_900/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a3313a65408771d16550b21.png" alt="Hugo Pérez" loading="lazy">
@@ -607,7 +630,7 @@ fbq('track', 'PageView');
 </section>
 
 <!-- ========== TESTIMONIALS ========== -->
-<section style="padding-top:0">
+<section>
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Ellos ya dieron el paso</span>
@@ -646,40 +669,20 @@ fbq('track', 'PageView');
         <b>Cupo limitado</b>
         <p>La masterclass es gratuita, pero la sala de Zoom tiene cupo limitado. Cuando se llena, se cierra el registro.</p>
       </div>
-      <ul class="schedule">
-        <li><span>Fecha</span><b>Miércoles 14 de octubre</b></li>
-        <li><span>🇺🇸 Los Ángeles · Phoenix</span><b>6:00 PM</b></li>
-        <li><span>🇲🇽 CDMX</span><b>7:00 PM</b></li>
-        <li><span>🇺🇸 Dallas · Houston · Chicago</span><b>8:00 PM</b></li>
-        <li><span>🇺🇸 Miami · Nueva York</span><b>9:00 PM</b></li>
-        <li><span>Plataforma</span><b>Zoom · en vivo</b></li>
-      </ul>
     </div>
-    <div class="reveal" id="registro-final">
-      <div class="form-card">
-        <div class="form-inner">
-          <div class="form-top">
-            <img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_320/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a3313a65408771d16550b21.png" alt="Hugo Pérez">
-            <div><b>Reserva tu lugar gratis</b><span>Te llega el link de Zoom por WhatsApp</span></div>
-          </div>
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/XsE9QlNY3r6MO2YBao21"
-            id="inline-XsE9QlNY3r6MO2YBao21-b"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="HUGO - EXPERT - Landing nueva"
-            data-height="640"
-            data-layout-iframe-id="inline-XsE9QlNY3r6MO2YBao21-b"
-            data-form-id="XsE9QlNY3r6MO2YBao21"
-            title="Registro a la masterclass gratuita"></iframe>
-        </div>
+    <div class="reveal">
+      <div class="ticket">
+        <span class="tag">Masterclass gratuita · Zoom</span>
+        <b class="ticket-date">Miércoles 14 de octubre</b>
+        <ul class="schedule">
+          <li><span>🇺🇸 Los Ángeles · Phoenix</span><b>6:00 PM</b></li>
+          <li><span>🇲🇽 CDMX</span><b>7:00 PM</b></li>
+          <li><span>🇺🇸 Dallas · Houston · Chicago</span><b>8:00 PM</b></li>
+          <li><span>🇺🇸 Miami · Nueva York</span><b>9:00 PM</b></li>
+        </ul>
+        <a class="btn btn-red" href="#registro">Reservar mi lugar gratis <span class="arr">→</span></a>
+        <div class="form-note"><span>100% gratuito</span><span>Sin spam</span><span>En vivo por Zoom</span></div>
       </div>
-      <div class="form-note"><span>100% gratuito</span><span>Sin spam</span><span>En vivo por Zoom</span></div>
     </div>
   </div>
 </section>
@@ -753,7 +756,7 @@ fbq('track', 'PageView');
       entries.forEach(function (e) { e.isIntersecting ? visible.add(e.target) : visible.delete(e.target); });
       s.classList.toggle("hide", visible.size > 0);
     });
-    ["registro", "registro-final"].forEach(function (id) { io.observe(document.getElementById(id)); });
+    ["registro"].forEach(function (id) { io.observe(document.getElementById(id)); });
   })();
 
   document.getElementById("year").textContent = new Date().getFullYear();
