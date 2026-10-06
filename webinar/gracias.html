@@ -390,7 +390,10 @@ fbq('track', 'CompleteRegistration');
   }
 
   /* ---------- thank-you page ---------- */
-  .ty-hero .wrap { align-items: center; grid-template-columns: 1.1fr .9fr; }
+  .ty-hero .wrap { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .ty-copy { max-width: 900px; margin: 0 auto; }
+  .ty-copy .lead { margin-left: auto; margin-right: auto; }
+  .ty-copy .facts { text-align: left; }
   .ty-hero .key-art { margin: 0 0 0 auto; max-width: 460px; }
   .ty-copy .lead { color: #fff; font-size: 17px; }
   .ty-copy .lead b { color: #fff; }
@@ -400,7 +403,7 @@ fbq('track', 'CompleteRegistration');
   .wa { width: 18px; height: 18px; flex-shrink: 0; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5 5 0 0 0 1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z'/%3E%3C/svg%3E") center / contain no-repeat; }
   .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
   .step-tag { white-space: nowrap; }
-  .hero.ty-hero h1 { font-size: clamp(34px, 4.2vw, 58px); }
+  .hero.ty-hero h1 { font-size: clamp(34px, 5vw, 68px); }
   .step .btn { align-self: stretch; justify-content: center; white-space: normal; text-align: center; }
   .step-schedule li b { white-space: nowrap; }
   .cal .btn { flex: 1 1 0; justify-content: center; padding-left: 10px; padding-right: 10px; }
@@ -472,17 +475,7 @@ fbq('track', 'CompleteRegistration');
         <div><small>Hora</small><b>8:00 PM · hora del Este</b></div>
         <div><small>Plataforma</small><b>Zoom · en vivo</b></div>
       </div>
-      <div class="countdown" data-countdown aria-label="Tiempo restante para el webinar">
-        <div><b data-d>--</b><span>Días</span></div>
-        <div><b data-h>--</b><span>Horas</span></div>
-        <div><b data-m>--</b><span>Min</span></div>
-        <div><b data-s>--</b><span>Seg</span></div>
-      </div>
-      <div class="ty-ctas">
-        <a class="btn btn-red btn-big" href="#pasos">Ver los 3 pasos <span class="arr">↓</span></a>
-      </div>
     </div>
-    <figure class="key-art reveal"><img src="images/hero-de-0-al-millon.webp" width="1254" height="1254" alt="Webinar: De 0 al Millón con Hugo Pérez"></figure>
   </div>
 </section>
 
@@ -541,19 +534,6 @@ fbq('track', 'CompleteRegistration');
   // Miércoles 14 de octubre de 2026, 8:00 PM hora del Este / Virginia (EDT, UTC-4)
   var EVENT_DATE = "2026-10-14T20:00:00-04:00";
   var ZOOM_URL = "https://us06web.zoom.us/webinar/register/WN_EyL45tHhSrG0Rqsi6c9RkQ";
-
-  // Countdown
-  (function () {
-    var target = new Date(EVENT_DATE).getTime();
-    var boxes = document.querySelectorAll("[data-countdown]");
-    function pad(n) { return n < 10 ? "0" + n : "" + n; }
-    function tick() {
-      var diff = Math.max(0, target - Date.now());
-      var v = { d: Math.floor(diff / 864e5), h: Math.floor(diff / 36e5) % 24, m: Math.floor(diff / 6e4) % 60, s: Math.floor(diff / 1e3) % 60 };
-      boxes.forEach(function (b) { for (var k in v) b.querySelector("[data-" + k + "]").textContent = pad(v[k]); });
-    }
-    tick(); setInterval(tick, 1000);
-  })();
 
   // Add-to-calendar links (8:00 PM ET, 2 hours)
   (function () {
