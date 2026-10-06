@@ -333,7 +333,11 @@ fbq('track', 'PageView');
   .scarcity p { margin: 0; color: #d8d4ce; font-size: 16px; }
   .schedule { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 10px; }
   .schedule li { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--muted); }
-  .schedule li b { color: var(--text); font-family: var(--display); font-weight: 600; }
+  .schedule li b { color: var(--text); font-family: var(--display); font-weight: 600; white-space: nowrap; flex-shrink: 0; }
+  .schedule li { gap: 12px; }
+  .schedule li span { min-width: 0; }
+  .ticket, .final .wrap > * { min-width: 0; }
+  .ticket, .schedule { grid-template-columns: minmax(0, 1fr); }
 
   /* footer */
   footer { border-top: 1px solid var(--line); padding: 40px 0 120px; color: var(--dim); font-size: 13px; }
@@ -352,7 +356,7 @@ fbq('track', 'PageView');
 
   /* ---------- responsive ---------- */
   @media (max-width: 1024px) {
-    .hero .wrap, .method, .host, .final .wrap { grid-template-columns: 1fr; }
+    .hero .wrap, .method, .host, .final .wrap { grid-template-columns: minmax(0, 1fr); }
     .pains, .learn, .forget-grid { grid-template-columns: repeat(2, 1fr); }
     .vids, .quotes, .options { grid-template-columns: 1fr 1fr; }
     .learn, .symptoms, .vids.vids4 { grid-template-columns: repeat(2, 1fr); }
@@ -378,7 +382,7 @@ fbq('track', 'PageView');
   @media (max-width: 760px) {
     body { font-size: 16px; }
     .nav-meta .when { display: none; }
-    .fit, .compare, .vids, .quotes, .options, .estimate, .symptoms, .vids.vids4 { grid-template-columns: 1fr; }
+    .fit, .compare, .vids, .quotes, .options, .estimate, .symptoms, .vids.vids4 { grid-template-columns: minmax(0, 1fr); }
     .compare-arrow span { transform: rotate(90deg); }
     .facts { grid-template-columns: 1fr; }
     .pains, .learn, .forget-grid, .creds { grid-template-columns: 1fr; }
