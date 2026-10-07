@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¡Pago confirmado! · Experiencia VIP · Next Level Leaders Tampa</title>
+<meta name="description" content="Tu paquete Experiencia VIP para Next Level Leaders está confirmado. Tampa, FL · 23, 24 y 25 de octubre, 2026.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="images/one-empire-icon-red.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500..900&family=Manrope:wght@400..800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root {
+    --black: #08080a;
+    --carbon: #111114;
+    --carbon-2: #1a1a1f;
+    --red: #c1121f;
+    --red-bright: #e01e2b;
+    --silver: #c9ccd2;
+    --silver-mid: #a3a7af;
+    --silver-dark: #5f636b;
+    --line: rgba(255,255,255,.1);
+    --chrome: linear-gradient(180deg, #ffffff 0%, #f5f6f8 35%, #dcdfe3 65%, #b9bec6 100%);
+    --display: "Archivo", "Arial Black", sans-serif;
+    --body: "Manrope", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { margin: 0; background: var(--black); color: #fff; font-family: var(--body); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; }
+  p { margin: 0; color: #c9cbd1; }
+  strong { color: #fff; font-weight: 700; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- type ---------- */
+  .chrome { background: var(--chrome); background-size: 100% 1lh; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .red { color: var(--red-bright); }
+  .kicker { display: block; text-align: center; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); margin-bottom: 14px; }
+  h1, h2 { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; margin: 0; }
+  h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.1; text-align: center; }
+  h2 { font-size: clamp(19px, 2.2vw, 24px); line-height: 1.2; }
+  .divider { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--red-bright), transparent); margin: 22px auto 0; }
+
+  section { position: relative; padding: 44px 0; border-top: 1px solid var(--line); }
+  section:first-of-type { border-top: 0; padding-top: 40px; padding-bottom: 24px; background: radial-gradient(ellipse 70% 60% at 50% 20%, rgba(193,18,31,.2), transparent 70%); }
+
+  /* ---------- buttons ---------- */
+  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--display); font-weight: 900; font-size: 12px; letter-spacing: .03em; text-transform: uppercase; text-decoration: none; padding: 13px 24px; color: #fff; isolation: isolate; cursor: pointer; border: 0; background: none; white-space: nowrap; }
+  .btn::before { content: ""; position: absolute; inset: 0; z-index: -1; transform: skewX(-14deg); transition: transform .2s ease, background .2s ease, border-color .2s; }
+  .btn-red::before { background: linear-gradient(180deg, var(--red-bright), var(--red)); box-shadow: 0 14px 34px -12px rgba(224,30,43,.7), inset 0 1px 0 rgba(255,255,255,.25); }
+  .btn-red:hover::before { background: var(--red-bright); transform: skewX(-14deg) scale(1.04); }
+  .btn-line { padding: 10px 18px; font-size: 11px; }
+  .btn-line::before { border: 1.5px solid var(--silver-mid); }
+  .btn-line:hover::before { border-color: #fff; }
+
+  /* ---------- hero ---------- */
+  .brand-logo { width: 150px; margin: 0 auto 26px; }
+  .status-badge { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 8px 18px; position: relative; isolation: isolate; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #fff; }
+  .status-badge::before { content: ""; position: absolute; inset: 0; z-index: -1; border: 1px solid rgba(201,204,210,.3); background: rgba(255,255,255,.04); transform: skewX(-14deg); }
+  .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; flex-shrink: 0; animation: pulse-dot 2s ease-in-out infinite; }
+  @keyframes pulse-dot { 0%,100% { opacity: 1 } 50% { opacity: .25 } }
+
+  .confirm-card { position: relative; overflow: hidden; margin-top: 28px; padding: 34px 28px; text-align: center; background: linear-gradient(150deg, #1a0a0d 0%, #0d0d10 55%, #141418 100%); border: 1px solid rgba(224,30,43,.45); box-shadow: 0 40px 100px -50px rgba(224,30,43,.6); }
+  .confirm-card::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--red-bright), var(--silver) 60%, transparent); }
+  .confirm-icon { width: 56px; height: 56px; margin: 0 auto 18px; display: grid; place-items: center; position: relative; isolation: isolate; }
+  .confirm-icon::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, var(--red-bright), var(--red)); transform: skewX(-10deg); box-shadow: 0 14px 36px -10px rgba(224,30,43,.7); }
+  .confirm-icon svg { width: 26px; height: 26px; stroke: #fff; fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .confirm-type { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--silver-mid); margin-bottom: 8px; }
+  .confirm-name { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(22px, 3vw, 30px); line-height: 1.1; }
+  .confirm-price { display: inline-block; margin-top: 14px; font-family: var(--display); font-weight: 900; font-size: clamp(26px, 3.6vw, 36px); line-height: 1; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .confirm-divider { width: 48px; height: 2px; background: var(--red-bright); margin: 18px auto; transform: skewX(-30deg); }
+  .confirm-detail { font-size: 15px; line-height: 1.8; }
+  .confirm-detail small { display: block; margin-top: 6px; font-size: 13px; color: var(--silver-mid); }
+
+  /* ---------- steps ---------- */
+  .steps-kicker { margin-bottom: 26px; }
+  .step { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+  .step-num { flex-shrink: 0; font-family: var(--display); font-weight: 900; font-size: 48px; line-height: 1; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .step-body { flex: 1; min-width: 0; width: 100%; }
+  .step-tag { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); margin-bottom: 6px; }
+  .step-body > p { margin-top: 8px; }
+  @media (min-width: 640px) {
+    .step { flex-direction: row; align-items: flex-start; text-align: left; gap: 24px; }
+    .step-num { width: 64px; }
+  }
+
+  .event-card { margin-top: 18px; background: var(--carbon); border: 1px solid var(--line); text-align: left; }
+  .event-card::before { content: ""; display: block; height: 3px; background: linear-gradient(90deg, var(--red-bright), transparent); }
+  .event-day { display: flex; gap: 14px; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+  .event-day:last-child { border-bottom: 0; }
+  .event-day-num { flex-shrink: 0; width: 44px; height: 44px; display: grid; place-items: center; font-family: var(--display); font-weight: 900; font-size: 18px; color: #fff; position: relative; isolation: isolate; }
+  .event-day-num::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, var(--red-bright), var(--red)); transform: skewX(-10deg); }
+  .event-text { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 15px; line-height: 1.25; }
+  .event-sub { font-size: 13px; color: var(--silver-mid); margin-top: 3px; line-height: 1.45; }
+
+  .venue-card { margin-top: 14px; display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; background: var(--carbon-2); border-left: 3px solid var(--red-bright); text-align: left; }
+  .venue-icon { flex-shrink: 0; margin-top: 2px; width: 22px; height: 22px; stroke: var(--red-bright); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .venue-name { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 15px; line-height: 1.3; }
+  .venue-name em { font-style: normal; color: var(--silver-mid); }
+  .venue-addr { font-size: 13px; color: var(--silver-mid); margin-top: 3px; line-height: 1.5; }
+
+  .cal-label { display: block; margin-top: 22px; margin-bottom: 12px; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--silver-mid); }
+  .cal-buttons { display: flex; flex-wrap: wrap; gap: 12px 18px; justify-content: center; }
+  @media (min-width: 640px) { .cal-buttons { justify-content: flex-start; } }
+
+  .phone-highlight { margin-top: 16px; font-family: var(--display); font-weight: 900; font-size: clamp(22px, 3vw, 28px); letter-spacing: .02em; }
+  .phone-highlight a { text-decoration: none; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .phone-note { margin-top: 10px; font-size: 14px; }
+  .wa-btn { margin-top: 18px; }
+
+  .place-note { margin-top: 14px; font-size: 14px; color: var(--silver-mid); }
+
+  /* ---------- footer ---------- */
+  footer { padding: 30px 0 26px; border-top: 1px solid var(--line); }
+  .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+  .footer-inner img { width: 120px; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { font-size: 12px; color: var(--silver-dark); text-decoration: none; transition: color .2s; }
+  .footer-links a:hover { color: #fff; }
+  .footer-copy { margin-top: 16px; text-align: center; font-size: 11px; color: var(--silver-dark); }
+  @media (max-width: 639px) {
+    .footer-inner { flex-direction: column; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== Confirmación ===== -->
+  <section>
+    <div class="wrap">
+      <img class="brand-logo" src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbaf150d6ea53db13e67.png" alt="One Empire">
+      <span class="kicker">Next Level Leaders · Tampa, FL · 23, 24 y 25 de octubre, 2026</span>
+      <h1><span class="chrome">¡Tu lugar está </span><span class="red">confirmado!</span></h1>
+      <div style="display:flex;justify-content:center;">
+        <span class="status-badge"><span class="status-dot"></span>Pago confirmado · Experiencia VIP</span>
+      </div>
+
+      <div class="confirm-card">
+        <div class="confirm-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <p class="confirm-type">Tu paquete</p>
+        <div class="confirm-name">Experiencia VIP<br>Next Level Leaders</div>
+        <div class="confirm-price">500 USD</div>
+        <div class="confirm-divider"></div>
+        <p class="confirm-detail">
+          <strong>23, 24 y 25 de octubre, 2026</strong><br>
+          Tampa, Florida · Lugar por confirmar
+          <small>Recibirás los detalles de tu paquete por correo electrónico</small>
+        </p>
+      </div>
+
+      <div class="divider"></div>
+    </div>
+  </section>
+
+  <!-- ===== Paso 1: Guarda las fechas ===== -->
+  <section>
+    <div class="wrap">
+      <span class="kicker steps-kicker">¿Qué sigue?</span>
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <p class="step-tag">Paso 1</p>
+          <h2>Guarda las fechas</h2>
+          <p>Evento 100% presencial · 3 días. Bloquea tu agenda ahora para que nada interfiera.</p>
+
+          <div class="event-card">
+            <div class="event-day">
+              <div class="event-day-num">23</div>
+              <div>
+                <div class="event-text">Viernes 23 de octubre, 2026</div>
+                <div class="event-sub">Experiencia VIP · 2:00 PM a 6:00 PM · Masterclass y Cena con los Speakers</div>
+              </div>
+            </div>
+            <div class="event-day">
+              <div class="event-day-num">24</div>
+              <div>
+                <div class="event-text">Sábado 24 de octubre, 2026</div>
+                <div class="event-sub">Evento principal · 9:00 AM a 6:00 PM · Tampa, FL</div>
+              </div>
+            </div>
+            <div class="event-day">
+              <div class="event-day-num">25</div>
+              <div>
+                <div class="event-text">Domingo 25 de octubre, 2026</div>
+                <div class="event-sub">Evento principal · 9:00 AM a 6:00 PM · Tampa, FL</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="venue-card">
+            <svg class="venue-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            <div>
+              <div class="venue-name">Tampa, FL · <em>Lugar por confirmar</em></div>
+              <div class="venue-addr">Te enviaremos la dirección exacta por correo y WhatsApp.</div>
+            </div>
+          </div>
+
+          <span class="cal-label">Agregar a mi calendario</span>
+          <div class="cal-buttons">
+            <a href="#" class="btn btn-line calendar-google">Google Calendar</a>
+            <a href="#" class="btn btn-line calendar-outlook">Outlook</a>
+            <a href="#" class="btn btn-line calendar-yahoo">Yahoo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Paso 2: Asesor ===== -->
+  <section>
+    <div class="wrap">
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <p class="step-tag">Paso 2</p>
+          <h2>Queda atento: te contactamos</h2>
+          <p>Un asesor de nuestro equipo se comunicará contigo por llamada o WhatsApp para compartirte todos los detalles de tu paquete <strong>Experiencia VIP</strong> y coordinar tu llegada al evento.</p>
+          <div class="phone-highlight"><a href="tel:+5493795036313">+54 9 379 503 6313</a></div>
+          <p class="phone-note">También puedes escribirnos directamente:</p>
+          <a class="btn btn-red wa-btn" href="https://wa.me/5493795036313?text=%C2%A1Hola!%20Acabo%20de%20completar%20mi%20compra%20del%20paquete%20Experiencia%20VIP%20para%20Next%20Level%20Leaders%20%E2%80%93%20Tampa%2C%20FL.%20Quedo%20atento%20a%20los%20detalles%20del%20evento." target="_blank" rel="noopener">Escribir por WhatsApp →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Paso 3: Correo ===== -->
+  <section>
+    <div class="wrap">
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <p class="step-tag">Paso 3</p>
+          <h2>Revisa tu correo electrónico</h2>
+          <p>Te llegará un correo con la confirmación de tu compra y los detalles de tu paquete Experiencia VIP. Revisa spam, promociones y la carpeta social si no lo encuentras en tu bandeja principal.</p>
+          <p class="place-note">El evento se realizará en <strong>Tampa, Florida</strong>. El lugar exacto está por confirmar; te lo compartiremos directamente junto con toda la información de tu paquete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbaf150d6ea53db13e67.png" alt="One Empire" loading="lazy">
+        <div class="footer-links">
+          <a href="https://yosoyempresarioone.com/terminos" target="_blank" rel="noopener">Términos</a>
+          <a href="https://yosoyempresarioone.com/privacidad" target="_blank" rel="noopener">Privacidad</a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2026 One Empire LLC · Todos los derechos reservados · Tampa, Florida</p>
+    </div>
+  </footer>
+
+  <script>
+  // Add-to-calendar links (Eastern time, EDT UTC-4)
+  (function () {
+    var EVENT_NAME = "Next Level Leaders - Experiencia VIP";
+    var LOCATION = "Tampa, FL (lugar por confirmar)";
+    var TIMEZONE = "America/New_York";
+    var START = "20261023T140000";
+    var END = "20261025T180000";
+    var ISO_START = "2026-10-23T14:00:00-04:00";
+    var ISO_END = "2026-10-25T18:00:00-04:00";
+    var DESCRIPTION = "Next Level Leaders · Tampa, Florida. Te enviaremos la dirección exacta por correo y WhatsApp.";
+    var e = encodeURIComponent;
+    function utc(iso) { return new Date(iso).toISOString().replace(/[-:]|\.\d{3}/g, ""); }
+    var links = {
+      "calendar-google": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + e(EVENT_NAME) + "&dates=" + START + "/" + END + "&ctz=" + e(TIMEZONE) + "&details=" + e(DESCRIPTION) + "&location=" + e(LOCATION),
+      "calendar-outlook": "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=" + e(EVENT_NAME) + "&startdt=" + e(ISO_START) + "&enddt=" + e(ISO_END) + "&body=" + e(DESCRIPTION) + "&location=" + e(LOCATION),
+      "calendar-yahoo": "https://calendar.yahoo.com/?v=60&title=" + e(EVENT_NAME) + "&st=" + utc(ISO_START) + "&et=" + utc(ISO_END) + "&desc=" + e(DESCRIPTION) + "&in_loc=" + e(LOCATION)
+    };
+    Object.keys(links).forEach(function (cls) {
+      document.querySelectorAll("." + cls).forEach(function (a) { a.href = links[cls]; a.target = "_blank"; a.rel = "noopener"; });
+    });
+  })();
+  </script>
+</body>
+</html>
