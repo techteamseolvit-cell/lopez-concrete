@@ -140,7 +140,7 @@
   .plan-flag { position: absolute; top: -13px; right: 22px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 5px 12px; color: #fff; isolation: isolate; }
   .plan-flag::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, var(--red-bright), var(--red)); transform: skewX(-14deg); }
   .plan-tag { margin: 0 0 6px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); }
-  .plan-name { margin: 0; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(20px, 2vw, 24px); line-height: 1.15; }
+  .plan-name { margin: 0; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.15; }
   .plan-price { margin: 14px 0 4px; font-family: var(--display); font-weight: 800; font-size: 15px; color: var(--silver-mid); }
   .plan-price b { font-weight: 900; font-size: clamp(34px, 3.6vw, 44px); line-height: 1; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; margin-right: 4px; }
   .plan-when { margin: 0 0 18px; padding-bottom: 18px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--silver-mid); }
@@ -149,7 +149,15 @@
   .plan-list li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; font-size: 15px; line-height: 1.45; color: #e4e5e9; }
   .plan-list li::before { content: "✓"; width: 22px; height: 22px; display: grid; place-items: center; font-size: 12px; font-weight: 800; background: var(--red); color: #fff; margin-top: 1px; }
   .plan-list li span { color: var(--silver-mid); }
-  .plan-cta { margin-top: auto; align-self: stretch; }
+  .plan-body { margin-bottom: 22px; }
+  .plan-cta { margin-top: auto; align-self: stretch; padding: 15px 14px; font-size: 11px; white-space: nowrap; }
+  .plan-name { white-space: nowrap; }
+  /* line up name, price, dates, includes and button across the three cards */
+  @supports (grid-template-rows: subgrid) {
+    .plans { grid-template-rows: repeat(6, auto); row-gap: 0; }
+    .plan { display: grid; grid-row: span 6; grid-template-rows: subgrid; align-content: start; }
+    .plan-cta { align-self: end; }
+  }
   .plans-help { margin: 30px 0 0; text-align: center; font-size: 15px; color: var(--silver-mid); }
   .plans-help a { color: #fff; font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--red-bright); }
 
@@ -204,6 +212,9 @@
   @media (max-width: 1024px) {
     .vip-card, .guide { grid-template-columns: 1fr; }
     .plans { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+    .plans { grid-template-rows: none; row-gap: 22px; }
+    .plan { display: flex; grid-row: auto; }
+    .plan-cta { align-self: stretch; }
     .plan-featured { margin-top: 10px; }
     .guide-photo { max-width: 460px; margin: 0 auto; }
   }
@@ -281,12 +292,15 @@
         <h3 class="plan-name">VIP</h3>
         <p class="plan-price"><b>500</b> USD</p>
         <p class="plan-when">Sábado 24 y domingo 25</p>
-        <ul class="plan-list">
-          <li><div>Acceso preferencial <span>(evitas formarte para ingresar).</span></div></li>
-          <li><div>Asiento reservado en primeras filas.</div></li>
-          <li><div>Comida con speakers el sábado 24 y domingo 25.</div></li>
-        </ul>
-        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-vip">Quiero el VIP <i class="arr">→</i></a>
+        <div class="plan-body">
+          <ul class="plan-list">
+            <li><div>Acceso preferencial <span>(evitas formarte para ingresar).</span></div></li>
+            <li><div>Asiento reservado en primeras filas.</div></li>
+            <li><div>Comida con speakers el sábado 24 y domingo 25.</div></li>
+          </ul>
+          
+        </div>
+        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-vip">Comprar VIP <i class="arr">→</i></a>
       </article>
 
       <article class="plan reveal">
@@ -294,10 +308,13 @@
         <h3 class="plan-name">Entrenamiento</h3>
         <p class="plan-price"><b>997</b> USD</p>
         <p class="plan-when">Viernes 23 de octubre</p>
-        <ul class="plan-list">
-          <li><div>Acceso al entrenamiento: <strong>Conoce tus números y aprende a estimar.</strong></div></li>
-        </ul>
-        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-entrenamiento">Quiero el entrenamiento <i class="arr">→</i></a>
+        <div class="plan-body">
+          <ul class="plan-list">
+            <li><div>Acceso al entrenamiento: <strong>Conoce tus números y aprende a estimar.</strong></div></li>
+          </ul>
+          
+        </div>
+        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-entrenamiento">Comprar Entrenamiento <i class="arr">→</i></a>
       </article>
 
       <article class="plan plan-featured reveal">
@@ -306,17 +323,20 @@
         <h3 class="plan-name">VIP + Entrenamiento</h3>
         <p class="plan-price"><b>1,497</b> USD</p>
         <p class="plan-when">Viernes 23, sábado 24 y domingo 25</p>
-        <p class="plan-group">Viernes 23 · Entrenamiento</p>
-        <ul class="plan-list">
-          <li><div>Acceso al entrenamiento: <strong>Conoce tus números y aprende a estimar.</strong></div></li>
-        </ul>
-        <p class="plan-group">Next Level Leaders · VIP</p>
-        <ul class="plan-list">
-          <li><div>Acceso preferencial <span>(evitas formarte para ingresar).</span></div></li>
-          <li><div>Asiento reservado en primeras filas.</div></li>
-          <li><div>Comida con speakers el sábado y domingo.</div></li>
-        </ul>
-        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-vip-entrenamiento">Quiero VIP + Entrenamiento <i class="arr">→</i></a>
+        <div class="plan-body">
+          <p class="plan-group">Viernes 23 · Entrenamiento</p>
+          <ul class="plan-list">
+            <li><div>Acceso al entrenamiento: <strong>Conoce tus números y aprende a estimar.</strong></div></li>
+          </ul>
+          <p class="plan-group">Next Level Leaders · VIP</p>
+          <ul class="plan-list">
+            <li><div>Acceso preferencial <span>(evitas formarte para ingresar).</span></div></li>
+            <li><div>Asiento reservado en primeras filas.</div></li>
+            <li><div>Comida con speakers el sábado y domingo.</div></li>
+          </ul>
+          
+        </div>
+        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-vip-entrenamiento">Comprar VIP + Entrenamiento <i class="arr">→</i></a>
       </article>
     </div>
 
