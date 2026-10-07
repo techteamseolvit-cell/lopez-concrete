@@ -130,6 +130,29 @@
   .vip-cta { font-size: 13px; padding: 16px 30px; }
   .vip-cta::before { box-shadow: 0 16px 40px -10px rgba(224,30,43,.75), inset 0 1px 0 rgba(255,255,255,.25); }
 
+  /* ---------- upgrade options ---------- */
+  .vip .head .badge2 { margin-bottom: 20px; }
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2vw, 22px); align-items: stretch; }
+  .plan { position: relative; display: flex; flex-direction: column; padding: clamp(26px, 3vw, 34px); background: linear-gradient(160deg, #141418 0%, #0b0b0d 100%); border: 1px solid var(--line); }
+  .plan::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--red-bright), transparent); }
+  .plan-featured { background: linear-gradient(150deg, #1a0a0d 0%, #0d0d10 55%, #141418 100%); border-color: rgba(224,30,43,.55); box-shadow: 0 40px 100px -50px rgba(224,30,43,.7); }
+  .plan-featured::before { height: 4px; background: linear-gradient(90deg, var(--red-bright), var(--silver) 60%, transparent); }
+  .plan-flag { position: absolute; top: -13px; right: 22px; font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 5px 12px; color: #fff; isolation: isolate; }
+  .plan-flag::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, var(--red-bright), var(--red)); transform: skewX(-14deg); }
+  .plan-tag { margin: 0 0 6px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); }
+  .plan-name { margin: 0; font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: clamp(20px, 2vw, 24px); line-height: 1.15; }
+  .plan-price { margin: 14px 0 4px; font-family: var(--display); font-weight: 800; font-size: 15px; color: var(--silver-mid); }
+  .plan-price b { font-weight: 900; font-size: clamp(34px, 3.6vw, 44px); line-height: 1; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; margin-right: 4px; }
+  .plan-when { margin: 0 0 18px; padding-bottom: 18px; border-bottom: 1px solid var(--line); font-size: 14px; color: var(--silver-mid); }
+  .plan-group { margin: 6px 0 10px; font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: .05em; color: var(--silver-mid); }
+  .plan-list { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 10px; }
+  .plan-list li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; font-size: 15px; line-height: 1.45; color: #e4e5e9; }
+  .plan-list li::before { content: "✓"; width: 22px; height: 22px; display: grid; place-items: center; font-size: 12px; font-weight: 800; background: var(--red); color: #fff; margin-top: 1px; }
+  .plan-list li span { color: var(--silver-mid); }
+  .plan-cta { margin-top: auto; align-self: stretch; }
+  .plans-help { margin: 30px 0 0; text-align: center; font-size: 15px; color: var(--silver-mid); }
+  .plans-help a { color: #fff; font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--red-bright); }
+
   /* ---------- steps ---------- */
   .steps { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2.4vw, 26px); }
   .step { background: var(--black); color: #fff; padding: clamp(26px, 3.4vw, 42px); position: relative; overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--line); }
@@ -180,6 +203,8 @@
   /* ---------- responsive ---------- */
   @media (max-width: 1024px) {
     .vip-card, .guide { grid-template-columns: 1fr; }
+    .plans { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+    .plan-featured { margin-top: 10px; }
     .guide-photo { max-width: 460px; margin: 0 auto; }
   }
   @media (max-width: 760px) {
@@ -240,32 +265,62 @@
   </div>
 </section>
 
-<!-- ============ VIP ============ -->
+<!-- ============ MEJORA TU EXPERIENCIA ============ -->
 <section class="pad vip" id="vip">
   <div class="streaks" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap">
-    <div class="vip-card reveal">
-      <span class="vip-mark" aria-hidden="true">VIP</span>
-      <div class="vip-copy">
-        <span class="badge2">Experiencia VIP</span>
-        <h2 class="h-lg"><span class="chrome">¡Tu lugar para el 24 y 25 de octubre ya está </span><span class="red">reservado!</span></h2>
-        <p class="lead">Ahora puedes llevar tu experiencia al siguiente nivel con la <strong>Experiencia VIP</strong>. Disfruta de <strong>3 días intensivos (23, 24 y 25 de octubre)</strong>, que incluyen:</p>
-        <div class="ticket">
-          <div class="ticket-date"><small>Vie</small><b>23</b><span>Oct</span></div>
-          <div class="ticket-info"><small>Día exclusivo VIP</small><b>2:00pm a 6:00pm</b><span>Masterclass y Cena con los Speakers</span></div>
-        </div>
-      </div>
-      <div class="vip-perks">
-        <ul class="vip-list">
-          <li><b>01</b><span>Acceso exclusivo el 23 de octubre a la Masterclass y Cena con los Speakers.</span></li>
-          <li><b>02</b><span>Acceso completo al evento los días 24 y 25 de octubre.</span></li>
-          <li><b>03</b><span>Asientos preferenciales en primera fila.</span></li>
-          <li><b>04</b><span>Comida con los Speakers.</span></li>
-          <li><b>05</b><span>Foto profesional con los Speakers.</span></li>
-        </ul>
-        <a class="btn btn-red vip-cta" href="https://wa.me/5493795036313?text=%C2%A1Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20Experiencia%20VIP%20del%20evento%20Next%20Level%20Leaders%20en%20Tampa." target="_blank" rel="noopener">Vivir la experiencia VIP <i class="arr">→</i></a>
-      </div>
+    <div class="head center reveal">
+      <span class="badge2">Mejora tu experiencia</span>
+      <h2 class="h-lg"><span class="chrome">Tu lugar ya está confirmado. </span><span class="red">¿Quieres vivirlo al máximo?</span></h2>
+      <p class="lead">Tu entrada gratuita al evento del sábado 24 y domingo 25 ya está reservada. Si quieres llevar tu experiencia a otro nivel, tenemos estas opciones para ti:</p>
     </div>
+
+    <div class="plans">
+      <article class="plan reveal">
+        <p class="plan-tag">Opción 1</p>
+        <h3 class="plan-name">VIP</h3>
+        <p class="plan-price"><b>500</b> USD</p>
+        <p class="plan-when">Sábado 24 y domingo 25</p>
+        <ul class="plan-list">
+          <li><div>Acceso preferencial <span>(evitas formarte para ingresar).</span></div></li>
+          <li><div>Asiento reservado en primeras filas.</div></li>
+          <li><div>Comida con speakers el sábado 24 y domingo 25.</div></li>
+        </ul>
+        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-vip">Quiero el VIP <i class="arr">→</i></a>
+      </article>
+
+      <article class="plan reveal">
+        <p class="plan-tag">Opción 2</p>
+        <h3 class="plan-name">Entrenamiento</h3>
+        <p class="plan-price"><b>997</b> USD</p>
+        <p class="plan-when">Viernes 23 de octubre</p>
+        <ul class="plan-list">
+          <li><div>Acceso al entrenamiento: <strong>Conoce tus números y aprende a estimar.</strong></div></li>
+        </ul>
+        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-entrenamiento">Quiero el entrenamiento <i class="arr">→</i></a>
+      </article>
+
+      <article class="plan plan-featured reveal">
+        <span class="plan-flag">La experiencia completa</span>
+        <p class="plan-tag">Opción 3</p>
+        <h3 class="plan-name">VIP + Entrenamiento</h3>
+        <p class="plan-price"><b>1,497</b> USD</p>
+        <p class="plan-when">Viernes 23, sábado 24 y domingo 25</p>
+        <p class="plan-group">Viernes 23 · Entrenamiento</p>
+        <ul class="plan-list">
+          <li><div>Acceso al entrenamiento: <strong>Conoce tus números y aprende a estimar.</strong></div></li>
+        </ul>
+        <p class="plan-group">Next Level Leaders · VIP</p>
+        <ul class="plan-list">
+          <li><div>Acceso preferencial <span>(evitas formarte para ingresar).</span></div></li>
+          <li><div>Asiento reservado en primeras filas.</div></li>
+          <li><div>Comida con speakers el sábado y domingo.</div></li>
+        </ul>
+        <a class="btn btn-red plan-cta" href="https://yosoyempresarioone.com/checkout-vip-entrenamiento">Quiero VIP + Entrenamiento <i class="arr">→</i></a>
+      </article>
+    </div>
+
+    <p class="plans-help reveal">¿Tienes dudas sobre qué opción elegir? <a href="https://wa.me/5493795036313?text=%C2%A1Hola!%20Ya%20estoy%20registrado%20en%20Next%20Level%20Leaders%20Tampa%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20opciones%20para%20mejorar%20mi%20experiencia." target="_blank" rel="noopener">Escríbenos por WhatsApp →</a></p>
   </div>
 </section>
 
@@ -283,7 +338,7 @@
         <h3 class="h-md">Guarda la fecha</h3>
         <div class="dates">
           <div class="date"><small>Evento presencial gratuito</small><b>Sábado 24 y Domingo 25 de Octubre</b><span>9:00am a 6:00pm · Tampa, FL (lugar por confirmar)</span></div>
-          <div class="date"><small>Experiencia VIP</small><b>Viernes 23 de Octubre</b><span>2:00pm a 6:00pm · Masterclass exclusiva y Cena con los Speakers. Una oportunidad para aprender, conectar y comenzar tu experiencia VIP antes del evento principal.</span></div>
+          <div class="date"><small>Entrenamiento (opcional)</small><b>Viernes 23 de Octubre</b><span>Conoce tus números y aprende a estimar · Horario por confirmar · Incluido en los paquetes Entrenamiento y VIP + Entrenamiento.</span></div>
         </div>
         <div class="cal">
           <span class="cal-label">Agregar a mi calendario</span>
