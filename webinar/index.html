@@ -13,7 +13,7 @@
 <link rel="icon" href="../next-level-leaders/images/one-empire-icon-red.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap">
 
 <!-- Meta Pixel Code -->
 <script>
@@ -46,8 +46,9 @@ fbq('track', 'PageView');
     --red-grad: linear-gradient(180deg, #e01e2b 0%, #c1121f 55%, #9a0d18 100%);
     --silver: #c9ccd2;
     --green: #d7dade;
-    --sans: "Inter", system-ui, -apple-system, sans-serif;
-    --display: "Montserrat", "Inter", system-ui, sans-serif;
+    --sans: "Barlow", system-ui, -apple-system, sans-serif;
+    --impact: "Barlow Condensed", "Barlow", system-ui, sans-serif;
+    --display: "Barlow", system-ui, sans-serif;
     --wrap: 1180px;
     --r: 22px;
   }
@@ -394,17 +395,31 @@ fbq('track', 'PageView');
     .sticky-cta small b { display: block; color: var(--text); }
     .sticky-cta .btn { padding: 12px 20px; font-size: 14px; }
   }
+  /* ---------- typography: Barlow Condensed (titulares) + Barlow (texto) ---------- */
+  h1, h2 { font-family: var(--impact); font-weight: 800; text-transform: uppercase; letter-spacing: 0; line-height: .95; }
+  h1 { font-style: italic; font-size: clamp(46px, 5.6vw, 80px); }
+  h2 { font-size: clamp(38px, 5vw, 66px); }
+  h3 { font-weight: 700; letter-spacing: -.005em; }
+  h1 .chrome, h1 .accent { padding-right: .08em; }
+  .hero .key-art + h1 { font-size: clamp(44px, 4.4vw, 64px); }
+  .forget h2, .learn .num, .step-n, .est-result b, .ticket-date, .countdown b, .stat b { font-family: var(--impact); letter-spacing: 0; }
+  .learn .num, .step-n { font-size: 54px; font-weight: 800; }
+  .ticket-date { font-size: clamp(30px, 3.2vw, 40px); text-transform: uppercase; }
+  .countdown b { font-size: clamp(30px, 3.2vw, 40px); }
+  .est-result b { font-size: clamp(32px, 3.6vw, 44px); }
+
   /* mobile hero: image first, full width; then expanded title */
   @media (max-width: 1024px) {
     .hero { padding-top: 0; }
     .hero-copy > div:first-child { display: flex; flex-direction: column; align-items: center; }
     .hero .key-art { order: -1; margin: 24px 0 28px; max-width: 640px; width: 100%; }
-    .hero .key-art + h1 { font-size: clamp(40px, 7.4vw, 64px); line-height: .98; }
+    .hero .key-art + h1 { font-size: clamp(56px, 9vw, 88px); }
     .hero h1 .chrome, .hero h1 .accent { display: block; }
   }
   @media (max-width: 760px) {
-    .hero .key-art { max-width: none; width: auto; align-self: stretch; margin: 0 calc(-1 * clamp(16px, 4vw, 40px)) 24px; border-radius: 0; border: 0; border-bottom: 1px solid rgba(224,30,43,.35); }
-    .hero .key-art + h1 { font-size: clamp(38px, 11.6vw, 56px); letter-spacing: -.035em; }
+    .hero .key-art { max-width: none; width: auto; align-self: stretch; margin: 0 calc(-1 * clamp(16px, 4vw, 40px)) -36px; border-radius: 0; border: 0; box-shadow: none; -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%); }
+    .hero-copy > div:first-child > :not(.key-art) { position: relative; z-index: 1; }
+    .hero .key-art + h1 { font-size: clamp(54px, 15.4vw, 80px); }
   }
 </style>
 </head>
