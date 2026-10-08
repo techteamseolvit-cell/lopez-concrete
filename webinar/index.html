@@ -254,6 +254,12 @@ fbq('track', 'PageView');
   .host-photo figcaption span { font-size: 14px; color: var(--muted); }
   .host p { color: var(--muted); }
   .host p b { color: var(--text); font-weight: 600; }
+  .host-copy { display: flex; flex-direction: column; justify-content: center; }
+  .host-copy .eyebrow { align-self: flex-start; }
+  @media (max-width: 1024px) { .host-copy .eyebrow { align-self: center; } }
+  @media (min-width: 1025px) { .host-photo { min-height: 460px; } .host-photo img { position: absolute; inset: 0; min-height: 0; } }
+  .host-copy .lead { font-size: 19px; margin-top: 18px; }
+  .host-copy .lead + .lead { margin-top: 14px; }
   .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
   .creds div { padding: 18px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); font-size: 15px; color: var(--muted); }
   .creds b { display: block; color: var(--text); font-family: var(--display); font-weight: 600; font-size: 16px; margin-bottom: 4px; }
@@ -686,18 +692,13 @@ fbq('track', 'PageView');
   <div class="wrap host">
     <figure class="host-photo reveal" style="margin:0">
       <img src="images/hugo-perez.webp" width="1122" height="1402" alt="Hugo Pérez" loading="lazy">
-      <figcaption><b>Hugo Pérez</b><span>Fundador de One Empire</span></figcaption>
+      <figcaption><b>Hugo Pérez</b><span>Fundador de Potros Construction y One Empire</span></figcaption>
     </figure>
-    <div class="reveal">
-      <span class="eyebrow">Quién te enseña</span>
-      <h2 style="margin-top:16px">Alguien que ya hizo <span class="accent">el camino de obrero a empresario</span></h2>
-      <p class="lead">Hugo Pérez empezó en la obra, como tú. Llegó a estar al borde de la quiebra y hoy su empresa, <b>Potros Construction</b>, supera los $3 millones de dólares en facturación acumulada. Es fundador de <b>One Empire</b> y de <b>Next Level Leaders</b>, donde comparte con contratistas latinos lo que le funcionó.</p>
-      <div class="creds">
-        <div><b>Viene de la obra</b>Conoce el trabajo desde adentro, no desde un escritorio.</div>
-        <div><b>Dueño de empresa</b>Enseña lo que aplica todos los días en su propia constructora.</div>
-        <div><b>Resultados reales</b>De estar al borde de la quiebra a más de $1 millón en solo 9 meses.</div>
-        <div><b>Sin rodeos</b>Te comparte lo que le funcionó, tal como lo vivió.</div>
-      </div>
+    <div class="reveal host-copy">
+      <span class="eyebrow">Quién está detrás del sistema</span>
+      <h2 style="margin-top:16px">De estar al borde de la quiebra <span class="accent">a construir empresas millonarias</span></h2>
+      <p class="lead">Hugo Pérez comenzó trabajando en la construcción y estuvo a punto de perder su empresa.</p>
+      <p class="lead">Hoy es fundador de <b>Potros Construction</b> y <b>One Empire</b>, empresas con más de <b>$5 millones de dólares en facturación acumulada</b>, donde ha implementado estrategias y sistemas que hoy comparte con otros empresarios para ayudarlos a crecer.</p>
     </div>
   </div>
 </section>
