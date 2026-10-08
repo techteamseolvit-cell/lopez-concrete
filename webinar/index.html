@@ -780,6 +780,35 @@ fbq('track', 'PageView');
   // Miércoles 14 de octubre de 2026, 8:00 PM hora del Este / Virginia (EDT, UTC-4)
   var EVENT_DATE = "2026-10-14T20:00:00-04:00";
 
+  // Hero balance (desktop): size the key art so the copy column matches the form column,
+  // whatever height the GHL form ends up with.
+  (function () {
+    var box = document.querySelector(".hero-copy > div:first-child");
+    var art = document.querySelector(".hero .key-art");
+    var reg = document.getElementById("registro");
+    if (!box || !art || !reg) return;
+    var raf = 0;
+    function balance() {
+      raf = 0;
+      art.style.maxWidth = "";
+      if (window.innerWidth <= 1024) return;
+      box.style.justifyContent = "flex-start";
+      var kids = [].filter.call(box.children, function (k) { return k.offsetParent !== null; });
+      var last = kids[kids.length - 1];
+      var contentH = last.getBoundingClientRect().bottom - box.getBoundingClientRect().top;
+      var regH = reg.getBoundingClientRect().height;
+      var artW = art.getBoundingClientRect().width;
+      box.style.justifyContent = "";
+      if (contentH > regH) art.style.maxWidth = Math.max(260, Math.floor(artW - (contentH - regH))) + "px";
+    }
+    function queue() { if (!raf) raf = requestAnimationFrame(balance); }
+    window.addEventListener("resize", queue);
+    window.addEventListener("load", queue);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(queue);
+    if ("ResizeObserver" in window) new ResizeObserver(queue).observe(reg.querySelector(".form-card") || reg);
+    queue();
+  })();
+
   // Countdown
   (function () {
     var target = new Date(EVENT_DATE).getTime();
