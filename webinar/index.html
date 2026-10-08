@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Webinar: De 0 al Millón · Hugo Pérez</title>
-<meta name="description" content="Masterclass gratuita en vivo por Zoom, miércoles 14 de octubre a las 8 PM (hora del Este): conoce tus números, calcula tu overhead, estima con ganancia y domina marketing y ventas para tu empresa de construcción.">
+<meta name="description" content="Webinar gratuito en vivo por Zoom con Hugo Pérez, miércoles 14 de octubre a las 8 PM (hora del Este): descubre el sistema que utilizó para pasar de estar al borde de la quiebra a facturar más de $1 millón de dólares en solo 9 meses.">
 <meta name="author" content="Hugo Pérez">
-<meta property="og:title" content="Webinar: De 0 al Millón · Hugo Pérez">
-<meta property="og:description" content="Conoce tus números, tu overhead y aprende a estimar con ganancia. Miércoles 14 de octubre · 8:00 PM hora del Este · Zoom.">
+<meta property="og:title" content="Te mostraré cómo llevé mi empresa de construcción de $100,000 a casi $5 millones sin tener que hacerlo todo yo">
+<meta property="og:description" content="Webinar: De 0 al Millón con Hugo Pérez. Miércoles 14 de octubre · 8:00 PM hora del Este · Zoom.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="../next-level-leaders/images/one-empire-icon-red.png">
@@ -407,18 +407,43 @@ fbq('track', 'PageView');
   .countdown b { font-size: clamp(30px, 3.2vw, 40px); }
   .est-result b { font-size: clamp(32px, 3.6vw, 44px); }
 
+  /* hero copy additions */
+  .hero-kicker { margin: 18px 0 0; font-family: var(--impact); font-weight: 600; text-transform: uppercase; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.25; color: #fff; }
+  .hero-proof { margin: 18px 0 0; padding: 14px 18px; border-left: 3px solid var(--red-hi); background: rgba(193,18,31,.12); border-radius: 0 12px 12px 0; font-size: 16px; color: #fff; }
+  .hero-proof b { font-family: var(--impact); font-weight: 600; text-transform: uppercase; letter-spacing: .02em; }
+  .hero .key-art { max-width: 400px; }
+  .hero .key-art + h1 { font-size: clamp(30px, 2.8vw, 42px); }
+  .hero h1 .chrome, .hero h1 .accent { display: inline; }
+  .final h2 { font-size: clamp(30px, 3.4vw, 46px); }
+  /* results */
+  .results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .res { border-radius: 24px; padding: 32px 28px; background: linear-gradient(160deg, #1d1d22 0%, #0b0b0d 100%); color: #fff; box-shadow: 0 30px 60px -35px rgba(0,0,0,.6); border: 1px solid rgba(255,255,255,.06); text-align: center; }
+  .res:nth-child(2) { background: linear-gradient(160deg, #3a0a10 0%, #16080a 50%, #08080a 100%); border-color: rgba(224,30,43,.45); }
+  .res b { display: block; font-family: var(--impact); font-weight: 700; font-size: clamp(38px, 4vw, 52px); line-height: 1.05; background: var(--chrome); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .res p { margin: 12px 0 0; color: #c9c6c1; font-size: 16px; }
+  @media (max-width: 1024px) {
+    .hero .key-art { max-width: 640px; }
+    .hero-proof { border-left: 0; border-top: 3px solid var(--red-hi); border-radius: 0 0 12px 12px; }
+    .results { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin: 0 auto; }
+  }
+
   /* mobile hero: image first, full width; then expanded title */
   @media (max-width: 1024px) {
     .hero { padding-top: 0; }
     .hero-copy > div:first-child { display: flex; flex-direction: column; align-items: center; }
     .hero .key-art { order: -1; margin: 24px 0 28px; max-width: 640px; width: 100%; }
-    .hero .key-art + h1 { font-size: clamp(44px, 6.6vw, 60px); }
-    .hero h1 .chrome, .hero h1 .accent { display: block; }
+    .hero .key-art + h1 { font-size: clamp(34px, 5vw, 46px); }
   }
   @media (max-width: 760px) {
     .hero .key-art { max-width: none; width: auto; align-self: stretch; margin: 0 calc(-1 * clamp(16px, 4vw, 40px)) -36px; border-radius: 0; border: 0; box-shadow: none; -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%); }
     .hero-copy > div:first-child > :not(.key-art) { position: relative; z-index: 1; }
-    .hero .key-art + h1 { font-size: clamp(32px, 9.6vw, 46px); }
+    .hero .key-art + h1 { font-size: clamp(25px, 7.4vw, 34px); }
+    h2 { font-size: clamp(28px, 8.4vw, 40px); }
+    .hero-kicker { font-size: clamp(16px, 4.6vw, 19px); }
+    .hero-copy, .hero-copy > div { min-width: 0; }
+    .learn-wrap { padding: 28px 20px; }
+    .learn-wrap h2 { font-size: clamp(26px, 7.8vw, 40px); }
+    .pill { max-width: 100%; font-size: 13px; }
   }
 </style>
 </head>
@@ -443,12 +468,14 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="reveal hero-copy">
       <div>
-      <span class="pill"><b>Gratis</b> Webinar en vivo por Zoom</span>
+      <span class="pill"><b>Gratis</b> Webinar: De 0 al Millón</span>
       <figure class="key-art"><img src="images/hero-de-0-al-millon.webp" width="1254" height="1254" alt="Webinar: De 0 al Millón con Hugo Pérez" fetchpriority="high"></figure>
-      <h1><span class="chrome">Conoce tus números.</span> <span class="accent">Cobra como dueño.</span></h1>
-      <p class="lead">Para dueños latinos de construcción que tienen proyectos… y aun así no saben cuánto les queda. Aprende a calcular tu overhead, estimar con ganancia y vender como dueño.</p>
+      <h1><span class="chrome">Te mostraré cómo llevé mi empresa de construcción</span> <span class="accent">de $100,000 a casi $5 millones</span> <span class="chrome">sin tener que hacerlo todo&nbsp;yo</span></h1>
+      <p class="hero-kicker">Descubre el sistema que utilizó Hugo Pérez para pasar de estar al borde de la quiebra <span class="accent">a facturar más de $1 millón de dólares en solo 9 meses.</span></p>
+      <p class="lead">Conoce las estrategias, sistemas y habilidades que transformaron su negocio de construcción y que hoy le permiten atraer clientes constantemente, cobrar correctamente y cerrar proyectos de alto valor.</p>
+      <p class="hero-proof">Hoy, su empresa <b>Potros Construction</b> supera los <b class="accent">$3 millones de dólares</b> en facturación acumulada.</p>
       <div class="hero-actions">
-        <a class="btn btn-red" href="#registro">Quiero mi lugar gratis <span class="arr">→</span></a>
+        <a class="btn btn-red" href="#registro">¡Quiero mi lugar gratis! <span class="arr">→</span></a>
       </div>
       </div>
 
@@ -501,8 +528,8 @@ fbq('track', 'PageView');
 
 <div class="strip" aria-hidden="true">
   <div class="strip-track">
-    <span>Conoce tus números</span><span>Calcula tu overhead</span><span>Estima con ganancia</span><span>Marketing que trae clientes</span><span>Ventas sin regateo</span><span>De obrero a empresario</span>
-    <span>Conoce tus números</span><span>Calcula tu overhead</span><span>Estima con ganancia</span><span>Marketing que trae clientes</span><span>Ventas sin regateo</span><span>De obrero a empresario</span>
+    <span>Rentabilidad real</span><span>Control de costos</span><span>Cobrar con ganancia</span><span>Clientes constantes</span><span>Ventas de alto valor</span><span>De operador a dueño</span>
+    <span>Rentabilidad real</span><span>Control de costos</span><span>Cobrar con ganancia</span><span>Clientes constantes</span><span>Ventas de alto valor</span><span>De operador a dueño</span>
   </div>
 </div>
 
@@ -511,20 +538,20 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Lo que vemos en la construcción</span>
-      <h2>Sobran contratistas que saben levantar una obra. <span class="accent">Escasean los que saben cuánto les deja.</span></h2>
+      <h2>Sobran contratistas que saben levantar una obra. <span class="accent">Escasean los que saben hacer crecer una empresa.</span></h2>
       <p class="lead">Entran proyectos, se trabaja de sol a sol… y aun así el dueño termina:</p>
     </div>
     <div class="symptoms">
-      <div class="card sym reveal"><span>01</span><p>Cotizando “a ojo” o copiando el precio de otro</p></div>
-      <div class="card sym reveal"><span>02</span><p>Sin saber cuánto le cuesta tener la empresa abierta cada mes</p></div>
-      <div class="card sym reveal"><span>03</span><p>Cobrando el cheque sin saber cuánto le quedó de verdad</p></div>
+      <div class="card sym reveal"><span>01</span><p>Haciéndolo todo él mismo: la obra, las ventas, los cobros y la oficina</p></div>
+      <div class="card sym reveal"><span>02</span><p>Sin un equipo en quien confiar la operación</p></div>
+      <div class="card sym reveal"><span>03</span><p>Sintiendo que el negocio depende 100% de él</p></div>
       <div class="card sym reveal"><span>04</span><p>Esperando que suene el teléfono por una recomendación</p></div>
       <div class="card sym reveal"><span>05</span><p>Bajando su precio en cuanto el cliente regatea</p></div>
       <div class="card sym reveal"><span>06</span><p>Trabajando más horas cada año… y ganando lo mismo</p></div>
     </div>
     <div class="verdict reveal">
-      <h2>No es que no sepas construir. <span class="accent">Es que nadie te enseñó a leer los números de tu empresa.</span></h2>
-      <p>Y sin números, cualquier proyecto nuevo puede ser una pérdida disfrazada de trabajo.</p>
+      <h2>No es que no sepas construir. <span class="accent">Es que nadie te enseñó a dirigir una empresa.</span></h2>
+      <p>Hugo Pérez estuvo ahí: al borde de la quiebra y haciéndolo todo él mismo. Lo que cambió fue el sistema.</p>
     </div>
   </div>
 </section>
@@ -543,7 +570,7 @@ fbq('track', 'PageView');
       </div>
     </div>
     <div class="vsl-cta reveal">
-      <p>Hay un camino para dejar de ser “el que hace todo” y pasar a ser <b>el que conoce sus números, cotiza con seguridad y cobra lo que vale su trabajo.</b></p>
+      <p>Hay un camino para dejar de ser “el que hace todo” y pasar a ser <b>el dueño de una empresa que crece con sistemas, equipo y clientes constantes.</b></p>
       <a class="btn btn-red" href="#registro">Quiero ese camino <span class="arr">→</span></a>
     </div>
   </div>
@@ -554,28 +581,28 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">El cambio</span>
-      <h2>Del obrero que adivina <span class="accent">al dueño que decide con números</span></h2>
+      <h2>Del operador que lo hace todo <span class="accent">al dueño que dirige su empresa</span></h2>
     </div>
     <div class="compare">
       <div class="card before reveal">
         <span class="tag">Hoy</span>
         <h3>Así trabajas hoy</h3>
         <ul>
-          <li><span class="ico no">✕</span>Cotizas a ojo y te enteras de la pérdida cuando ya terminaste.</li>
-          <li><span class="ico no">✕</span>No sabes cuánto es tu overhead ni dónde se va el dinero.</li>
+          <li><span class="ico no">✕</span>Haces todo tú: la obra, las ventas, los cobros y la oficina.</li>
           <li><span class="ico no">✕</span>Dependes de recomendaciones para conseguir trabajo.</li>
-          <li><span class="ico no">✕</span>Bajas tu precio en cuanto el cliente regatea.</li>
+          <li><span class="ico no">✕</span>Compites por precio y lo bajas en cuanto el cliente regatea.</li>
+          <li><span class="ico no">✕</span>Trabajas más horas, pero el negocio no crece.</li>
         </ul>
       </div>
       <div class="compare-arrow" aria-hidden="true"><span>→</span></div>
       <div class="card after reveal">
-        <span class="tag">Después de la masterclass</span>
-        <h3>Así trabajarás después</h3>
+        <span class="tag">El cambio que hizo Hugo</span>
+        <h3>Así trabaja un dueño de empresa</h3>
         <ul>
-          <li><span class="ico yes">✓</span>Sabes tu costo real y tu margen antes de firmar.</li>
-          <li><span class="ico yes">✓</span>Tu overhead está calculado y metido en cada estimado.</li>
-          <li><span class="ico yes">✓</span>Tu marketing trae clientes de forma constante.</li>
-          <li><span class="ico yes">✓</span>Presentas tu precio con seguridad y lo defiendes.</li>
+          <li><span class="ico yes">✓</span>Tiene sistemas para atraer clientes de forma constante.</li>
+          <li><span class="ico yes">✓</span>Vende con confianza y defiende su precio.</li>
+          <li><span class="ico yes">✓</span>Cierra proyectos de alto valor.</li>
+          <li><span class="ico yes">✓</span>Tiene un equipo que lleva la operación con él.</li>
         </ul>
       </div>
     </div>
@@ -588,53 +615,33 @@ fbq('track', 'PageView');
     <div class="learn-wrap reveal">
       <div class="sec-head">
         <span class="eyebrow">El contenido</span>
-        <h2>Lo que vas a dominar <span class="accent">en una sola noche</span></h2>
+        <h2>Descubre los 6 cambios <span class="accent">que transformaron su negocio</span></h2>
       </div>
       <div class="learn">
-        <div class="card"><span class="num">01</span><p>Conoce tus números</p><span class="verbs">Analiza · Mide · Decide</span><small>Ingresos, costos, margen y flujo de efectivo: los números que todo dueño debe saber de memoria.</small></div>
-        <div class="card"><span class="num">02</span><p>Calcula tu overhead</p><span class="verbs">Identifica · Reparte</span><small>Renta, seguros, licencias, camionetas, gasolina, teléfono, oficina… cuánto te cuesta abrir la puerta cada mes.</small></div>
-        <div class="card"><span class="num">03</span><p>Estima con ganancia</p><span class="verbs">Calcula · Cotiza · Gana</span><small>Materiales, mano de obra, overhead y margen en un estimado claro que el cliente entiende y respeta.</small></div>
-        <div class="card"><span class="num">04</span><p>Marketing</p><span class="verbs">Atrae · Posiciona</span><small>Cómo llenar tu agenda de proyectos sin depender solo de recomendaciones.</small></div>
-        <div class="card"><span class="num">05</span><p>Ventas</p><span class="verbs">Presenta · Cierra</span><small>Cómo presentar tu precio con seguridad, manejar el regateo y cerrar contratos más grandes.</small></div>
-        <div class="card"><span class="num">06</span><p>Dirige como dueño</p><span class="verbs">Ordena · Crece</span><small>Cómo usar tus números para decidir qué proyectos tomar y cómo hacer crecer tu empresa.</small></div>
+        <div class="card"><span class="num">01</span><p>Los números que cambiaron su rentabilidad</p><small>Descubre qué comenzó a medir para conocer sus ganancias reales y tomar mejores decisiones.</small></div>
+        <div class="card"><span class="num">02</span><p>El secreto detrás de su overhead</p><small>Conoce qué implementó para identificar sus costos operativos y evitar pérdidas.</small></div>
+        <div class="card"><span class="num">03</span><p>De competir por precio a cobrar con ganancia</p><small>Descubre qué cambió en sus estimaciones para cobrar correctamente y proteger su rentabilidad.</small></div>
+        <div class="card"><span class="num">04</span><p>El sistema para atraer clientes constantemente</p><small>Conoce qué implementó para generar oportunidades de negocio sin depender solo de las recomendaciones.</small></div>
+        <div class="card"><span class="num">05</span><p>La habilidad que transformó sus ventas</p><small>Descubre qué le permite generar confianza, defender sus precios y cerrar proyectos de alto valor.</small></div>
+        <div class="card"><span class="num">06</span><p>De operador a dueño de empresa</p><small>Conoce qué cambió en su liderazgo para construir un equipo y desarrollar una empresa rentable y escalable.</small></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== ESTIMATE ========== -->
+<!-- ========== RESULTS ========== -->
 <section class="light">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">Overhead y estimación</span>
-      <h2>El mismo proyecto. <span class="accent">Dos formas de cotizarlo.</span></h2>
-      <p class="lead">La mayoría de los contratistas pierde dinero sin darse cuenta porque nunca mete el overhead en su precio. Mira la diferencia en un patio de concreto.</p>
+      <span class="eyebrow">Potros Construction</span>
+      <h2>De estar al borde de la quiebra <span class="accent">a una empresa de millones</span></h2>
+      <p class="lead">Los resultados que Hugo Pérez logró en su propia empresa de construcción.</p>
     </div>
-    <div class="estimate">
-      <div class="card est before reveal">
-        <span class="tag">Cotizar a ojo</span>
-        <ul class="est-lines">
-          <li><span>Materiales</span><b>$6,200</b></li>
-          <li><span>Mano de obra</span><b>$4,800</b></li>
-          <li><span>“Algo extra por si acaso”</span><b>$1,500</b></li>
-          <li class="muted"><span>Overhead</span><b>No lo calculó</b></li>
-          <li class="total"><span>Precio al cliente</span><b>$12,500</b></li>
-        </ul>
-        <div class="est-result bad"><small>Costo real con overhead: $13,100</small><b>−$600</b><span>Perdió dinero… y ni se enteró.</span></div>
-      </div>
-      <div class="card est after reveal">
-        <span class="tag">Estimar como dueño</span>
-        <ul class="est-lines">
-          <li><span>Materiales</span><b>$6,200</b></li>
-          <li><span>Mano de obra</span><b>$4,800</b></li>
-          <li><span>Overhead asignado al proyecto</span><b>$2,100</b></li>
-          <li><span>Margen de ganancia (20%)</span><b>$3,275</b></li>
-          <li class="total"><span>Precio al cliente</span><b>$16,375</b></li>
-        </ul>
-        <div class="est-result good"><small>Costo real con overhead: $13,100</small><b>+$3,275</b><span>Ganancia limpia, calculada antes de firmar.</span></div>
-      </div>
+    <div class="results">
+      <div class="res reveal"><b>9 meses</b><p>para pasar de estar al borde de la quiebra a facturar más de $1 millón de dólares.</p></div>
+      <div class="res reveal"><b>+$3M</b><p>de dólares en facturación acumulada de Potros Construction.</p></div>
+      <div class="res reveal"><b>Casi $5M</b><p>su empresa pasó de $100,000 a casi $5 millones, sin tener que hacerlo todo él.</p></div>
     </div>
-    <p class="est-note reveal">Cifras de ejemplo. En la masterclass aprendes a calcular las tuyas.</p>
   </div>
 </section>
 
@@ -650,8 +657,8 @@ fbq('track', 'PageView');
         <h3><span class="ico yes">✓</span>Sí es para ti si…</h3>
         <ul>
           <li><span class="ico yes">✓</span>Tienes una empresa de construcción o ya trabajas por tu cuenta: remodelación, concreto, roofing, framing, pintura o cualquier otra rama.</li>
-          <li><span class="ico yes">✓</span>Cotizas a ojo y no estás seguro de cuánto ganas en cada proyecto.</li>
-          <li><span class="ico yes">✓</span>No tienes claro cuál es tu overhead.</li>
+          <li><span class="ico yes">✓</span>Sientes que tu negocio depende 100% de ti.</li>
+          <li><span class="ico yes">✓</span>Compites por precio y te cuesta defender lo que cobras.</li>
           <li><span class="ico yes">✓</span>Quieres más clientes y mejores proyectos.</li>
           <li><span class="ico yes">✓</span>Estás decidido a manejar tu empresa como dueño.</li>
         </ul>
@@ -660,7 +667,7 @@ fbq('track', 'PageView');
         <h3><span class="ico no">✕</span>No es para ti si…</h3>
         <ul>
           <li><span class="ico no">✕</span>No trabajas en construcción.</li>
-          <li><span class="ico no">✕</span>Prefieres seguir adivinando tus precios.</li>
+          <li><span class="ico no">✕</span>Prefieres seguir haciéndolo todo tú solo.</li>
           <li><span class="ico no">✕</span>Crecer no está en tus planes.</li>
           <li><span class="ico no">✕</span>No estás dispuesto a probar nada nuevo.</li>
         </ul>
@@ -679,12 +686,12 @@ fbq('track', 'PageView');
     <div class="reveal">
       <span class="eyebrow">Quién te enseña</span>
       <h2 style="margin-top:16px">Alguien que ya hizo <span class="accent">el camino de obrero a empresario</span></h2>
-      <p class="lead">Hugo Pérez empezó en la obra, como tú. Hoy es dueño de su empresa de construcción y fundador de <b>One Empire</b> y de <b>Next Level Leaders</b>, donde enseña a contratistas latinos a dirigir su negocio con números, sistemas y visión.</p>
+      <p class="lead">Hugo Pérez empezó en la obra, como tú. Llegó a estar al borde de la quiebra y hoy su empresa, <b>Potros Construction</b>, supera los $3 millones de dólares en facturación acumulada. Es fundador de <b>One Empire</b> y de <b>Next Level Leaders</b>, donde comparte con contratistas latinos lo que le funcionó.</p>
       <div class="creds">
         <div><b>Viene de la obra</b>Conoce el trabajo desde adentro, no desde un escritorio.</div>
         <div><b>Dueño de empresa</b>Enseña lo que aplica todos los días en su propia constructora.</div>
-        <div><b>Números claros</b>Overhead, estimados y márgenes explicados sin complicaciones.</div>
-        <div><b>100% práctico</b>Herramientas para aplicar en tu empresa desde el día siguiente.</div>
+        <div><b>Resultados reales</b>De estar al borde de la quiebra a más de $1 millón en solo 9 meses.</div>
+        <div><b>Sin rodeos</b>Te comparte lo que le funcionó, tal como lo vivió.</div>
       </div>
     </div>
   </div>
@@ -695,7 +702,7 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">Ellos ya dieron el paso</span>
-      <h2>Dueños que hoy trabajan <span class="accent">con información correcta</span></h2>
+      <h2>Contratistas que hoy dirigen <span class="accent">su empresa como dueños</span></h2>
       <p class="lead">Contratistas que pasaron por Next Level Leaders. Escúchalos en sus propias palabras.</p>
     </div>
     <div class="vids vids4">
@@ -724,8 +731,8 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Último paso</span>
-      <h2 style="margin-top:16px">Deja de adivinar. <span class="accent">Empieza a cobrar como dueño.</span></h2>
-      <p class="lead">Una noche para entender tus números, tu overhead y tu estimado, y salir con un plan de marketing y ventas para tu empresa.</p>
+      <h2 style="margin-top:16px"><span class="chrome">Te mostraré cómo llevé mi empresa de construcción</span> <span class="accent">de $100,000 a casi $5 millones</span> <span class="chrome">sin tener que hacerlo todo&nbsp;yo</span></h2>
+      <p class="lead">Una noche en vivo con Hugo Pérez para descubrir las estrategias, sistemas y habilidades que transformaron su negocio de construcción.</p>
       <div class="scarcity">
         <b>Cupo limitado</b>
         <p>La masterclass es gratuita, pero la sala de Zoom tiene cupo limitado. Cuando se llena, se cierra el registro.</p>
@@ -756,7 +763,7 @@ fbq('track', 'PageView');
       <img src="../next-level-leaders/images/one-empire-logo-red.png" alt="One Empire" loading="lazy">
       <span>© <span id="year">2026</span> One Empire · Hugo Pérez · De obrero a empresario</span>
     </div>
-    <p>Los resultados dependen del esfuerzo, la experiencia y las condiciones de cada persona y no están garantizados. Las cifras del ejemplo de estimación son ilustrativas.</p>
+    <p>Los resultados dependen del esfuerzo, la experiencia y las condiciones de cada persona y no están garantizados.</p>
   </div>
 </footer>
 
