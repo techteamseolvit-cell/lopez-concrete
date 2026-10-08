@@ -411,8 +411,13 @@ fbq('track', 'PageView');
   .hero-kicker { margin: 18px 0 0; font-family: var(--impact); font-weight: 600; text-transform: uppercase; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.25; color: #fff; }
   .hero-proof { margin: 18px 0 0; padding: 14px 18px; border-left: 3px solid var(--red-hi); background: rgba(193,18,31,.12); border-radius: 0 12px 12px 0; font-size: 16px; color: #fff; }
   .hero-proof b { font-family: var(--impact); font-weight: 600; text-transform: uppercase; letter-spacing: .02em; }
-  .hero .key-art { max-width: 400px; }
-  .hero .key-art + h1 { font-size: clamp(30px, 2.8vw, 42px); }
+  .hero .key-art { max-width: 100%; }
+  .hero .key-art + h1 { font-size: clamp(30px, 3vw, 46px); }
+  @media (min-width: 1025px) {
+    .hero-copy > div:first-child { flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 22px; padding-bottom: 28px; }
+    .hero-copy > div:first-child > * { margin-top: 0 !important; }
+    .hero-copy .pill { align-self: flex-start; }
+  }
   .hero h1 .chrome, .hero h1 .accent { display: inline; }
   .final h2 { font-size: clamp(30px, 3.4vw, 46px); }
   /* results */
@@ -471,7 +476,6 @@ fbq('track', 'PageView');
       <span class="pill"><b>Gratis</b> Webinar: De 0 al Millón</span>
       <figure class="key-art"><img src="images/hero-de-0-al-millon.webp" width="1254" height="1254" alt="Webinar: De 0 al Millón con Hugo Pérez" fetchpriority="high"></figure>
       <h1><span class="chrome">Te mostraré cómo llevé mi empresa de construcción</span> <span class="accent">de $100,000 a casi $5 millones</span> <span class="chrome">sin tener que hacerlo todo&nbsp;yo</span></h1>
-      <p class="hero-kicker">Descubre el sistema que utilizó Hugo Pérez para pasar de estar al borde de la quiebra <span class="accent">a facturar más de $1 millón de dólares en solo 9 meses.</span></p>
       <p class="lead">Conoce las estrategias, sistemas y habilidades que transformaron su negocio de construcción y que hoy le permiten atraer clientes constantemente, cobrar correctamente y cerrar proyectos de alto valor.</p>
       <p class="hero-proof">Hoy, su empresa <b>Potros Construction</b> supera los <b class="accent">$3 millones de dólares</b> en facturación acumulada.</p>
       <div class="hero-actions">
