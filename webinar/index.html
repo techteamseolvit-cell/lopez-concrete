@@ -451,7 +451,7 @@ fbq('track', 'PageView');
     .hero .key-art + h1 { font-size: clamp(34px, 5vw, 46px); }
   }
   @media (max-width: 760px) {
-    .hero .key-art { max-width: none; width: auto; align-self: stretch; margin: 0 calc(-1 * clamp(16px, 4vw, 40px)) -36px; border-radius: 0; border: 0; box-shadow: none; -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%); }
+    .hero .key-art { max-width: none; width: auto; align-self: stretch; margin: 0 calc(-1 * clamp(16px, 4vw, 40px)) 10px; border-radius: 0; border: 0; box-shadow: none; -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 72%, transparent 100%); }
     .hero-copy > div:first-child > :not(.key-art) { position: relative; z-index: 1; }
     .hero .key-art + h1 { font-size: clamp(25px, 7.4vw, 34px); }
     h2 { font-size: clamp(28px, 8.4vw, 40px); }
@@ -460,6 +460,10 @@ fbq('track', 'PageView');
     .learn-wrap { padding: 28px 20px; }
     .learn-wrap h2 { font-size: clamp(26px, 7.8vw, 40px); }
     .pill { max-width: 100%; font-size: 13px; }
+  }
+  @media (max-width: 760px) {
+    .pill { flex-direction: column; gap: 6px; border-radius: 16px; padding: 10px 16px; text-align: center; font-size: 13px; }
+    .pill b { white-space: nowrap; }
   }
 </style>
 </head>
@@ -484,8 +488,8 @@ fbq('track', 'PageView');
   <div class="wrap">
     <div class="reveal hero-copy">
       <div>
-      <span class="pill"><b>Gratis</b> Webinar en vivo para contratistas</span>
-      <figure class="key-art"><img src="images/hero-webinar.webp" width="1254" height="1254" alt="Webinar gratuito con Hugo Pérez" fetchpriority="high"></figure>
+      <span class="pill"><b>Gratis</b> Webinar para dueños de empresas de construcción</span>
+      <figure class="key-art"><img src="images/hero-webinar.webp" width="1254" height="1254" alt="Webinar para dueños de empresas de construcción con Hugo Pérez" fetchpriority="high"></figure>
       <h1><span class="chrome">Te mostraré los sistemas que uso en mi empresa de construcción</span> <span class="accent">para crecer</span> <span class="chrome">sin tener que hacerlo todo&nbsp;yo</span></h1>
       <p class="lead">Estrategias, sistemas y habilidades para atraer clientes de forma constante, cobrar con ganancia y cerrar proyectos de mayor valor.</p>
       <p class="hero-proof">Hugo Pérez es fundador de <b>Potros Construction</b> y comparte lo que aplica en su <b class="accent">propia empresa</b>.</p>
