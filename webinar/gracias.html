@@ -344,6 +344,10 @@ fbq('track', 'CompleteRegistration');
   footer .row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
   footer img { height: 28px; width: auto; opacity: .85; }
   footer p { margin: 0; max-width: 820px; line-height: 1.55; }
+  footer .legal { display: grid; gap: 8px; max-width: 820px; }
+  footer .legal p { font-size: 11px; line-height: 1.5; opacity: .7; }
+  footer .legal a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+  footer .legal a:hover { opacity: 1; }
 
   /* sticky mobile cta */
   .sticky-cta { display: none; }
@@ -377,6 +381,7 @@ fbq('track', 'CompleteRegistration');
     .vid blockquote { text-align: center; }
     footer .row { justify-content: center; text-align: center; }
     footer p { text-align: center; margin: 0 auto; }
+    footer .legal { margin: 0 auto; }
   }
   @media (max-width: 760px) {
     body { font-size: 16px; }
@@ -552,6 +557,11 @@ fbq('track', 'CompleteRegistration');
     <div class="row">
       <img src="../next-level-leaders/images/one-empire-logo-red.png" alt="One Empire" loading="lazy">
       <span>© <span id="year">2026</span> One Empire · Hugo Pérez · Webinar para dueños de empresas de construcción</span>
+    </div>
+    <div class="legal">
+      <p>Los resultados varían según el compromiso, el tiempo dedicado, el punto de partida, el tipo de empresa, el mercado y otros factores de cada persona. Los casos y testimonios que se muestran son experiencias individuales y no representan resultados típicos. No garantizamos ingresos, clientes, contratos ni crecimiento específicos en un plazo determinado.</p>
+      <p>Al continuar en este sitio, aceptas la <a href="https://yosoyempresarioone.com/politica-de-privacidad-2842" target="_blank" rel="noopener">política de privacidad</a> y los <a href="https://yosoyempresarioone.com/trminos-y-condiciones" target="_blank" rel="noopener">términos y condiciones</a>.</p>
+      <p>Este sitio no forma parte del sitio web de Facebook ni de Meta Platforms, Inc. Además, este sitio NO está respaldado por Facebook ni por Meta de ninguna manera. FACEBOOK es una marca registrada de Meta Platforms, Inc.</p>
     </div>
   </div>
 </footer>
