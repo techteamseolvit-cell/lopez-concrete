@@ -9,7 +9,7 @@
 <meta name="author" content="Hugo Pérez">
 <meta property="og:title" content="Next Level Leaders | Liderazgo para empresas de construcción">
 <meta property="og:description" content="Evento presencial gratuito · 24 y 25 de octubre · Tampa, FL · 9:00 AM.">
-<meta property="og:image" content="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6ac2adfe22bc27f58f583a87.png">
+<meta property="og:image" content="https://techteamseolvit-cell.github.io/lopez-concrete/next-level-leaders/images/hero-next-level-leaders.webp">
 <link rel="icon" href="images/one-empire-icon-red.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -223,7 +223,8 @@
   .xp-more .close em { font-style: normal; color: var(--silver-mid); }
 
   /* ---------- speakers ---------- */
-  .speakers { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 980px; margin: 0 auto; gap: clamp(12px, 1.6vw, 18px); }
+  .speakers { --cols: 3; --gap: clamp(12px, 1.6vw, 18px); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--gap); max-width: 760px; margin: 0 auto; }
+  .speakers .speaker { width: calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols)); }
   .speaker { margin: 0; position: relative; overflow: hidden; background: linear-gradient(180deg, #1c1c21, #0b0b0d); }
   .speaker img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 12%; transition: transform .5s ease; }
   .speaker:hover img { transform: scale(1.04); }
@@ -316,7 +317,7 @@
     .learn div { text-align: center; }
     .learn div { border-left: 0 !important; border-top: 1px solid var(--line); }
     .learn div:nth-child(even) { border-left: 1px solid var(--line) !important; }
-    .speakers { grid-template-columns: 1fr 1fr; }
+    .speakers { --cols: 2; }
     .speaker figcaption { padding: 30px 12px 12px; }
     .speaker figcaption b { font-size: 16px; }
     .countdown div { min-width: 50px; }
@@ -366,7 +367,7 @@
       </div>
     </div>
     <div class="key-art-col">
-      <div class="key-art"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6ac2adfe22bc27f58f583a87.png" alt="Next Level Leaders con Hugo Pérez y speakers invitados" fetchpriority="high"></div>
+      <div class="key-art"><img src="https://techteamseolvit-cell.github.io/lopez-concrete/next-level-leaders/images/hero-next-level-leaders.webp" alt="Next Level Leaders con Hugo Pérez y speakers invitados" fetchpriority="high"></div>
       <div class="countdown" data-countdown>
         <div><b data-d>--</b><span>Días</span></div><div class="sep">:</div>
         <div><b data-h>--</b><span>Horas</span></div><div class="sep">:</div>
@@ -636,7 +637,6 @@
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6a3313a65408771d16550b21.png" alt="Hugo Pérez" loading="lazy"><figcaption><b>Hugo Pérez</b><span>Speaker</span></figcaption></figure>
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69db2e3ad7871cddf76f2e78.png" alt="Mónica Tuccella" loading="lazy"><figcaption><b>Mónica Tuccella</b><span>Speaker</span></figcaption></figure>
       <figure class="speaker reveal"><img src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_640/u_https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/69db2e3ad7871cddf76f2e7b.png" alt="Darwin Ontiveros" loading="lazy"><figcaption><b>Darwin Ontiveros</b><span>Speaker</span></figcaption></figure>
-      <figure class="speaker reveal"><img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbb77bca8cd20c3417f7.png" alt="Miguel Castellanos" loading="lazy"><figcaption><b>Miguel Castellanos</b><span>Speaker</span></figcaption></figure>
     </div>
   </div>
 </section>
