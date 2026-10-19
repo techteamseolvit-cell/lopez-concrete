@@ -193,6 +193,8 @@
   .place svg { flex: none; width: 22px; height: 22px; stroke: var(--red-bright); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
   .place b { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: 15px; line-height: 1.3; }
   .place b em { font-style: normal; color: var(--silver-mid); font-weight: 700; }
+  .place .map-link { display: inline-block; margin-top: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--red-bright); text-decoration: none; }
+  .place .map-link:hover { color: #fff; }
 
   /* ---------- guide ---------- */
   .guide { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
@@ -290,7 +292,7 @@
     <p class="lead">Pronto aprenderás cómo liderar equipos, crear sistemas y construir una empresa de construcción más fuerte y rentable.</p>
     <div class="facts">
       <div><small>Evento</small><b>Sáb 24 y Dom 25 Oct</b><span>9:00am a 6:00pm</span></div>
-      <div><small>Ciudad</small><b>Tampa, FL</b><span>Lugar por confirmar</span></div>
+      <div><small>Lugar</small><b>The Westshore Grand</b><span>4860 W Kennedy Blvd, Tampa</span></div>
       <div><small>Acceso</small><b>Presencial</b><span>Gratuito</span></div>
     </div>
   </div>
@@ -376,7 +378,7 @@
         <div class="step-top"><span class="step-n">01</span><small>Paso 1</small></div>
         <h3 class="h-md">Guarda la fecha</h3>
         <div class="dates">
-          <div class="date"><small>Evento presencial gratuito</small><b>Sábado 24 y Domingo 25 de Octubre</b><span>9:00am a 6:00pm · Tampa, FL (lugar por confirmar)</span></div>
+          <div class="date"><small>Evento presencial gratuito</small><b>Sábado 24 y Domingo 25 de Octubre</b><span>9:00am a 6:00pm · The Westshore Grand, 4860 W Kennedy Blvd, Tampa, FL 33609</span></div>
         </div>
         <div class="cal">
           <span class="cal-label">Agregar a mi calendario</span>
@@ -401,7 +403,7 @@
         <p>Recibirás la confirmación y la información detallada del evento en tu correo electrónico. Por favor revisa tu carpeta de spam, promociones, social, etc.</p>
         <div class="place">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-          <b>Tampa, FL · <em>Lugar por confirmar</em></b>
+          <b>The Westshore Grand<br><em>4860 W Kennedy Blvd, Tampa, FL 33609</em><br><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=The+Westshore+Grand+4860+W+Kennedy+Blvd+Tampa+FL+33609" target="_blank" rel="noopener">Ver en Google Maps →</a></b>
         </div>
       </article>
 
@@ -464,8 +466,8 @@
     var START = "20261024T090000";
     var END = "20261025T180000";
     var TIMEZONE = "America/New_York";
-    var LOCATION = "Tampa, FL (lugar por confirmar)";
-    var DESCRIPTION = "Evento presencial gratuito con Hugo Pérez para dueños de empresas de construcción. Sábado 24 y domingo 25 de octubre, 9:00am a 6:00pm. Te enviaremos la dirección exacta por correo y WhatsApp.";
+    var LOCATION = "The Westshore Grand, 4860 W Kennedy Blvd, Tampa, FL 33609";
+    var DESCRIPTION = "Evento presencial gratuito con Hugo Pérez para dueños de empresas de construcción. Sábado 24 y domingo 25 de octubre, 9:00am a 6:00pm. Lugar: The Westshore Grand, 4860 W Kennedy Blvd, Tampa, FL 33609.";
     // ISO strings with Eastern offset (EDT, UTC-4) for Outlook
     var ISO_START = "2026-10-24T09:00:00-04:00";
     var ISO_END = "2026-10-25T18:00:00-04:00";
