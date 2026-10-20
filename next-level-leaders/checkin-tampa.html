@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¡Check-In Completado! · Next Level Leaders · Tampa, FL</title>
+<meta name="description" content="Tu check-in para Next Level Leaders Tampa quedó confirmado.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500..900&family=Manrope:wght@400..800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root {
+    --black: #08080a;
+    --carbon-2: #1a1a1f;
+    --red: #c1121f;
+    --red-bright: #e01e2b;
+    --silver: #c9ccd2;
+    --silver-mid: #a3a7af;
+    --silver-dark: #5f636b;
+    --line: rgba(255,255,255,.1);
+    --chrome: linear-gradient(180deg, #ffffff 0%, #f5f6f8 35%, #dcdfe3 65%, #b9bec6 100%);
+    --display: "Archivo", "Arial Black", sans-serif;
+    --body: "Manrope", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: #fff; font-family: var(--body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- header ---------- */
+  header { padding: 26px 0; text-align: center; border-bottom: 1px solid var(--line); }
+  .brand-logo { height: 50px; width: auto; margin: 0 auto; }
+
+  /* ---------- check-in ---------- */
+  #success { position: relative; overflow: hidden; padding: 72px 0 84px; text-align: center; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(224,30,43,.22), transparent 70%); }
+  .streaks { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .streaks i { position: absolute; height: 1px; width: 60%; background: linear-gradient(90deg, transparent, var(--red-bright), transparent); transform: rotate(-28deg); opacity: .45; }
+  .streaks i:nth-child(1) { top: 20%; left: -20%; }
+  .streaks i:nth-child(2) { top: 70%; right: -26%; width: 70%; opacity: .28; }
+  #success .wrap { position: relative; }
+  .check { width: 64px; height: 64px; margin: 0 auto 26px; display: grid; place-items: center; position: relative; isolation: isolate; }
+  .check::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, var(--red-bright), var(--red)); transform: skewX(-10deg); box-shadow: 0 16px 40px -10px rgba(224,30,43,.7); }
+  .check svg { width: 30px; height: 30px; stroke: #fff; fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .kicker { display: block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); margin-bottom: 14px; }
+  h1 { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; font-size: clamp(28px, 4.4vw, 46px); line-height: 1.1; margin-bottom: 22px; }
+  .chrome { background: var(--chrome); background-size: 100% 1lh; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .red { color: var(--red-bright); }
+  .nowrap { white-space: nowrap; }
+  .success-copy { font-size: clamp(16px, 1.8vw, 18px); color: #c9cbd1; max-width: 620px; margin: 0 auto; }
+  .success-copy strong { color: #fff; }
+  .event-strip { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin-top: 30px; padding: 12px 22px; position: relative; isolation: isolate; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--silver); }
+  .event-strip::before { content: ""; position: absolute; inset: 0; z-index: -1; border: 1px solid rgba(201,204,210,.25); background: rgba(255,255,255,.03); transform: skewX(-14deg); }
+  .event-strip .sep { color: var(--red-bright); }
+
+  /* ---------- footer ---------- */
+  footer { padding: 34px 0 30px; border-top: 1px solid var(--line); text-align: center; }
+  .footer-logo { height: 44px; width: auto; margin: 0 auto; }
+  .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; margin-top: 16px; font-size: 12px; color: var(--silver-dark); }
+  .footer-links a { color: var(--silver-mid); text-decoration: none; }
+  .footer-links a:hover { color: #fff; }
+  .footer-copy { font-size: 11px; color: var(--silver-dark); margin-top: 10px; }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 0 18px; }
+    #success { padding: 52px 0 60px; }
+    .brand-logo { height: 42px; }
+    .event-strip { padding: 12px 26px; }
+    .event-strip .sep { display: none; }
+    .event-strip span { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img class="brand-logo" src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbaf150d6ea53db13e67.png" alt="One Empire">
+  </div>
+</header>
+
+<section id="success">
+  <div class="streaks" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap">
+    <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <span class="kicker">Next Level Leaders · Tampa, FL</span>
+    <h1><span class="chrome">¡Check-In </span><span class="red nowrap">Completado!</span></h1>
+    <p class="success-copy">¡Bienvenido a <strong>Next Level Leaders Tampa</strong>! Ya estás dentro. Prepárate para aprender a armar el equipo, los sistemas y los procesos que tu empresa necesita para crecer sin depender de ti, y para conectar con dueños latinos de empresas de construcción que están listos para llevar su negocio al siguiente nivel.</p>
+    <div class="event-strip">
+      <span>The Westshore Grand</span><span class="sep">/</span><span>24 y 25 de octubre</span><span class="sep">/</span><span>9:00 AM a 6:00 PM</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbaf150d6ea53db13e67.png" alt="One Empire" loading="lazy">
+    <nav class="footer-links" aria-label="Legal">
+      <a href="https://yosoyempresarioone.com/trminos-y-condiciones" target="_blank" rel="noopener">Términos y condiciones</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://yosoyempresarioone.com/politica-de-privacidad-2842" target="_blank" rel="noopener">Política de privacidad</a>
+    </nav>
+    <p class="footer-copy">© 2026 One Empire LLC · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+</body>
+</html>
