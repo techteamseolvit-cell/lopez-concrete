@@ -166,7 +166,8 @@
         <div class="includes">
           <p class="includes-title">Tu paquete incluye</p>
           <ul>
-            <li><div>Acceso al entrenamiento: <strong>Conoce tus números y aprende a estimar.</strong></div></li>
+            <li><div>Acceso al entrenamiento: <strong>Conoce tus números y aprende a estimar</strong>, de 10:00 AM a 5:00 PM.</div></li>
+            <li><div>Comida incluida el viernes 23.</div></li>
           </ul>
         </div>
       </div>
@@ -191,7 +192,7 @@
               <div class="event-day-num">23</div>
               <div>
                 <div class="event-text">Viernes 23 de octubre, 2026</div>
-                <div class="event-sub">Entrenamiento: Conoce tus números y aprende a estimar · Horario por confirmar</div>
+                <div class="event-sub">Entrenamiento: Conoce tus números y aprende a estimar · 10:00 AM a 5:00 PM · Comida incluida · The Westshore Grand</div>
               </div>
             </div>
             <div class="event-day">
@@ -282,24 +283,17 @@
     var EVENT_NAME = "Next Level Leaders - Entrenamiento";
     var LOCATION = "The Westshore Grand, 4860 W Kennedy Blvd, Tampa, FL 33609";
     var DESCRIPTION = "Next Level Leaders · The Westshore Grand, 4860 W Kennedy Blvd, Tampa, FL 33609.";
-    var ALL_DAY = true;       // true when the package starts Friday 23 (horario por confirmar)
+    var STARTS_FRIDAY = true;  // true when the package includes the Friday 23 training (10:00 AM)
     var e = encodeURIComponent;
-    var links;
-    if (ALL_DAY) {
-      links = {
-        "calendar-google": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + e(EVENT_NAME) + "&dates=20261023/20261026&details=" + e(DESCRIPTION) + "&location=" + e(LOCATION),
-        "calendar-outlook": "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&allday=true&subject=" + e(EVENT_NAME) + "&startdt=2026-10-23&enddt=2026-10-26&body=" + e(DESCRIPTION) + "&location=" + e(LOCATION),
-        "calendar-yahoo": "https://calendar.yahoo.com/?v=60&title=" + e(EVENT_NAME) + "&st=20261023&et=20261025&dur=allday&desc=" + e(DESCRIPTION) + "&in_loc=" + e(LOCATION)
-      };
-    } else {
-      var ISO_START = "2026-10-24T09:00:00-04:00", ISO_END = "2026-10-25T18:00:00-04:00";
-      var utc = function (iso) { return new Date(iso).toISOString().replace(/[-:]|\.\d{3}/g, ""); };
-      links = {
-        "calendar-google": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + e(EVENT_NAME) + "&dates=20261024T090000/20261025T180000&ctz=America%2FNew_York&details=" + e(DESCRIPTION) + "&location=" + e(LOCATION),
-        "calendar-outlook": "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=" + e(EVENT_NAME) + "&startdt=" + e(ISO_START) + "&enddt=" + e(ISO_END) + "&body=" + e(DESCRIPTION) + "&location=" + e(LOCATION),
-        "calendar-yahoo": "https://calendar.yahoo.com/?v=60&title=" + e(EVENT_NAME) + "&st=" + utc(ISO_START) + "&et=" + utc(ISO_END) + "&desc=" + e(DESCRIPTION) + "&in_loc=" + e(LOCATION)
-      };
-    }
+    var ISO_START = STARTS_FRIDAY ? "2026-10-23T10:00:00-04:00" : "2026-10-24T09:00:00-04:00";
+    var ISO_END = "2026-10-25T18:00:00-04:00";
+    var GOOGLE_START = STARTS_FRIDAY ? "20261023T100000" : "20261024T090000";
+    var utc = function (iso) { return new Date(iso).toISOString().replace(/[-:]|\.\d{3}/g, ""); };
+    var links = {
+      "calendar-google": "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + e(EVENT_NAME) + "&dates=" + GOOGLE_START + "/20261025T180000&ctz=America%2FNew_York&details=" + e(DESCRIPTION) + "&location=" + e(LOCATION),
+      "calendar-outlook": "https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&subject=" + e(EVENT_NAME) + "&startdt=" + e(ISO_START) + "&enddt=" + e(ISO_END) + "&body=" + e(DESCRIPTION) + "&location=" + e(LOCATION),
+      "calendar-yahoo": "https://calendar.yahoo.com/?v=60&title=" + e(EVENT_NAME) + "&st=" + utc(ISO_START) + "&et=" + utc(ISO_END) + "&desc=" + e(DESCRIPTION) + "&in_loc=" + e(LOCATION)
+    };
     Object.keys(links).forEach(function (cls) {
       document.querySelectorAll("." + cls).forEach(function (a) { a.href = links[cls]; a.target = "_blank"; a.rel = "noopener"; });
     });
