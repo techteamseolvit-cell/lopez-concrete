@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check-In · Next Level Leaders · Tampa, FL</title>
+<meta name="description" content="Confirma tus datos para agilizar tu ingreso a Next Level Leaders en Tampa, FL.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500..900&family=Manrope:wght@400..800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+  :root {
+    --black: #08080a;
+    --carbon: #111114;
+    --red: #c1121f;
+    --red-bright: #e01e2b;
+    --silver: #c9ccd2;
+    --silver-mid: #a3a7af;
+    --silver-dark: #5f636b;
+    --line: rgba(255,255,255,.1);
+    --chrome: linear-gradient(180deg, #ffffff 0%, #f5f6f8 35%, #dcdfe3 65%, #b9bec6 100%);
+    --display: "Archivo", "Arial Black", sans-serif;
+    --body: "Manrope", system-ui, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--black); color: #fff; font-family: var(--body); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- type ---------- */
+  .chrome { background: var(--chrome); background-size: 100% 1lh; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .red { color: var(--red-bright); }
+  .kicker { display: block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--red-bright); margin-bottom: 14px; }
+  h1 { font-family: var(--display); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.12; margin-bottom: 16px; }
+  p { color: #c9cbd1; }
+  strong { color: #fff; }
+
+  /* ---------- header ---------- */
+  header { padding: 22px 0; text-align: center; border-bottom: 1px solid var(--line); }
+  .brand-logo { height: 48px; width: auto; margin: 0 auto; }
+
+  /* ---------- check-in ---------- */
+  #checkin { position: relative; padding: 60px 0 76px; background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(224,30,43,.2), transparent 70%); }
+  .checkin-intro { max-width: 680px; margin: 0 auto 36px; text-align: center; }
+  .checkin-intro p { font-size: 16px; }
+  .event-strip { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; margin-top: 20px; padding: 10px 22px; position: relative; isolation: isolate; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--silver); }
+  .event-strip::before { content: ""; position: absolute; inset: 0; z-index: -1; border: 1px solid rgba(201,204,210,.25); background: rgba(255,255,255,.03); transform: skewX(-14deg); }
+  .event-strip .sep { color: var(--red-bright); }
+
+  .checkin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+  .checkin-media { position: relative; overflow: hidden; border: 1px solid rgba(224,30,43,.35); background: var(--carbon); }
+  .checkin-media::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 3px; z-index: 1; background: linear-gradient(90deg, var(--red-bright), var(--silver) 60%, transparent); }
+  .checkin-media img { width: 100%; height: auto; }
+
+  .checkin-card { position: relative; background: var(--carbon); border: 1px solid var(--line); }
+  .checkin-card::before { content: ""; position: absolute; left: 0; top: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--red-bright), transparent); }
+  .checkin-card-inner { padding: 26px 20px 20px; }
+  .card-title { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: 18px; line-height: 1.2; text-align: center; margin-bottom: 4px; }
+  .card-sub { font-size: 14px; color: var(--silver-mid); text-align: center; margin-bottom: 18px; }
+  .checkin-form-wrap { width: 100%; min-height: 50px; }
+  .checkin-form-wrap iframe { display: block; width: 100%; border: none; background: transparent; color-scheme: normal; }
+
+  /* ---------- footer ---------- */
+  footer { padding: 30px 0 26px; border-top: 1px solid var(--line); text-align: center; }
+  .footer-logo { height: 42px; width: auto; margin: 0 auto; }
+  .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; margin-top: 14px; font-size: 12px; color: var(--silver-dark); }
+  .footer-links a { color: var(--silver-mid); text-decoration: none; }
+  .footer-links a:hover { color: #fff; }
+  .footer-copy { font-size: 11px; color: var(--silver-dark); margin-top: 10px; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 860px) {
+    .checkin-grid { grid-template-columns: 1fr; gap: 0; }
+    .checkin-media { border-bottom: 0; }
+    .checkin-card { border-top: 0; }
+    .checkin-card::before { display: none; }
+    #checkin { padding: 42px 0 56px; }
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    .brand-logo { height: 40px; }
+    .checkin-card-inner { padding: 22px 12px 14px; }
+    .event-strip { padding: 10px 26px; }
+    .event-strip .sep { display: none; }
+    .event-strip span { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img class="brand-logo" src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbaf150d6ea53db13e67.png" alt="One Empire">
+  </div>
+</header>
+
+<section id="checkin">
+  <div class="wrap">
+
+    <div class="checkin-intro">
+      <span class="kicker">Check-In · Tampa, FL</span>
+      <h1><span class="chrome">¡Bienvenido a </span><span class="red">Next Level Leaders Tampa!</span></h1>
+      <p>Completa la siguiente información para confirmar tus datos y agilizar tu ingreso al evento. <strong>¡Gracias por acompañarnos!</strong></p>
+      <div class="event-strip">
+        <span>The Westshore Grand</span><span class="sep">/</span><span>24 y 25 de octubre</span><span class="sep">/</span><span>9:00 AM a 6:00 PM</span>
+      </div>
+    </div>
+
+    <div class="checkin-grid">
+
+      <div class="checkin-media">
+        <img src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6ad18f29fbcf4d38019f014b.png" alt="Next Level Leaders · Tampa">
+      </div>
+
+      <div class="checkin-card">
+        <div class="checkin-card-inner">
+          <p class="card-title">Confirma tus datos</p>
+          <p class="card-sub">Toma menos de un minuto.</p>
+          <div class="checkin-form-wrap">
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/yjORblACuwlwHcXw2OMf"
+              style="width:100%;height:1013px;border:none;border-radius:0;"
+              id="inline-yjORblACuwlwHcXw2OMf"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="HUGO - Tampa, FL - CHECK IN"
+              data-height="1013"
+              data-layout-iframe-id="inline-yjORblACuwlwHcXw2OMf"
+              data-form-id="yjORblACuwlwHcXw2OMf"
+              data-cookie-consent="true"
+              data-cookie-consent-provider="auto"
+              title="HUGO - Tampa, FL - CHECK IN">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img class="footer-logo" src="https://assets.cdn.filesafe.space/4o5wwWKbFhOEOaerWTE6/media/6abfcbaf150d6ea53db13e67.png" alt="One Empire" loading="lazy">
+    <nav class="footer-links" aria-label="Legal">
+      <a href="https://yosoyempresarioone.com/trminos-y-condiciones" target="_blank" rel="noopener">Términos y condiciones</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://yosoyempresarioone.com/politica-de-privacidad-2842" target="_blank" rel="noopener">Política de privacidad</a>
+    </nav>
+    <p class="footer-copy">© 2026 One Empire LLC · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</body>
+</html>
